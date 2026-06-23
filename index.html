@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polo Calçadista do Ceará — Uma jornada</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <style>
+      :root {
+        --bg: #140d08;
+        --bg2: #1d130c;
+        --leather: #7a4326;
+        --leatherL: #9c5e37;
+        --brass: #c9912f;
+        --brassL: #e3b561;
+        --cream: #f1e7d5;
+        --creamS: #eae0cc;
+        --ink: #2b2018;
+        --muted: #8a7a68;
+        --good: #6f9268;
+        --warn: #c96a52;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        background: var(--bg);
+        color: var(--cream);
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+      body {
+        cursor: default;
+      }
+      .serif {
+        font-family: "Fraunces", serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+      }
+      section {
+        position: relative;
+        padding: 14vh 8vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .kick {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--brass);
+        margin-bottom: 1.4rem;
+      }
+      .lead {
+        font-size: clamp(1rem, 1.5vw, 1.35rem);
+        color: var(--creamS);
+        max-width: 46ch;
+        line-height: 1.6;
+        font-weight: 300;
+      }
+      .word {
+        display: inline-block;
+        will-change: transform, opacity;
+      }
+      /* progress + nav */
+      #prog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: linear-gradient(
+          90deg,
+          var(--leather),
+          var(--brass),
+          var(--brassL)
+        );
+        z-index: 1000;
+      }
+      #chapnav {
+        position: fixed;
+        right: 2.2vw;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 900;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      #chapnav a {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(241, 231, 213, 0.25);
+        transition: 0.4s;
+        display: block;
+      }
+      #chapnav a.on {
+        background: var(--brass);
+        transform: scale(1.5);
+      }
+      .scrollhint {
+        position: fixed;
+        bottom: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 900;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--muted);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+      .scrollhint .bar {
+        width: 1px;
+        height: 34px;
+        background: linear-gradient(var(--brass), transparent);
+        animation: drop 1.8s infinite;
+      }
+      .navbtns {
+        position: fixed;
+        bottom: 28px;
+        right: 2.2vw;
+        z-index: 950;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbtns button {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1px solid rgba(201, 145, 47, 0.5);
+        background: rgba(20, 13, 8, 0.7);
+        color: var(--brassL);
+        font-size: 1.3rem;
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+        transition: background 0.3s, transform 0.3s, color 0.3s, opacity 0.3s;
+      }
+      .navbtns button:hover {
+        background: var(--brass);
+        color: var(--bg);
+        transform: scale(1.1);
+      }
+      .navbtns button:disabled {
+        opacity: 0.25;
+        cursor: default;
+        transform: none;
+      }
+      @media (max-width: 820px) {
+        .navbtns button {
+          width: 44px;
+          height: 44px;
+          font-size: 1.1rem;
+        }
+      }
+      @keyframes drop {
+        0% {
+          transform: scaleY(0);
+          transform-origin: top;
+        }
+        45% {
+          transform: scaleY(1);
+          transform-origin: top;
+        }
+        55% {
+          transform: scaleY(1);
+          transform-origin: bottom;
+        }
+        100% {
+          transform: scaleY(0);
+          transform-origin: bottom;
+        }
+      }
+      /* hero */
+      #hero {
+        min-height: 100vh;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .hero-big {
+        font-size: clamp(2.8rem, 9vw, 9rem);
+        color: var(--cream);
+      }
+      .hero-big .ln {
+        display: block;
+        overflow: hidden;
+      }
+      .hero-sub {
+        margin-top: 2rem;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        font-style: italic;
+        color: var(--brassL);
+        font-family: "Fraunces", serif;
+        font-weight: 400;
+        max-width: 40ch;
+      }
+      .hero-meta {
+        position: absolute;
+        bottom: 8vh;
+        left: 8vw;
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      /* floating shoe / footprints layer */
+      #shoe {
+        position: fixed;
+        z-index: 50;
+        font-size: 3rem;
+        pointer-events: none;
+        will-change: transform;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+      }
+      .print {
+        position: fixed;
+        z-index: 40;
+        font-size: 1.6rem;
+        opacity: 0;
+        pointer-events: none;
+        color: var(--leatherL);
+      }
+      /* cards & grids */
+      .grid {
+        display: grid;
+        gap: 1.4rem;
+        width: 100%;
+      }
+      .g2 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .g3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .g4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card {
+        background: rgba(241, 231, 213, 0.04);
+        border: 1px solid rgba(201, 145, 47, 0.18);
+        border-radius: 16px;
+        padding: 1.6rem 1.7rem;
+        backdrop-filter: blur(6px);
+      }
+      .card.light {
+        background: var(--cream);
+        color: var(--ink);
+        border-color: transparent;
+      }
+      .card.light .ct {
+        color: var(--leather);
+      }
+      .card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.6rem;
+      }
+      .card p,
+      .card li {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: var(--creamS);
+      }
+      .card.light p,
+      .card.light li {
+        color: #5b4c3d;
+      }
+      .num {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(2.2rem, 4vw, 3.6rem);
+        color: var(--brass);
+        line-height: 1;
+      }
+      .nlabel {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-top: 0.5rem;
+        max-width: 22ch;
+      }
+      ul.clean {
+        list-style: none;
+      }
+      ul.clean li {
+        padding: 0.45rem 0 0.45rem 1.3rem;
+        position: relative;
+      }
+      ul.clean li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.95rem;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--brass);
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4vw;
+        align-items: center;
+        width: 100%;
+      }
+      .chartbox {
+        background: var(--cream);
+        border-radius: 18px;
+        padding: 1.4rem;
+        height: auto;
+      }
+      .chartbox canvas {
+        max-height: 380px !important;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.8rem;
+        border-radius: 99px;
+        border: 1px solid var(--brass);
+        color: var(--brassL);
+        margin-bottom: 1rem;
+      }
+      .reveal-up {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      .big-stat {
+        font-size: clamp(3.5rem, 11vw, 9rem);
+        color: var(--brass);
+      }
+      @media (max-width: 820px) {
+        .g2,
+        .g3,
+        .g4,
+        .split {
+          grid-template-columns: 1fr;
+        }
+        section {
+          padding: 12vh 7vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="prog"></div>
+    <div id="shoe">👞</div>
+    <nav id="chapnav"></nav>
+    <div class="navbtns">
+      <button id="btnUp" aria-label="Seção anterior">↑</button>
+      <button id="btnDown" aria-label="Próxima seção">↓</button>
+    </div>
+    <div class="scrollhint"><span>scroll</span><span class="bar"></span></div>
+  </body>
+</html>
+<!-- HERO -->
+<section id="hero" data-chap="Início">
+  <div
+    class="glow"
+    style="
+      width: 600px;
+      height: 600px;
+      background: var(--leather);
+      top: -10%;
+      right: -5%;
+    "
+  ></div>
+  <div
+    class="glow"
+    style="
+      width: 400px;
+      height: 400px;
+      background: var(--brass);
+      bottom: 5%;
+      left: -8%;
+      opacity: 0.3;
+    "
+  ></div>
+  <p class="kick" data-anim="fade">Seminário · Economia do Nordeste</p>
+  <h1 class="hero-big">
+    <span class="ln"><span class="hl">Panorama da</span></span>
+    <span class="ln"><span class="hl">Indústria Cearense</span></span>
+    <span class="ln"
+      ><span class="hl" style="color: var(--brass)">de Calçados</span></span
+    >
+  </h1>
+  <p class="hero-sub" data-anim="fade">
+    Da relocalização da cadeia produtiva nacional à consolidação do Ceará como o
+    principal polo calçadista do Nordeste.
+  </p>
+  <div class="hero-meta">
+    <strong style="color: var(--brassL)">Baseado em:</strong> Odorico de Moraes
+    Eloy da Costa<br />
+    IPECE · Textos para Discussão nº 101 · agosto de 2012
+  </div>
+</section>
+
+<!-- CHAPTER 1 INTRO -->
+<section data-chap="Mundo">
+  <p class="kick" data-anim="fade">Capítulo 01 — Contexto mundial</p>
+  <h2 style="font-size: clamp(2rem, 5.5vw, 5rem); max-width: 16ch" data-split>
+    Uma indústria tradicional em plena reestruturação.
+  </h2>
+  <p class="lead" style="margin-top: 2rem" data-anim="fade">
+    Desde os anos 1980, novas máquinas, a microeletrônica e o desenho por
+    computador (CAD/CAM) modernizaram a fabricação de calçados. Mesmo assim,
+    costurar e montar a parte de cima do sapato — o cabedal — ainda exige muita
+    mão de obra. Como esse trabalho manual é caro, as fábricas passaram a
+    procurar países onde a mão de obra custa menos: foi assim que a produção
+    começou a migrar pelo mundo.
+  </p>
+</section>
+<!-- aglomerados -->
+<section data-chap="Mundo">
+  <p class="kick" data-anim="fade">Clusters globais</p>
+  <h2
+    style="
+      font-size: clamp(1.8rem, 4.5vw, 3.8rem);
+      max-width: 18ch;
+      margin-bottom: 2.5rem;
+    "
+    data-split
+  >
+    O calçado se faz em aglomerados, no mundo todo.
+  </h2>
+  <div class="grid g3">
+    <div class="card reveal-up">
+      🇲🇽
+      <h3>México</h3>
+      <p>Guadalajara e León</p>
+    </div>
+    <div class="card reveal-up">
+      🇰🇷
+      <h3>Coreia do Sul</h3>
+      <p>Pusan — grandes empresas</p>
+    </div>
+    <div class="card reveal-up">
+      🇮🇹
+      <h3>Itália</h3>
+      <p>Brenta e Marche — pequenas empresas</p>
+    </div>
+    <div class="card reveal-up" style="border-color: var(--brass)">
+      🇧🇷
+      <h3>Brasil — RS</h3>
+      <p>Vale dos Sinos, o "supercluster"</p>
+    </div>
+    <div class="card reveal-up" style="border-color: var(--brass)">
+      🇧🇷
+      <h3>Brasil — SP / MG</h3>
+      <p>Franca, Jaú, Birigui, Divinópolis</p>
+    </div>
+    <div class="card reveal-up" style="border-color: var(--brass)">
+      🇧🇷
+      <h3>Brasil — CE</h3>
+      <p>Fortaleza e Cariri</p>
+    </div>
+  </div>
+  <p class="lead" style="margin-top: 2rem" data-anim="fade">
+    A indústria de calçados costuma se concentrar em regiões específicas, os
+    chamados "clusters": ali, fábricas, fornecedores e instituições ficam perto
+    umas das outras e compartilham conhecimento. Mas o formato varia — alguns
+    polos reúnem muitas empresas pequenas (Itália, Taiwan), enquanto outros são
+    dominados por poucas empresas grandes (Coreia, China e Brasil).
+  </p>
+</section>
+
+<!-- cadeia de valor -->
+<section data-chap="Mundo">
+  <p class="kick" data-anim="fade">Cadeia de valor</p>
+  <h2
+    style="
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      max-width: 14ch;
+      margin-bottom: 3rem;
+    "
+    data-split
+  >
+    Quem comanda a cadeia fica com o valor.
+  </h2>
+  <div class="grid g4">
+    <div class="card reveal-up" style="text-align: center">
+      <div style="font-size: 2.2rem">🎨</div>
+      <h3 style="font-size: 1rem; margin-top: 0.6rem">Design & P&D</h3>
+      <p style="font-size: 0.8rem">Concepção e tendências</p>
+    </div>
+    <div class="card reveal-up" style="text-align: center">
+      <div style="font-size: 2.2rem">🏆</div>
+      <h3 style="font-size: 1rem; margin-top: 0.6rem">Marca & Marketing</h3>
+      <p style="font-size: 0.8rem">Comunicação e varejo</p>
+    </div>
+    <div
+      class="card reveal-up"
+      style="
+        text-align: center;
+        border-color: var(--brass);
+        background: rgba(201, 145, 47, 0.12);
+      "
+    >
+      <div style="font-size: 2.2rem">🏭</div>
+      <h3 style="font-size: 1rem; margin-top: 0.6rem; color: var(--brassL)">
+        Manufatura
+      </h3>
+      <p style="font-size: 0.8rem">A etapa que migra</p>
+    </div>
+    <div class="card reveal-up" style="text-align: center">
+      <div style="font-size: 2.2rem">🛒</div>
+      <h3 style="font-size: 1rem; margin-top: 0.6rem">Logística & Venda</h3>
+      <p style="font-size: 0.8rem">Distribuição final</p>
+    </div>
+  </div>
+  <p class="lead" style="margin-top: 2.2rem" data-anim="fade">
+    Nessa indústria, quem manda são os compradores — as grandes marcas e redes
+    de varejo (o modelo "buyer-driven", ou guiado pelo comprador). Elas controlam
+    o design, a marca e a venda, que são as etapas mais lucrativas, e ficam com a
+    maior fatia do lucro. Para quem só fabrica o calçado sob encomenda, sobra a
+    parte que rende menos: a manufatura.
+  </p>
+</section>
+<!-- CHAPTER 2 — BRASIL -->
+<section data-chap="Brasil">
+  <p class="kick" data-anim="fade">Capítulo 02 — O Brasil no jogo</p>
+  <h2 style="font-size: clamp(2rem, 5.5vw, 5rem); max-width: 14ch" data-split>
+    As raízes do calçado no Brasil.
+  </h2>
+  <div class="grid g4" style="margin-top: 3rem">
+    <div class="card light reveal-up">
+      <div class="num ct" style="color: var(--leather)">1824</div>
+      <p style="margin-top: 0.6rem">
+        Imigrantes alemães chegam ao Vale dos Sinos (RS)
+      </p>
+    </div>
+    <div class="card light reveal-up">
+      <div class="num ct" style="color: var(--leather)">1888</div>
+      <p style="margin-top: 0.6rem">Nasce a 1ª fábrica de calçados do Brasil</p>
+    </div>
+    <div class="card light reveal-up">
+      <div class="num ct" style="color: var(--leather)">1960s</div>
+      <p style="margin-top: 0.6rem">
+        80 milhões de pares/ano; surge a necessidade de exportar
+      </p>
+    </div>
+    <div class="card light reveal-up">
+      <div class="num ct" style="color: var(--leather)">1968</div>
+      <p style="margin-top: 0.6rem">
+        Sandálias Franciscana para os EUA: marco da exportação
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- numeros 2010 -->
+<section data-chap="Brasil">
+  <p class="kick" data-anim="fade">Brasil em 2010</p>
+  <h2
+    style="
+      font-size: clamp(1.8rem, 4.5vw, 3.6rem);
+      max-width: 18ch;
+      margin-bottom: 3rem;
+    "
+    data-split
+  >
+    Um verdadeiro player mundial do calçado.
+  </h2>
+  <div class="grid g3">
+    <div class="card reveal-up">
+      <div class="num" data-count="3" data-suffix="º">0</div>
+      <div class="nlabel">maior produtor mundial</div>
+    </div>
+    <div class="card reveal-up">
+      <div class="num" data-count="5" data-suffix="º">0</div>
+      <div class="nlabel">maior mercado consumidor</div>
+    </div>
+    <div class="card reveal-up">
+      <div class="num" data-count="6" data-suffix="º">0</div>
+      <div class="nlabel">maior exportador mundial</div>
+    </div>
+    <div class="card reveal-up">
+      <div class="num" data-count="893.9" data-suffix=" mi">0</div>
+      <div class="nlabel">pares produzidos no ano</div>
+    </div>
+    <div class="card reveal-up">
+      <div class="num" data-count="10351">0</div>
+      <div class="nlabel">empresas calçadistas</div>
+    </div>
+    <div class="card reveal-up">
+      <div class="num" data-count="348691">0</div>
+      <div class="nlabel">empregos gerados</div>
+    </div>
+  </div>
+  <p class="lead" style="margin-top: 2.2rem" data-anim="fade">
+    <strong style="color: var(--brass)">84%</strong> de tudo o que o Brasil
+    produz é vendido aqui dentro, no próprio mercado nacional; só
+    <strong style="color: var(--brass)">16%</strong> vai para fora. É o oposto
+    do modelo asiático — China e países vizinhos fabricam pensando, acima de
+    tudo, em exportar.
+  </p>
+</section>
+
+<!-- radar -->
+<section data-chap="Brasil">
+  <div class="split">
+    <div>
+      <p class="kick" data-anim="fade">Benchmarking</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch"
+        data-split
+      >
+        Cada país compete numa frente diferente.
+      </h2>
+      <p class="lead" style="margin-top: 1.2rem; font-size: 0.95rem" data-anim="fade">
+        Pesquisadores pediram a grandes compradores internacionais que dessem
+        notas (de 0 a 5) a cada país fornecedor. O resultado mostra que cada um
+        se destaca em algo diferente:
+      </p>
+      <ul class="clean lead" style="margin-top: 1rem; font-size: 1rem">
+        <li data-anim="fade">China e Índia: ganham no preço baixo</li>
+        <li data-anim="fade">Itália: imbatível em design (nota 4,8)</li>
+        <li data-anim="fade">
+          Brasil: fica no meio-termo — boa qualidade e flexibilidade para
+          pedidos de qualquer tamanho
+        </li>
+        <li data-anim="fade">
+          O design é o calcanhar de aquiles brasileiro (nota 2,5)
+        </li>
+      </ul>
+    </div>
+    <div class="chartbox reveal-up"><canvas id="radarChart"></canvas></div>
+  </div>
+</section>
+<!-- exportações destino -->
+<section data-chap="Brasil">
+  <div class="split">
+    <div class="chartbox reveal-up"><canvas id="exportChart"></canvas></div>
+    <div>
+      <p class="kick" data-anim="fade">Destinos · 2010</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch"
+        data-split
+      >
+        Para onde vai o calçado brasileiro.
+      </h2>
+      <ul class="clean lead" style="margin-top: 1.5rem; font-size: 1rem">
+        <li data-anim="fade">
+          EUA: maior comprador, com 20,28% dos pares vendidos lá fora
+        </li>
+        <li data-anim="fade">
+          Paraguai: 10% dos pares — compra muito em quantidade, mas calçado
+          barato (pouco valor)
+        </li>
+        <li data-anim="fade">Argentina: 9,86% · Espanha: 6,71%</li>
+        <li data-anim="fade">
+          <strong style="color: var(--brassL)"
+            >No total, o Brasil exportou US$ 1,49 bilhão / 143 milhões de pares
+            em 2010</strong
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 3 — MIGRAÇÃO (big statement) -->
+<section data-chap="Migração" style="text-align: center; align-items: center">
+  <div
+    class="glow"
+    style="
+      width: 500px;
+      height: 500px;
+      background: var(--leather);
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.35;
+    "
+  ></div>
+  <p class="kick" data-anim="fade">Capítulo 03 — A grande migração</p>
+  <div
+    class="big-stat serif"
+    data-count="29.4"
+    data-suffix=" pp"
+    data-prefix="+"
+  >
+    +0 pp
+  </div>
+  <p
+    class="lead"
+    style="margin: 1.5rem auto 0; text-align: center"
+    data-anim="fade"
+  >
+    foi o ganho de participação do
+    <strong style="color: var(--brassL)">Nordeste</strong> no total de empregos
+    do setor entre 2000 e 2010. Os "pp" são
+    <strong style="color: var(--brassL)">pontos percentuais</strong>: a
+    participação saltou de 6,6% para 36% dos empregos do país — ou seja, subiu
+    29,4 pontos e quase quintuplicou. Enquanto isso, o Sudeste despencou — e São
+    Paulo, antes líder, foi justamente quem mais transferiu fábricas para outras
+    regiões.
+  </p>
+</section>
+
+<!-- migração chart -->
+<section data-chap="Migração">
+  <div class="split">
+    <div>
+      <p class="kick" data-anim="fade">2000 → 2010</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 13ch"
+        data-split
+      >
+        O Nordeste vira o novo polo do calçado.
+      </h2>
+      <p
+        class="lead"
+        style="margin-top: 1.5rem; font-size: 1rem"
+        data-anim="fade"
+      >
+        A região saltou de 6,59% para 36,02% dos empregos do setor no país em
+        apenas dez anos. E o movimento não parou no Sudeste: a região Sul, que
+        vinha crescendo, também começou a perder fábricas depois de 2005.
+      </p>
+    </div>
+    <div
+      class="chartbox reveal-up"
+      style="background: var(--bg2); border: 1px solid rgba(201, 145, 47, 0.2)"
+    >
+      <canvas id="migracaoChart"></canvas>
+    </div>
+  </div>
+</section>
+<!-- estados -->
+<section data-chap="Migração">
+  <div class="split">
+    <div class="chartbox reveal-up"><canvas id="estadosChart"></canvas></div>
+    <div>
+      <p class="kick" data-anim="fade">Quem produz · 2010</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 13ch"
+        data-split
+      >
+        Poucas empresas, muito emprego.
+      </h2>
+      <div class="num" data-count="181" style="margin-top: 1.2rem">0</div>
+      <p
+        class="lead"
+        style="font-size: 1rem; margin-top: 0.4rem"
+        data-anim="fade"
+      >
+        é a média de empregados por empresa no Ceará — a maior do Brasil. Isso
+        revela um perfil único: o estado tem poucas fábricas (apenas 3,39% do
+        total nacional), mas elas são enormes e respondem por 18,23% de todos os
+        empregos do setor no país. São empresas grandes e "verticalizadas", que
+        fazem várias etapas da produção dentro da mesma planta.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- plástico vs couro -->
+<section data-chap="Migração">
+  <div class="split">
+    <div>
+      <p class="kick" data-anim="fade">A vocação cearense</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 12ch"
+        data-split
+      >
+        Plástico, não couro.
+      </h2>
+      <div
+        class="num"
+        data-count="47.91"
+        data-suffix="%"
+        style="margin-top: 1.2rem"
+      >
+        0
+      </div>
+      <p
+        class="lead"
+        style="font-size: 1rem; margin-top: 0.4rem"
+        data-anim="fade"
+      >
+        de todo o emprego brasileiro em calçados de plástico está concentrado no
+        Ceará. Aqui está a grande diferença do estado: enquanto a Bahia faz 97%
+        de calçados de couro, o Ceará apostou nos sapatos injetados de plástico
+        (PVC, EVA, PU e TR) — como sandálias e chinelos. É um modelo de produção
+        mais automatizado, ligado à indústria química, e que quase não depende de
+        curtumes por perto.
+      </p>
+    </div>
+    <div class="chartbox reveal-up"><canvas id="doughnutChart"></canvas></div>
+  </div>
+</section>
+
+<!-- clusters BR -->
+<section data-chap="Migração">
+  <div class="split">
+    <div class="chartbox reveal-up"><canvas id="clustersChart"></canvas></div>
+    <div>
+      <p class="kick" data-anim="fade">Aglomerações nacionais</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch"
+        data-split
+      >
+        Cariri e Fortaleza entram no mapa.
+      </h2>
+      <ul class="clean lead" style="margin-top: 1.5rem; font-size: 1rem">
+        <li data-anim="fade">
+          Franca, Jaú, Divinópolis e Birigui (SP/MG) ainda têm o maior número de
+          fábricas
+        </li>
+        <li data-anim="fade">
+          Mas Cariri (CE) já aparece entre as maiores aglomerações do Brasil
+        </li>
+        <li data-anim="fade">
+          O Vale dos Sinos (RS) é o "supercluster": tem a cadeia mais completa,
+          do couro ao calçado pronto, tudo na mesma região
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- CHAPTER 4 — CEARÁ -->
+<section data-chap="Ceará">
+  <p class="kick" data-anim="fade">Capítulo 04 — O caso Ceará</p>
+  <h2
+    style="
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      max-width: 14ch;
+      margin-bottom: 2.5rem;
+    "
+    data-split
+  >
+    Por que o Ceará? Incentivos e custos baixos.
+  </h2>
+  <div class="grid g2">
+    <div class="card reveal-up">
+      <h3 style="color: var(--brassL)">🏛️ Incentivos do governo</h3>
+      <ul class="clean">
+        <li>FDI: o estado devolvia até 75% do imposto (ICMS) por 10 anos</li>
+        <li>PROVIN: empréstimos baratos para montar a fábrica</li>
+        <li>Terrenos e infraestrutura prontos para a empresa se instalar</li>
+        <li>Isenção de taxas das prefeituras</li>
+      </ul>
+    </div>
+    <div class="card reveal-up">
+      <h3 style="color: var(--brassL)">💰 Custos mais baratos</h3>
+      <ul class="clean">
+        <li>Salários menores: R$ 510 no CE contra R$ 800–1.200 no RS/SP</li>
+        <li>Muita gente disponível para trabalhar, sobretudo no interior</li>
+        <li>Porto de Pecém perto, facilitando a exportação</li>
+        <li>Energia elétrica mais barata nos distritos industriais</li>
+      </ul>
+    </div>
+  </div>
+  <p class="lead" style="margin-top: 2rem" data-anim="fade">
+    <strong style="color: var(--brass)">O resultado:</strong> grandes fabricantes
+    do Sul e Sudeste — como Grendene, Vulcabrás, Dakota e Paquetá — abriram
+    fábricas no Ceará para aproveitar esses benefícios.
+  </p>
+</section>
+
+<!-- CHAPTER 5 — RESULTADOS -->
+<section data-chap="Resultados">
+  <p class="kick" data-anim="fade">Capítulo 05 — Resultados no território</p>
+  <h2
+    style="
+      font-size: clamp(1.8rem, 4.5vw, 3.6rem);
+      max-width: 16ch;
+      margin-bottom: 3rem;
+    "
+    data-split
+  >
+    O impacto no chão de fábrica cearense.
+  </h2>
+  <div class="grid g3">
+    <div class="card reveal-up">
+      <div class="num" data-count="63547">0</div>
+      <div class="nlabel">empregos diretos (2010)</div>
+    </div>
+    <div class="card reveal-up">
+      <div class="num" data-count="351">0</div>
+      <div class="nlabel">empresas calçadistas no estado</div>
+    </div>
+    <div class="card reveal-up">
+      <div class="num" data-count="299" data-prefix="US$ " data-suffix=" mi">
+        0
+      </div>
+      <div class="nlabel">exportados — 20% do Brasil</div>
+    </div>
+  </div>
+  <p class="lead" style="margin-top: 2.2rem" data-anim="fade">
+    Em dez anos, o Ceará mais que dobrou seu peso: foi de
+    <strong style="color: var(--brass)">6,59%</strong> para
+    <strong style="color: var(--brass)">18,23%</strong> de todos os empregos do
+    setor no Brasil. As fábricas se espalharam por três grandes polos:
+    Fortaleza e região, Sobral e o Cariri (Crato/Juazeiro do Norte).
+  </p>
+</section>
+
+<!-- export CE -->
+<section data-chap="Resultados">
+  <div class="split">
+    <div class="chartbox reveal-up"><canvas id="exportCEChart"></canvas></div>
+    <div>
+      <p class="kick" data-anim="fade">Perfil exportador</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch"
+        data-split
+      >
+        O que sai do Ceará para o mundo.
+      </h2>
+      <ul class="clean lead" style="margin-top: 1.5rem; font-size: 1rem">
+        <li data-anim="fade">
+          Quase tudo é calçado de plástico/borracha (sandálias e chinelos)
+        </li>
+        <li data-anim="fade">
+          Principais destinos: Estados Unidos, Argentina e Europa
+        </li>
+        <li data-anim="fade">
+          O preço médio é de US$ 7,50 por par — mais baixo porque é calçado
+          popular e produzido em larga escala, e não por ser de pior qualidade
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- CHAPTER 6 — CONCLUSÕES -->
+<section data-chap="Conclusões">
+  <p class="kick" data-anim="fade">Capítulo 06 — Conclusões</p>
+  <h2
+    style="
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      max-width: 16ch;
+      margin-bottom: 2.5rem;
+    "
+    data-split
+  >
+    O que esse caso ensina sobre política industrial.
+  </h2>
+  <div class="grid g2">
+    <div class="card reveal-up" style="border-color: rgba(111, 146, 104, 0.5)">
+      <h3 style="color: var(--good)">✓ O que funcionou</h3>
+      <ul class="clean">
+        <li>Os incentivos fiscais realmente atraíram fábricas para o estado</li>
+        <li>Geração de muito emprego com carteira assinada no interior</li>
+        <li>Surgimento de novos polos calçadistas (Cariri, Sobral)</li>
+        <li>O Ceará passou a vender calçados para o mundo todo</li>
+      </ul>
+    </div>
+    <div class="card reveal-up" style="border-color: rgba(201, 106, 82, 0.5)">
+      <h3 style="color: var(--warn)">⚠ Limites e desafios</h3>
+      <ul class="clean">
+        <li>
+          A cadeia é incompleta: falta fornecedor local, quase tudo vem de fora
+        </li>
+        <li>Pouca inovação e design feitos no próprio estado</li>
+        <li>
+          Incentivos têm prazo de validade — e podem virar "guerra fiscal" entre
+          estados
+        </li>
+        <li>Salários baixos seguram o consumo da própria população</li>
+      </ul>
+    </div>
+  </div>
+  <p class="lead" style="margin-top: 2.2rem; max-width: 60ch" data-anim="fade">
+    <strong style="color: var(--brass)">A grande lição:</strong> trazer fábricas
+    com incentivos é só o começo. O desafio de verdade — e que dura anos — é
+    construir um ecossistema completo em volta delas, com fornecedores locais,
+    design próprio e capacidade de inovar. Sem isso, o polo continua dependente e
+    vulnerável.
+  </p>
+</section>
+
+<!-- OUTRO -->
+<section
+  data-chap="Fim"
+  style="text-align: center; align-items: center; min-height: 100vh"
+>
+  <div
+    class="glow"
+    style="
+      width: 600px;
+      height: 600px;
+      background: var(--leather);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.4;
+    "
+  ></div>
+  <h2
+    class="serif"
+    style="font-size: clamp(3rem, 9vw, 7rem); color: var(--cream)"
+  >
+    Obrigado.
+  </h2>
+  <div
+    style="
+      width: 120px;
+      height: 3px;
+      background: var(--brass);
+      margin: 2rem auto;
+    "
+  ></div>
+  <p class="lead" style="text-align: center; margin: 0 auto">
+    Panorama da Indústria Cearense de Calçados
+  </p>
+  <p style="color: var(--muted); font-size: 0.85rem; margin-top: 1.5rem">
+    Odorico de Moraes Eloy da Costa · IPECE nº 101 · 2012
+  </p>
+</section>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ---------- Lenis smooth scroll ---------- */
+var lenis;
+if(window.Lenis){
+  lenis=new Lenis({lerp:0.09,wheelMultiplier:1});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+}
+
+/* ---------- progress bar ---------- */
+gsap.to('#prog',{width:'100%',ease:'none',scrollTrigger:{trigger:'body',start:'top top',end:'bottom bottom',scrub:true}});
+
+/* ---------- chapter nav dots ---------- */
+var secs=document.querySelectorAll('section[data-chap]');
+var nav=document.getElementById('chapnav');
+var activeIdx=0;
+secs.forEach(function(s,i){
+  var a=document.createElement('a');a.title=s.dataset.chap;nav.appendChild(a);
+  a.addEventListener('click',function(){goToSection(i)});
+  a.style.cursor='pointer';
+  ScrollTrigger.create({trigger:s,start:'top 55%',end:'bottom 55%',
+    onToggle:function(self){if(self.isActive){activeIdx=i;updateBtns();document.querySelectorAll('#chapnav a').forEach(function(d){d.classList.remove('on')});a.classList.add('on')}}});
+});
+
+/* ---------- prev / next section buttons (same smooth scroll as wheel) ---------- */
+function goToSection(i){
+  i=Math.max(0,Math.min(secs.length-1,i));
+  var target=secs[i];
+  if(lenis){lenis.scrollTo(target,{offset:0,duration:1.2});}
+  else{target.scrollIntoView({behavior:'smooth'});}
+}
+function nearestIndex(){
+  // recalcula com base na posição atual (mais confiável que só o activeIdx)
+  var sc=window.scrollY||document.documentElement.scrollTop,best=0,bd=Infinity;
+  secs.forEach(function(s,i){var d=Math.abs(s.offsetTop-sc);if(d<bd){bd=d;best=i}});
+  return best;
+}
+function updateBtns(){
+  var i=activeIdx;
+  document.getElementById('btnUp').disabled=(i<=0);
+  document.getElementById('btnDown').disabled=(i>=secs.length-1);
+}
+document.getElementById('btnUp').addEventListener('click',function(){goToSection(nearestIndex()-1)});
+document.getElementById('btnDown').addEventListener('click',function(){goToSection(nearestIndex()+1)});
+updateBtns();
+
+/* ---------- hero intro ---------- */
+gsap.set('.hero-big .hl',{yPercent:120});
+var htl=gsap.timeline({delay:.3});
+htl.to('.hero-big .hl',{yPercent:0,duration:1.1,stagger:.12,ease:'power4.out'})
+   .from('#hero .kick',{opacity:0,y:20,duration:.7},'-=.9')
+   .from('.hero-sub',{opacity:0,y:24,duration:.8},'-=.6')
+   .from('.hero-meta',{opacity:0,duration:.8},'-=.5');
+/* ---------- split text into words & animate on scroll ---------- */
+document.querySelectorAll('[data-split]').forEach(function(el){
+  var words=el.textContent.trim().split(/\s+/);
+  el.innerHTML=words.map(function(w){return '<span class="word">'+w+'</span>'}).join(' ');
+  gsap.from(el.querySelectorAll('.word'),{
+    yPercent:110,opacity:0,duration:.8,stagger:.045,ease:'power3.out',
+    scrollTrigger:{trigger:el,start:'top 82%'}
+  });
+});
+
+/* ---------- generic fade-ins ---------- */
+document.querySelectorAll('[data-anim="fade"]').forEach(function(el){
+  gsap.from(el,{opacity:0,y:30,duration:.9,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+});
+
+/* ---------- reveal-up cards (stagger per section) ---------- */
+document.querySelectorAll('section').forEach(function(s){
+  var cards=s.querySelectorAll('.reveal-up');
+  if(!cards.length)return;
+  gsap.to(cards,{opacity:1,y:0,duration:.8,stagger:.1,ease:'power3.out',
+    scrollTrigger:{trigger:s,start:'top 70%'}});
+});
+
+/* ---------- animated counters ---------- */
+document.querySelectorAll('[data-count]').forEach(function(el){
+  var end=parseFloat(el.dataset.count),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';
+  var dec=(end%1!==0)?(el.dataset.count.split('.')[1]||'').length:0;
+  var o={v:0};
+  ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:function(){
+    gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:function(){
+      var n=o.v.toFixed(dec);
+      if(end>=1000)n=Math.round(o.v).toLocaleString('pt-BR');
+      else n=o.v.toFixed(dec).replace('.',',');
+      el.textContent=pre+n+suf;
+    }});
+  }});
+});
+/* ---------- walking shoe that drifts across as you scroll ---------- */
+var shoe=document.getElementById('shoe');
+gsap.set(shoe,{x:window.innerWidth*0.1,y:window.innerHeight*0.7,rotation:-10});
+var sxTl=gsap.timeline({scrollTrigger:{trigger:'body',start:'top top',end:'bottom bottom',scrub:1.2}});
+sxTl.to(shoe,{x:window.innerWidth*0.78,rotation:8,ease:'none'})
+    .to(shoe,{x:window.innerWidth*0.15,rotation:-8,ease:'none'})
+    .to(shoe,{x:window.innerWidth*0.82,rotation:10,ease:'none'})
+    .to(shoe,{x:window.innerWidth*0.4,rotation:0,ease:'none'});
+/* little bobbing + bigger near hero */
+gsap.to(shoe,{y:'-=18',rotation:'+=4',duration:.6,repeat:-1,yoyo:true,ease:'sine.inOut'});
+gsap.to(shoe,{fontSize:'2rem',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+
+/* footprints that stamp in periodically while scrolling */
+(function(){
+  var marks=['👣','👞','🥾','👟'],count=0;
+  if(lenis){
+    lenis.on('scroll',function(e){
+      count++;
+      if(count%14===0){
+        var p=document.createElement('div');p.className='print';
+        p.textContent=marks[Math.floor(Math.random()*marks.length)];
+        p.style.left=(10+Math.random()*80)+'vw';
+        p.style.top=(15+Math.random()*70)+'vh';
+        document.body.appendChild(p);
+        gsap.fromTo(p,{opacity:0,scale:.4,rotation:Math.random()*40-20},{opacity:.5,scale:1,duration:.5});
+        gsap.to(p,{opacity:0,duration:1.2,delay:.7,onComplete:function(){p.remove()}});
+      }
+    });
+  }
+})();
+/* ---------- charts: build once, animate when scrolled into view ---------- */
+Chart.defaults.font.family="'Inter',sans-serif";
+var built={};
+function buildChart(id,fn){
+  if(built[id])return;built[id]=true;fn();
+}
+function onView(id,fn){
+  var el=document.getElementById(id);if(!el)return;
+  ScrollTrigger.create({trigger:el,start:'top 80%',once:true,onEnter:function(){buildChart(id,fn)}});
+}
+
+onView('radarChart',function(){new Chart(document.getElementById('radarChart'),{type:'radar',data:{labels:['Qualidade','Preço','Tempo','Pontual.','Flex. peq.','Flex. grande','Design'],datasets:[{label:'China',data:[3.8,4.7,2.8,4.1,1.8,3.6,1.7],borderColor:'#8A7A68',backgroundColor:'rgba(138,122,104,.08)',borderWidth:2},{label:'Índia',data:[2,4.1,2.1,2.4,2.9,2.8,1.4],borderColor:'#B3A48F',backgroundColor:'rgba(179,164,143,.08)',borderWidth:2},{label:'Brasil',data:[3.9,2.8,3.5,3.6,3.5,3.7,2.5],borderColor:'#C9912F',backgroundColor:'rgba(201,145,47,.15)',borderWidth:2.5},{label:'Itália',data:[3.7,1.9,3.4,3.1,4.1,3,4.8],borderColor:'#7A4326',backgroundColor:'rgba(122,67,38,.08)',borderWidth:2}]},options:{responsive:true,animation:{duration:1400},scales:{r:{min:0,max:5,ticks:{stepSize:1,font:{size:9}},pointLabels:{font:{size:10}}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}}})});
+
+onView('exportChart',function(){new Chart(document.getElementById('exportChart'),{type:'bar',data:{labels:['EUA','Reino Unido','Argentina','Itália','França','Paraguai'],datasets:[{data:[22.93,12.04,11.25,6.89,3.97,3.10],backgroundColor:'#C9912F',borderRadius:6}]},options:{indexAxis:'y',responsive:true,animation:{duration:1400},plugins:{legend:{display:false},title:{display:true,text:'% do valor exportado',color:'#2B2018',font:{size:12}}},scales:{x:{display:false},y:{ticks:{font:{size:11},color:'#2B2018'}}}}})});
+
+onView('estadosChart',function(){new Chart(document.getElementById('estadosChart'),{type:'bar',data:{labels:['RS','SP','MG','CE','BA','PB'],datasets:[{label:'% empresas',data:[36.97,29.82,16.97,3.39,1.28,1.28],backgroundColor:'#8A7A68',borderRadius:5},{label:'% empregos',data:[33.95,16.15,8.88,18.23,11.28,3.94],backgroundColor:'#C9912F',borderRadius:5}]},options:{responsive:true,animation:{duration:1400},plugins:{legend:{position:'bottom',labels:{color:'#2B2018',font:{size:10}}}},scales:{y:{ticks:{color:'#2B2018'}},x:{ticks:{color:'#2B2018'}}}}})});
+onView('doughnutChart',function(){new Chart(document.getElementById('doughnutChart'),{type:'doughnut',data:{labels:['Couro','Plástico','Outros'],datasets:[{data:[52.90,41.02,6.05],backgroundColor:['#7A4326','#C9912F','#8A7A68'],borderWidth:3,borderColor:'#F1E7D5'}]},options:{responsive:true,cutout:'58%',animation:{duration:1400,animateRotate:true},plugins:{legend:{position:'bottom',labels:{color:'#2B2018',font:{size:11}}},title:{display:true,text:'Emprego calçadista no Ceará (%)',color:'#2B2018',font:{size:12}}}}})});
+
+onView('clustersChart',function(){new Chart(document.getElementById('clustersChart'),{type:'bar',data:{labels:['Franca','Divinópolis','Jaú','Birigui','Cariri-CE','Fortaleza-CE','V.Sinos'],datasets:[{data:[1800,1053,510,400,178,103,94],backgroundColor:'#C9912F',borderRadius:6}]},options:{indexAxis:'y',responsive:true,animation:{duration:1400},plugins:{legend:{display:false},title:{display:true,text:'Estabelecimentos por microrregião (2010)',color:'#2B2018',font:{size:12}}},scales:{x:{display:false},y:{ticks:{color:'#2B2018',font:{size:10}}}}}})});
+
+onView('migracaoChart',function(){new Chart(document.getElementById('migracaoChart'),{type:'line',data:{labels:['2000','2005','2010'],datasets:[{label:'Sudeste',data:[46.69,26.86,25.71],borderColor:'#8A7A68',backgroundColor:'rgba(138,122,104,.1)',fill:true,tension:.25},{label:'Sul',data:[43.58,44.90,37.21],borderColor:'#9C5E37',backgroundColor:'rgba(156,94,55,.1)',fill:true,tension:.25},{label:'Nordeste',data:[6.59,27.32,36.02],borderColor:'#C9912F',backgroundColor:'rgba(201,145,47,.15)',fill:true,borderWidth:3,tension:.25}]},options:{responsive:true,animation:{duration:1600},plugins:{legend:{position:'bottom',labels:{color:'#EAE0CC',font:{size:10}}},title:{display:true,text:'Participação regional no emprego (%)',color:'#EAE0CC',font:{size:12}}},scales:{y:{ticks:{color:'#8A7A68'},grid:{color:'rgba(255,255,255,.08)'}},x:{ticks:{color:'#EAE0CC'},grid:{display:false}}}}})});
+
+onView('exportCEChart',function(){new Chart(document.getElementById('exportCEChart'),{type:'bar',data:{labels:['Plástico','Couro','Têxtil','Outros'],datasets:[{data:[72,18,7,3],backgroundColor:['#C9912F','#7A4326','#8A7A68','#EAE0CC'],borderRadius:6}]},options:{responsive:true,animation:{duration:1400},plugins:{legend:{display:false},title:{display:true,text:'Exportações cearenses por tipo (%)',color:'#2B2018',font:{size:12}}},scales:{y:{ticks:{color:'#2B2018'}},x:{ticks:{color:'#2B2018'}}}}})});
+
+/* hide scroll hint after first scroll */
+window.addEventListener('scroll',function(){gsap.to('.scrollhint',{opacity:0,duration:.4})},{once:true});
+if(lenis)lenis.on('scroll',function(){gsap.to('.scrollhint',{opacity:0,duration:.4})});
+</script>
+</body>
+</html>
