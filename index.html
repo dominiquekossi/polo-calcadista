@@ -440,1617 +440,2647 @@
       ><button id="btnDown" aria-label="Próxima">&#8595;</button>
     </div>
     <div class="scrollhint"><span>scroll</span><span class="bar"></span></div>
-  </body>
-</html>
-<!-- SLIDE 1 CAPA (pinned, 3 phases) -->
-<section id="hero" data-chap="Início" style="min-height:300vh;padding:0">
-<div id="hero-pin" style="height:100vh;width:100%;position:relative;display:flex;flex-direction:column;justify-content:center;padding:14vh 8vw;overflow:hidden">
-<div class="glow" style="width:600px;height:600px;background:var(--leather);top:-10%;right:-5%"></div>
-<div class="glow" style="width:400px;height:400px;background:var(--brass);bottom:5%;left:-8%;opacity:.3"></div>
 
-<!-- Phase 1: título -->
-<div id="hp1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:14vh 8vw">
-<p class="kick">Seminário · Economia do Nordeste</p>
-<h1 class="hero-big">
-<span class="ln"><span class="hl">Panorama da</span></span>
-<span class="ln"><span class="hl">Indústria Cearense</span></span>
-<span class="ln"><span class="hl" style="color:var(--brass)">de Calçados</span></span>
-</h1>
-<p class="hero-sub" style="margin-top:2rem">Da relocalização da cadeia produtiva nacional à consolidação do Ceará como o principal polo calçadista do Nordeste</p>
-</div>
-
-<!-- Phase 2: nome + curso -->
-<div id="hp2" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14vh 8vw;opacity:0">
-<p class="kick" style="text-align:center">Apresentado por</p>
-<h2 style="font-size:clamp(2rem,5vw,4.5rem);color:var(--cream);text-align:center;max-width:18ch;margin-bottom:1rem">Kossi Sedjro Mawuli Dominique Houessou</h2>
-<p style="font-size:clamp(1rem,1.5vw,1.3rem);color:var(--brassL);font-style:italic;text-align:center">Engenharia de Computação</p>
-</div>
-
-<!-- Phase 3: referência -->
-<div id="hp3" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14vh 8vw;opacity:0">
-<p class="kick" style="text-align:center">Baseado em</p>
-<h2 style="font-size:clamp(1.5rem,3.5vw,2.8rem);color:var(--cream);text-align:center;max-width:22ch;margin-bottom:1rem">Odorico de Moraes Eloy da Costa</h2>
-<p style="font-size:clamp(.95rem,1.3vw,1.15rem);color:var(--creamS);text-align:center;max-width:36ch">"Panorama da Indústria Cearense de Calçados"</p>
-<p style="font-size:.85rem;color:var(--muted);margin-top:.8rem;text-align:center">IPECE Textos para Discussão nº 101 · agosto de 2012</p>
-</div>
-
-</div>
-</section>
-
-<!-- SLIDE 2 ROTEIRO -->
-<section data-chap="Roteiro">
-  <p class="kick" data-anim="fade">Roteiro da apresentação</p>
-  <h2
-    style="
-      font-size: clamp(2rem, 5vw, 4.2rem);
-      max-width: 16ch;
-      margin-bottom: 2.5rem;
-    "
-    data-split
-  >
-    Do cenário global ao chão de fábrica cearense
-  </h2>
-  <div class="grid g3">
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--brass)"
-        ><i class="fa-solid fa-globe" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">01 · Contexto mundial</h3>
-      <p>Reestruturação da indústria de calçados e cadeia produtiva global</p>
-    </div>
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--brass)"
-        ><i class="fa-solid fa-flag" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">02 · O Brasil no jogo</h3>
-      <p>Posição do país no ranking mundial e nas exportações</p>
-    </div>
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--leather)"
-        ><i class="fa-solid fa-truck" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">03 · A grande migração</h3>
-      <p>Relocalização do Sul/Sudeste em direção ao Nordeste (2000-2010)</p>
-    </div>
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--leather)"
-        ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">04 · O caso Ceará</h3>
-      <p>Incentivos fiscais, salários e a aposta no calçado de plástico</p>
-    </div>
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--brass)"
-        ><i class="fa-solid fa-chart-line" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">05 · Resultados no território</h3>
-      <p>Emprego, empresas e exportações cearenses</p>
-    </div>
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--leather)"
-        ><i class="fa-solid fa-award" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">06 · Conclusões</h3>
-      <p>O que esse caso ensina sobre política industrial regional</p>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 3 -->
-<section data-chap="Mundo">
-  <p class="kick" data-anim="fade">1. Contexto mundial</p>
-  <h2
-    style="font-size: clamp(1.8rem, 4.5vw, 3.8rem); max-width: 16ch"
-    data-split
-  >
-    Uma indústria tradicional em reestruturação
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div
-      class="card reveal-up"
-      style="background: var(--leather); border-color: transparent"
-    >
-      <span class="chip" style="background: var(--leatherD)"
-        ><i class="fa-solid fa-gears" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="color: var(--cream); margin-top: 0.8rem">
-        Desde os anos 1980
-      </h3>
-      <p style="color: var(--creamS)">
-        Novas máquinas, microeletrônica e o sistema CAD/CAM (1963) entram no
-        desenvolvimento do produto e na modelagem técnica, em busca de mais
-        automação e competitividade.
-      </p>
-      <hr style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0" />
-      <p style="color: var(--creamS)">
-        Mas a costura e a montagem do cabedal seguem intensivas em mão de obra,
-        sobretudo no calçado de couro. A automação avança mais nos injetados de
-        plástico.
-      </p>
-    </div>
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--brass)"
-        ><i class="fa-solid fa-shoe-prints" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">A resposta: diversificar a produção</h3>
-      <ul class="clean">
-        <li>
-          Confeccionar parte ou todo o cabedal em países de baixo custo de
-          produção, principalmente mão de obra
-        </li>
-        <li>
-          Descentralização das operações: a matriz retém apenas as funções
-          corporativas superiores
-        </li>
-        <li>
-          O valor gerado na produção e na comercialização se concentra em quem
-          coordena a cadeia
-        </li>
-        <li>
-          Empresas líderes passam a atuar como coordenadoras ("governadoras") da
-          cadeia de suprimentos
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SLIDE 4 -->
-<section data-chap="Mundo">
-  <p class="kick" data-anim="fade">1. Contexto mundial</p>
-  <h2
-    style="
-      font-size: clamp(1.8rem, 4.5vw, 3.8rem);
-      max-width: 18ch;
-      margin-bottom: 2rem;
-    "
-    data-split
-  >
-    Calçado se faz em aglomerados, em todo o mundo
-  </h2>
-  <p
-    class="lead"
-    data-anim="fade"
-    style="margin-bottom: 2rem; font-style: italic"
-  >
-    A produção tende a se concentrar geograficamente: empresas, fornecedores e
-    instituições compartilham conhecimento e infraestrutura comuns.
-  </p>
-  <div class="grid g3">
-    <div class="card reveal-up">
-      <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
-      <h3>México</h3>
-      <p>Guadalajara e León</p>
-    </div>
-    <div class="card reveal-up">
-      <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
-      <h3>Coreia do Sul</h3>
-      <p>Pusan: grandes empresas</p>
-    </div>
-    <div class="card reveal-up">
-      <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
-      <h3>Itália</h3>
-      <p>Brenta e Marche: pequenas empresas</p>
-    </div>
-    <div class="card reveal-up" style="border-color: var(--brass)">
-      <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
-      <h3>Brasil · RS</h3>
-      <p>Vale dos Sinos, o "supercluster"</p>
-    </div>
-    <div class="card reveal-up" style="border-color: var(--brass)">
-      <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
-      <h3>Brasil · SP / MG</h3>
-      <p>Franca, Jaú, Birigui e Divinópolis</p>
-    </div>
-    <div class="card reveal-up" style="border-color: var(--brass)">
-      <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
-      <h3>Brasil · CE</h3>
-      <p>Microrregiões de Fortaleza e Cariri</p>
-    </div>
-  </div>
-  <div class="note" data-anim="fade">
-    <span class="mark"
-      ><i class="fa-solid fa-industry" style="font-size: 0.7rem"></i
-    ></span>
-    <p>
-      A forma de organização não é única: predominância de pequenas empresas
-      (Itália, Taiwan, Espanha) versus estruturas com grandes empresas (Coreia
-      do Sul, China e Brasil).
-    </p>
-  </div>
-</section>
-<!-- SLIDE 5 -->
-<section data-chap="Mundo" style="text-align:center;align-items:center">
-  <p class="kick" data-anim="fade">1. Contexto mundial</p>
-  <h2
-    style="
-      font-size: clamp(1.8rem, 4.5vw, 3.8rem);
-      max-width: 14ch;
-      margin-bottom: 2.5rem;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    "
-    data-split
-  >
-    Quem comanda a cadeia, fica com o valor
-  </h2>
-  <div class="grid g4">
-    <div class="card reveal-up" style="text-align: center">
-      <span class="chip" style="background: var(--leather)"
-        ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="font-size: 1rem; margin-top: 0.6rem">Design &amp; P&amp;D</h3>
-      <p style="font-size: 0.8rem">Concepção do produto e tendências de moda</p>
-    </div>
-    <div class="card reveal-up" style="text-align: center">
-      <span class="chip" style="background: var(--leather)"
-        ><i class="fa-solid fa-award" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="font-size: 1rem; margin-top: 0.6rem">Marca &amp; Marketing</h3>
-      <p style="font-size: 0.8rem">Construção de marca, comunicação e varejo</p>
-    </div>
-    <div
-      class="card reveal-up"
-      style="
-        text-align: center;
-        border-color: var(--brass);
-        background: rgba(201, 145, 47, 0.12);
-      "
-    >
-      <span class="chip" style="background: var(--brass)"
-        ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="font-size: 1rem; margin-top: 0.6rem; color: var(--brassL)">
-        Manufatura
-      </h3>
-      <p style="font-size: 0.8rem">
-        Corte, costura e montagem: etapa que migra
-      </p>
-    </div>
-    <div class="card reveal-up" style="text-align: center">
-      <span class="chip" style="background: var(--leather)"
-        ><i class="fa-solid fa-shopping-cart" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="font-size: 1rem; margin-top: 0.6rem">
-        Logística &amp; Venda final
-      </h3>
-      <p style="font-size: 0.8rem">Distribuição até o consumidor</p>
-    </div>
-  </div>
-  <div class="note" data-anim="fade" style="margin-left:auto;margin-right:auto;text-align:left">
-    <span class="mark"
-      ><i class="fa-solid fa-link" style="font-size: 0.7rem"></i
-    ></span>
-    <p>
-      <strong>Cadeia comandada pelo comprador ("buyer-driven").</strong> Marcas
-      e varejistas concentram as funções superiores e se apropriam de parcela
-      maior do valor gerado; produtores ficam, sobretudo, com a manufatura.
-    </p>
-  </div>
-  <div class="note" data-anim="fade" style="margin-top: 1rem;margin-left:auto;margin-right:auto;text-align:left">
-    <span class="mark"
-      ><i class="fa-solid fa-quote-right" style="font-size: 0.7rem"></i
-    ></span>
-    <p style="font-style: italic">
-      <strong>Schmitz e Knorringa (2000):</strong> a presença de agentes de
-      comércio internacional fomenta aprendizado produtivo, mais visível nos
-      países onde a fabricação ainda é menos desenvolvida.
-    </p>
-  </div>
-</section>
-
-<!-- SLIDE 6 -->
-<section data-chap="Brasil">
-  <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
-  <h2
-    style="font-size: clamp(1.8rem, 4.5vw, 3.8rem); max-width: 14ch"
-    data-split
-  >
-    As raízes do calçado no Brasil
-  </h2>
-  <p
-    class="lead"
-    data-anim="fade"
-    style="font-style: italic; margin-bottom: 2rem"
-  >
-    Do couro de arreio à primeira grande exportação
-  </p>
-  <div class="grid g5">
-    <div class="card light reveal-up">
-      <div class="num" style="color: var(--leather)">1824</div>
-      <p style="margin-top: 0.6rem">
-        Imigrantes alemães chegam ao Vale dos Sinos (RS) trazendo a cultura do
-        artesanato em couro
-      </p>
-    </div>
-    <div class="card light reveal-up">
+    <!-- SLIDE 1 CAPA (pinned, 3 phases) -->
+    <section id="hero" data-chap="Início" style="min-height: 300vh; padding: 0">
       <div
-        class="num"
-        style="color: var(--leather); font-size: clamp(1.3rem, 2vw, 1.8rem)"
-      >
-        1864&ndash;1870
-      </div>
-      <p style="margin-top: 0.6rem">
-        Guerra do Paraguai impulsiona a confecção de arreios e o surgimento de
-        curtumes
-      </p>
-    </div>
-    <div class="card light reveal-up">
-      <div class="num" style="color: var(--leather)">1888</div>
-      <p style="margin-top: 0.6rem">
-        Nasce a primeira fábrica de calçados do Brasil, no Vale dos Sinos
-      </p>
-    </div>
-    <div class="card light reveal-up">
-      <div class="num" style="color: var(--leather)">1960s</div>
-      <p style="margin-top: 0.6rem">
-        Produção nacional atinge 80 milhões de pares/ano; surge a necessidade de
-        exportar
-      </p>
-    </div>
-    <div class="card light reveal-up">
-      <div class="num" style="color: var(--leather)">1968</div>
-      <p style="margin-top: 0.6rem">
-        Embarque das sandálias Franciscana (Strassburguer) para os EUA: marco da
-        exportação em larga escala
-      </p>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 7 -->
-<section data-chap="Brasil">
-  <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
-  <h2
-    style="
-      font-size: clamp(1.8rem, 4.5vw, 3.8rem);
-      max-width: 16ch;
-      margin-bottom: 2.5rem;
-    "
-    data-split
-  >
-    Brasil em 2010: um player mundial do calçado
-  </h2>
-  <div class="grid g3">
-    <div class="card reveal-up">
-      <div class="num" data-count="3" data-suffix="º">0</div>
-      <div class="nlabel">maior produtor mundial de calçados</div>
-    </div>
-    <div class="card reveal-up">
-      <div class="num" data-count="5" data-suffix="º">0</div>
-      <div class="nlabel">maior mercado consumidor</div>
-    </div>
-    <div class="card reveal-up">
-      <div class="num" data-count="6" data-suffix="º">0</div>
-      <div class="nlabel">maior exportador mundial</div>
-    </div>
-    <div class="card reveal-up">
-      <div class="num" data-count="893.9" data-suffix=" mi">0</div>
-      <div class="nlabel">pares produzidos no ano</div>
-    </div>
-    <div class="card reveal-up">
-      <div class="num" data-count="10351">0</div>
-      <div class="nlabel">empresas calçadistas no país</div>
-    </div>
-    <div class="card reveal-up">
-      <div class="num" data-count="348691">0</div>
-      <div class="nlabel">empregos gerados pelo setor</div>
-    </div>
-  </div>
-  <div class="note" data-anim="fade">
-    <span class="mark">%</span>
-    <p>
-      <strong>84%</strong> da produção atende ao mercado interno; apenas
-      <strong>16%</strong> é exportado: um padrão bem diferente do modelo
-      asiático, voltado à exportação.
-    </p>
-  </div>
-</section>
-
-<!-- SLIDE 8 -->
-<section data-chap="Brasil">
-  <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch" data-split>
-    Como os grandes compradores avaliam cada país
-  </h2>
-  <p
-    class="lead"
-    data-anim="fade"
-    style="font-style: italic; margin-bottom: 1.5rem"
-  >
-    Notas médias (0 a 5) atribuídas por 12 grandes compradores dos EUA e da
-    Europa, por atributo de fornecimento
-  </p>
-  <div class="split">
-    <div class="chartbox reveal-up"><canvas id="radarChart"></canvas></div>
-    <div>
-      <h3 style="color: var(--leather); margin-bottom: 0.8rem" data-anim="fade">
-        Leitura rápida
-      </h3>
-      <ul class="clean" style="color: var(--inkS)">
-        <li data-anim="fade">China e Índia: preço é o atrativo central</li>
-        <li data-anim="fade">Itália: design quase nota máxima (4,8)</li>
-        <li data-anim="fade">
-          Brasil: qualidade + flexibilidade, posição intermediária
-        </li>
-        <li data-anim="fade">Design ainda é ponto fraco do Brasil (2,5)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SLIDE 9 -->
-<section data-chap="Brasil">
-  <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
-  <h2
-    style="
-      font-size: clamp(1.8rem, 4.5vw, 3.8rem);
-      max-width: 16ch;
-      margin-bottom: 2rem;
-    "
-    data-split
-  >
-    Cada país compete numa frente diferente
-  </h2>
-  <div class="grid g3">
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
-      <div
+        id="hero-pin"
         style="
-          background: var(--muted);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
+          height: 100vh;
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 14vh 8vw;
+          overflow: hidden;
         "
       >
-        <span
-          class="chip"
+        <div
+          class="glow"
           style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.9rem;
+            width: 600px;
+            height: 600px;
+            background: var(--leather);
+            top: -10%;
+            right: -5%;
           "
-          ><i
-            class="fa-solid fa-hand-holding-dollar"
-            style="color: var(--brass)"
-          ></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem">China e Índia</strong>
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <p style="color: var(--creamS)">
-          Competem por preço: a Índia tem o preço como único grande atrativo. A
-          China soma pontualidade e flexibilidade para grandes pedidos.
-        </p>
-        <p
+        ></div>
+        <div
+          class="glow"
           style="
-            margin-top: 0.8rem;
-            font-style: italic;
-            font-weight: 600;
-            color: var(--muted);
-            font-size: 0.85rem;
+            width: 400px;
+            height: 400px;
+            background: var(--brass);
+            bottom: 5%;
+            left: -8%;
+            opacity: 0.3;
           "
-        >
-          Fraquezas: pequenos pedidos e design inovativo
-        </p>
-      </div>
-    </div>
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
-      <div
-        style="
-          background: var(--leather);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
-        "
-      >
-        <span
-          class="chip"
+        ></div>
+
+        <!-- Phase 1: título -->
+        <div
+          id="hp1"
           style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.9rem;
-          "
-          ><i class="fa-solid fa-award" style="color: var(--cream)"></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem">Itália</strong>
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <p style="color: var(--creamS)">
-          Lidera em design (4,8) e qualidade, ditando moda no mercado
-          internacional. Em contrapartida, tem o pior desempenho em preço entre
-          os quatro países.
-        </p>
-        <p
-          style="
-            margin-top: 0.8rem;
-            font-style: italic;
-            font-weight: 600;
-            color: var(--leather);
-            font-size: 0.85rem;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 14vh 8vw;
           "
         >
-          Aposta: diferenciação, não custo
-        </p>
-      </div>
-    </div>
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
-      <div
-        style="
-          background: var(--brass);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
-        "
-      >
-        <span
-          class="chip"
+          <p class="kick">Seminário · Economia do Nordeste</p>
+          <h1 class="hero-big">
+            <span class="ln"><span class="hl">Panorama da</span></span>
+            <span class="ln"><span class="hl">Indústria Cearense</span></span>
+            <span class="ln"
+              ><span class="hl" style="color: var(--brass)"
+                >de Calçados</span
+              ></span
+            >
+          </h1>
+          <p class="hero-sub" style="margin-top: 2rem">
+            Da relocalização da cadeia produtiva nacional à consolidação do
+            Ceará como o principal polo calçadista do Nordeste
+          </p>
+        </div>
+
+        <!-- Phase 2: nome + curso -->
+        <div
+          id="hp2"
           style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.9rem;
-          "
-          ><i
-            class="fa-solid fa-balance-scale"
-            style="color: var(--cream)"
-          ></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem">Brasil</strong>
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <p style="color: var(--creamS)">
-          Posição intermediária e diferenciada frente aos concorrentes
-          asiáticos: alia qualidade a elevada flexibilidade para pequenas e
-          grandes encomendas, com preço moderado e boa pontualidade.
-        </p>
-        <p
-          style="
-            margin-top: 0.8rem;
-            font-style: italic;
-            font-weight: 600;
-            color: var(--brass);
-            font-size: 0.85rem;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 14vh 8vw;
+            opacity: 0;
           "
         >
-          Limite: design ainda deixa a desejar
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 10 -->
-<section data-chap="Brasil">
-  <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch" data-split>
-    Para onde vai o calçado brasileiro (2010)
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox reveal-up"><canvas id="exportChart"></canvas></div>
-    <div>
-      <h3 style="color: var(--ink)" data-anim="fade">
-        <i
-          class="fa-solid fa-shopping-cart"
-          style="color: var(--leather); margin-right: 0.5rem"
-        ></i
-        >Em pares (quantidade)
-      </h3>
-      <ul class="clean" style="margin-top: 1rem">
-        <li data-anim="fade">
-          EUA: 20,28% dos pares exportados (1º lugar também em volume)
-        </li>
-        <li data-anim="fade">
-          Paraguai: 10,00%. Forte em quantidade, não em valor
-        </li>
-        <li data-anim="fade">Argentina: 9,86%</li>
-        <li data-anim="fade">Espanha: 6,71% · Reino Unido: 5,24%</li>
-        <li data-anim="fade">
-          <strong
-            >Total exportado em 2010: US$ 1,49 bilhão / 143 milhões de
-            pares</strong
+          <p class="kick" style="text-align: center">Apresentado por</p>
+          <h2
+            style="
+              font-size: clamp(2rem, 5vw, 4.5rem);
+              color: var(--cream);
+              text-align: center;
+              max-width: 18ch;
+              margin-bottom: 1rem;
+            "
           >
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+            Kossi Sedjro Mawuli Dominique Houessou
+          </h2>
+          <p
+            style="
+              font-size: clamp(1rem, 1.5vw, 1.3rem);
+              color: var(--brassL);
+              font-style: italic;
+              text-align: center;
+            "
+          >
+            Engenharia de Computação
+          </p>
+        </div>
 
-<!-- SLIDE 11 -->
-<section data-chap="Migração">
-  <p class="kick" data-anim="fade">3. A grande migração</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch" data-split>
-    Quem produz calçado no Brasil (2010)
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox reveal-up"><canvas id="estadosChart"></canvas></div>
-    <div
-      class="card reveal-up"
-      style="background: var(--leather); border-color: transparent"
-    >
-      <span class="chip" style="background: var(--leatherD)"
-        ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="color: var(--cream); margin-top: 0.8rem">
-        O destaque cearense
-      </h3>
-      <div class="num" data-count="181" style="margin-top: 0.6rem">0</div>
-      <p style="color: var(--creamS); margin-top: 0.4rem">
-        empregados por empresa em média no Ceará, a maior do país
-      </p>
-      <hr style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0" />
-      <p style="color: var(--creamS)">
-        Apenas 3,39% das empresas do país concentram 18,23% dos empregos: poucas
-        empresas, mas grandes e verticalizadas.
-      </p>
-    </div>
-  </div>
-</section>
+        <!-- Phase 3: referência -->
+        <div
+          id="hp3"
+          style="
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 14vh 8vw;
+            opacity: 0;
+          "
+        >
+          <p class="kick" style="text-align: center">Baseado em</p>
+          <h2
+            style="
+              font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+              color: var(--cream);
+              text-align: center;
+              max-width: 22ch;
+              margin-bottom: 1rem;
+            "
+          >
+            Odorico de Moraes Eloy da Costa
+          </h2>
+          <p
+            style="
+              font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+              color: var(--creamS);
+              text-align: center;
+              max-width: 36ch;
+            "
+          >
+            "Panorama da Indústria Cearense de Calçados"
+          </p>
+          <p
+            style="
+              font-size: 0.85rem;
+              color: var(--muted);
+              margin-top: 0.8rem;
+              text-align: center;
+            "
+          >
+            IPECE Textos para Discussão nº 101 · agosto de 2012
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- SLIDE 12 -->
-<section data-chap="Migração">
-  <p class="kick" data-anim="fade">3. A grande migração</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch" data-split>
-    Nem todo estado tem a cadeia completa
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox reveal-up"><canvas id="cadeiaChart"></canvas></div>
-    <div>
-      <h3 data-anim="fade" style="color: var(--leather)">
-        Curtume + Artefatos + Fabricação de calçados
-      </h3>
-      <div style="margin-top: 1.2rem">
-        <p data-anim="fade" style="font-size: 0.9rem; margin: 0.6rem 0">
-          <span
-            style="
-              display: inline-block;
-              width: 10px;
-              height: 10px;
-              background: var(--good);
-              border-radius: 50%;
-              margin-right: 0.6rem;
-            "
-          ></span
-          ><strong>Rio Grande do Sul:</strong> Cadeia completa: curtumes,
-          artefatos de couro e fabricação de calçados próximos
-        </p>
-        <p data-anim="fade" style="font-size: 0.9rem; margin: 0.6rem 0">
-          <span
-            style="
-              display: inline-block;
-              width: 10px;
-              height: 10px;
-              background: var(--good);
-              border-radius: 50%;
-              margin-right: 0.6rem;
-            "
-          ></span
-          ><strong>São Paulo:</strong> Também concentra fornecedores de couro e
-          artefatos perto das fábricas
-        </p>
-        <p data-anim="fade" style="font-size: 0.9rem; margin: 0.6rem 0">
-          <span
-            style="
-              display: inline-block;
-              width: 10px;
-              height: 10px;
-              background: var(--warn);
-              border-radius: 50%;
-              margin-right: 0.6rem;
-            "
-          ></span
-          ><strong>Ceará e Bahia:</strong> Emprego decorre quase só da
-          fabricação de calçados: pouca presença de curtume ou artefatos de
-          couro local
+    <!-- SLIDE 2 ROTEIRO -->
+    <section data-chap="Roteiro">
+      <p class="kick" data-anim="fade">Roteiro da apresentação</p>
+      <h2
+        style="
+          font-size: clamp(2rem, 5vw, 4.2rem);
+          max-width: 16ch;
+          margin-bottom: 2.5rem;
+        "
+        data-split
+      >
+        Do cenário global ao chão de fábrica cearense
+      </h2>
+      <div class="grid g3">
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--brass)"
+            ><i class="fa-solid fa-globe" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">01 · Contexto mundial</h3>
+          <p>
+            Reestruturação da indústria de calçados e cadeia produtiva global
+          </p>
+        </div>
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--brass)"
+            ><i class="fa-solid fa-flag" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">02 · O Brasil no jogo</h3>
+          <p>Posição do país no ranking mundial e nas exportações</p>
+        </div>
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--leather)"
+            ><i class="fa-solid fa-truck" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">03 · A grande migração</h3>
+          <p>Relocalização do Sul/Sudeste em direção ao Nordeste (2000-2010)</p>
+        </div>
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--leather)"
+            ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">04 · O caso Ceará</h3>
+          <p>Incentivos fiscais, salários e a aposta no calçado de plástico</p>
+        </div>
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--brass)"
+            ><i class="fa-solid fa-chart-line" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">05 · Resultados no território</h3>
+          <p>Emprego, empresas e exportações cearenses</p>
+        </div>
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--leather)"
+            ><i class="fa-solid fa-award" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">06 · Conclusões</h3>
+          <p>O que esse caso ensina sobre política industrial regional</p>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 3 -->
+    <section data-chap="Mundo">
+      <p class="kick" data-anim="fade">1. Contexto mundial</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4.5vw, 3.8rem); max-width: 16ch"
+        data-split
+      >
+        Uma indústria tradicional em reestruturação
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div
+          class="card reveal-up"
+          style="background: var(--leather); border-color: transparent"
+        >
+          <span class="chip" style="background: var(--leatherD)"
+            ><i class="fa-solid fa-gears" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="color: var(--cream); margin-top: 0.8rem">
+            Desde os anos 1980
+          </h3>
+          <p style="color: var(--creamS)">
+            Novas máquinas, microeletrônica e o sistema CAD/CAM (1963) entram no
+            desenvolvimento do produto e na modelagem técnica, em busca de mais
+            automação e competitividade.
+          </p>
+          <hr
+            style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0"
+          />
+          <p style="color: var(--creamS)">
+            Mas a costura e a montagem do cabedal seguem intensivas em mão de
+            obra, sobretudo no calçado de couro. A automação avança mais nos
+            injetados de plástico.
+          </p>
+        </div>
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--brass)"
+            ><i class="fa-solid fa-shoe-prints" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">
+            A resposta: diversificar a produção
+          </h3>
+          <ul class="clean">
+            <li>
+              Confeccionar parte ou todo o cabedal em países de baixo custo de
+              produção, principalmente mão de obra
+            </li>
+            <li>
+              Descentralização das operações: a matriz retém apenas as funções
+              corporativas superiores
+            </li>
+            <li>
+              O valor gerado na produção e na comercialização se concentra em
+              quem coordena a cadeia
+            </li>
+            <li>
+              Empresas líderes passam a atuar como coordenadoras
+              ("governadoras") da cadeia de suprimentos
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4 -->
+    <section data-chap="Mundo">
+      <p class="kick" data-anim="fade">1. Contexto mundial</p>
+      <h2
+        style="
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
+          max-width: 18ch;
+          margin-bottom: 2rem;
+        "
+        data-split
+      >
+        Calçado se faz em aglomerados, em todo o mundo
+      </h2>
+      <p
+        class="lead"
+        data-anim="fade"
+        style="margin-bottom: 2rem; font-style: italic"
+      >
+        A produção tende a se concentrar geograficamente: empresas, fornecedores
+        e instituições compartilham conhecimento e infraestrutura comuns.
+      </p>
+      <div class="grid g3">
+        <div class="card reveal-up">
+          <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
+          <h3>México</h3>
+          <p>Guadalajara e León</p>
+        </div>
+        <div class="card reveal-up">
+          <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
+          <h3>Coreia do Sul</h3>
+          <p>Pusan: grandes empresas</p>
+        </div>
+        <div class="card reveal-up">
+          <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
+          <h3>Itália</h3>
+          <p>Brenta e Marche: pequenas empresas</p>
+        </div>
+        <div class="card reveal-up" style="border-color: var(--brass)">
+          <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
+          <h3>Brasil · RS</h3>
+          <p>Vale dos Sinos, o "supercluster"</p>
+        </div>
+        <div class="card reveal-up" style="border-color: var(--brass)">
+          <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
+          <h3>Brasil · SP / MG</h3>
+          <p>Franca, Jaú, Birigui e Divinópolis</p>
+        </div>
+        <div class="card reveal-up" style="border-color: var(--brass)">
+          <i class="fa-solid fa-map-marker-alt" style="color: var(--brass)"></i>
+          <h3>Brasil · CE</h3>
+          <p>Microrregiões de Fortaleza e Cariri</p>
+        </div>
+      </div>
+      <div class="note" data-anim="fade">
+        <span class="mark"
+          ><i class="fa-solid fa-industry" style="font-size: 0.7rem"></i
+        ></span>
+        <p>
+          A forma de organização não é única: predominância de pequenas empresas
+          (Itália, Taiwan, Espanha) versus estruturas com grandes empresas
+          (Coreia do Sul, China e Brasil).
         </p>
       </div>
-      <div class="note" style="margin-top: 1.2rem">
+    </section>
+    <!-- SLIDE 5 -->
+    <section data-chap="Mundo" style="text-align: center; align-items: center">
+      <p class="kick" data-anim="fade">1. Contexto mundial</p>
+      <h2
+        style="
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
+          max-width: 14ch;
+          margin-bottom: 2.5rem;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        "
+        data-split
+      >
+        Quem comanda a cadeia, fica com o valor
+      </h2>
+      <div class="grid g4">
+        <div class="card reveal-up" style="text-align: center">
+          <span class="chip" style="background: var(--leather)"
+            ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="font-size: 1rem; margin-top: 0.6rem">
+            Design &amp; P&amp;D
+          </h3>
+          <p style="font-size: 0.8rem">
+            Concepção do produto e tendências de moda
+          </p>
+        </div>
+        <div class="card reveal-up" style="text-align: center">
+          <span class="chip" style="background: var(--leather)"
+            ><i class="fa-solid fa-award" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="font-size: 1rem; margin-top: 0.6rem">
+            Marca &amp; Marketing
+          </h3>
+          <p style="font-size: 0.8rem">
+            Construção de marca, comunicação e varejo
+          </p>
+        </div>
+        <div
+          class="card reveal-up"
+          style="
+            text-align: center;
+            border-color: var(--brass);
+            background: rgba(201, 145, 47, 0.12);
+          "
+        >
+          <span class="chip" style="background: var(--brass)"
+            ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="font-size: 1rem; margin-top: 0.6rem; color: var(--brassL)">
+            Manufatura
+          </h3>
+          <p style="font-size: 0.8rem">
+            Corte, costura e montagem: etapa que migra
+          </p>
+        </div>
+        <div class="card reveal-up" style="text-align: center">
+          <span class="chip" style="background: var(--leather)"
+            ><i
+              class="fa-solid fa-shopping-cart"
+              style="color: var(--cream)"
+            ></i
+          ></span>
+          <h3 style="font-size: 1rem; margin-top: 0.6rem">
+            Logística &amp; Venda final
+          </h3>
+          <p style="font-size: 0.8rem">Distribuição até o consumidor</p>
+        </div>
+      </div>
+      <div
+        class="note"
+        data-anim="fade"
+        style="margin-left: auto; margin-right: auto; text-align: left"
+      >
         <span class="mark"
-          ><i class="fa-solid fa-exclamation" style="font-size: 0.7rem"></i
+          ><i class="fa-solid fa-link" style="font-size: 0.7rem"></i
+        ></span>
+        <p>
+          <strong>Cadeia comandada pelo comprador ("buyer-driven").</strong>
+          Marcas e varejistas concentram as funções superiores e se apropriam de
+          parcela maior do valor gerado; produtores ficam, sobretudo, com a
+          manufatura.
+        </p>
+      </div>
+      <div
+        class="note"
+        data-anim="fade"
+        style="
+          margin-top: 1rem;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: left;
+        "
+      >
+        <span class="mark"
+          ><i class="fa-solid fa-quote-right" style="font-size: 0.7rem"></i
         ></span>
         <p style="font-style: italic">
-          <strong>Conclusão:</strong> a indústria cearense é "montadora":
-          depende de insumos (couro, solados, componentes) trazidos de outras
-          regiões ou da indústria química.
+          <strong>Schmitz e Knorringa (2000):</strong> a presença de agentes de
+          comércio internacional fomenta aprendizado produtivo, mais visível nos
+          países onde a fabricação ainda é menos desenvolvida.
         </p>
       </div>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 13 -->
-<section data-chap="Migração">
-  <p class="kick" data-anim="fade">3. A grande migração</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch" data-split>
-    A vocação cearense: plástico, não couro
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox reveal-up"><canvas id="doughnutChart"></canvas></div>
-    <div
-      class="card reveal-up"
-      style="background: var(--leather); border-color: transparent"
-    >
-      <div
-        class="num"
-        data-count="47.91"
-        data-suffix="%"
-        style="margin-top: 0.2rem"
-      >
-        0
-      </div>
-      <p style="color: var(--cream); font-weight: 600; margin-top: 0.4rem">
-        de todo o emprego brasileiro em calçados de plástico está no Ceará
-      </p>
-      <hr style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0" />
-      <ul class="clean">
-        <li style="color: var(--creamS)">
-          Compare: Bahia tem 97,40% do emprego em calçados de couro; Rio Grande
-          do Sul, 78,83%
-        </li>
-        <li style="color: var(--creamS)">
-          O Ceará segue caminho próprio: injetados de PVC, EVA, PU e TR
-        </li>
-        <li style="color: var(--creamS)">
-          Modelo mais automatizado, ligado à indústria química, e menos
-          dependente de curtume local
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- SLIDE 14 -->
-<section data-chap="Migração">
-  <p class="kick" data-anim="fade">3. A grande migração</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 16ch" data-split>
-    As maiores aglomerações calçadistas do Brasil
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox reveal-up"><canvas id="clustersChart"></canvas></div>
-    <div>
+    <!-- SLIDE 6 -->
+    <section data-chap="Brasil">
+      <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4.5vw, 3.8rem); max-width: 14ch"
+        data-split
+      >
+        As raízes do calçado no Brasil
+      </h2>
       <p
+        class="lead"
         data-anim="fade"
-        style="font-size: 0.95rem; font-weight: 600; color: var(--cream)"
+        style="font-style: italic; margin-bottom: 2rem"
       >
-        <i
-          class="fa-solid fa-shoe-prints"
-          style="color: var(--brass); margin-right: 0.5rem"
-        ></i
-        >Franca, Jaú, Divinópolis e Birigui concentram 72,5% da mão de obra do
-        setor no país.
+        Do couro de arreio à primeira grande exportação
       </p>
-      <ul class="clean" style="margin-top: 1.2rem">
-        <li data-anim="fade">
-          Cariri (CE) já figura entre as maiores aglomerações do país em número
-          de estabelecimentos
-        </li>
-        <li data-anim="fade">
-          Fortaleza (CE) também aparece entre os principais polos nacionais
-        </li>
-        <li data-anim="fade">
-          Vale dos Sinos perde participação relativa, mas mantém a cadeia mais
-          completa e integrada: por isso é chamado de "supercluster" (Schmitz,
-          1995)
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SLIDE 15 -->
-<section data-chap="Migração" style="text-align: center; align-items: center">
-  <div
-    class="glow"
-    style="
-      width: 500px;
-      height: 500px;
-      background: var(--leather);
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0.35;
-    "
-  ></div>
-  <p class="kick" data-anim="fade">3. A grande migração</p>
-  <h2
-    style="
-      font-size: clamp(1.8rem, 4.5vw, 3.8rem);
-      max-width: 18ch;
-      margin: 0 auto 1.5rem;
-    "
-    data-split
-  >
-    O Nordeste vira o novo polo do calçado brasileiro
-  </h2>
-  <div class="split" style="margin-top: 1.5rem">
-    <div class="chartbox dark reveal-up">
-      <canvas id="migracaoChart"></canvas>
-    </div>
-    <div class="card reveal-up">
-      <div
-        class="num"
-        style="font-size: clamp(2.5rem, 5vw, 3.5rem)"
-        data-count="29.4"
-        data-suffix=" pp"
-        data-prefix="+"
-      >
-        +0 pp
+      <div class="grid g5">
+        <div class="card light reveal-up">
+          <div class="num" style="color: var(--leather)">1824</div>
+          <p style="margin-top: 0.6rem">
+            Imigrantes alemães chegam ao Vale dos Sinos (RS) trazendo a cultura
+            do artesanato em couro
+          </p>
+        </div>
+        <div class="card light reveal-up">
+          <div
+            class="num"
+            style="color: var(--leather); font-size: clamp(1.3rem, 2vw, 1.8rem)"
+          >
+            1864&ndash;1870
+          </div>
+          <p style="margin-top: 0.6rem">
+            Guerra do Paraguai impulsiona a confecção de arreios e o surgimento
+            de curtumes
+          </p>
+        </div>
+        <div class="card light reveal-up">
+          <div class="num" style="color: var(--leather)">1888</div>
+          <p style="margin-top: 0.6rem">
+            Nasce a primeira fábrica de calçados do Brasil, no Vale dos Sinos
+          </p>
+        </div>
+        <div class="card light reveal-up">
+          <div class="num" style="color: var(--leather)">1960s</div>
+          <p style="margin-top: 0.6rem">
+            Produção nacional atinge 80 milhões de pares/ano; surge a
+            necessidade de exportar
+          </p>
+        </div>
+        <div class="card light reveal-up">
+          <div class="num" style="color: var(--leather)">1968</div>
+          <p style="margin-top: 0.6rem">
+            Embarque das sandálias Franciscana (Strassburguer) para os EUA:
+            marco da exportação em larga escala
+          </p>
+        </div>
       </div>
-      <p style="margin-top: 0.6rem">
-        é o ganho de participação do Nordeste no emprego do setor entre 2000 e
-        2010
+    </section>
+    <!-- SLIDE 7 -->
+    <section data-chap="Brasil">
+      <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
+      <h2
+        style="
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
+          max-width: 16ch;
+          margin-bottom: 2.5rem;
+        "
+        data-split
+      >
+        Brasil em 2010: um player mundial do calçado
+      </h2>
+      <div class="grid g3">
+        <div class="card reveal-up">
+          <div class="num" data-count="3" data-suffix="º">0</div>
+          <div class="nlabel">maior produtor mundial de calçados</div>
+        </div>
+        <div class="card reveal-up">
+          <div class="num" data-count="5" data-suffix="º">0</div>
+          <div class="nlabel">maior mercado consumidor</div>
+        </div>
+        <div class="card reveal-up">
+          <div class="num" data-count="6" data-suffix="º">0</div>
+          <div class="nlabel">maior exportador mundial</div>
+        </div>
+        <div class="card reveal-up">
+          <div class="num" data-count="893.9" data-suffix=" mi">0</div>
+          <div class="nlabel">pares produzidos no ano</div>
+        </div>
+        <div class="card reveal-up">
+          <div class="num" data-count="10351">0</div>
+          <div class="nlabel">empresas calçadistas no país</div>
+        </div>
+        <div class="card reveal-up">
+          <div class="num" data-count="348691">0</div>
+          <div class="nlabel">empregos gerados pelo setor</div>
+        </div>
+      </div>
+      <div class="note" data-anim="fade">
+        <span class="mark">%</span>
+        <p>
+          <strong>84%</strong> da produção atende ao mercado interno; apenas
+          <strong>16%</strong> é exportado: um padrão bem diferente do modelo
+          asiático, voltado à exportação.
+        </p>
+      </div>
+    </section>
+
+    <!-- SLIDE 8 -->
+    <section data-chap="Brasil">
+      <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch"
+        data-split
+      >
+        Como os grandes compradores avaliam cada país
+      </h2>
+      <p
+        class="lead"
+        data-anim="fade"
+        style="font-style: italic; margin-bottom: 1.5rem"
+      >
+        Notas médias (0 a 5) atribuídas por 12 grandes compradores dos EUA e da
+        Europa, por atributo de fornecimento
       </p>
-      <hr style="border-color: rgba(201, 145, 47, 0.3); margin: 1rem 0" />
-      <p>
-        O Sudeste teve a maior perda relativa. São Paulo foi o principal indutor
-        desse movimento (Garcia, 2001).
+      <div class="split">
+        <div class="chartbox reveal-up"><canvas id="radarChart"></canvas></div>
+        <div>
+          <h3
+            style="color: var(--leather); margin-bottom: 0.8rem"
+            data-anim="fade"
+          >
+            Leitura rápida
+          </h3>
+          <ul class="clean" style="color: var(--inkS)">
+            <li data-anim="fade">China e Índia: preço é o atrativo central</li>
+            <li data-anim="fade">Itália: design quase nota máxima (4,8)</li>
+            <li data-anim="fade">
+              Brasil: qualidade + flexibilidade, posição intermediária
+            </li>
+            <li data-anim="fade">Design ainda é ponto fraco do Brasil (2,5)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9 -->
+    <section data-chap="Brasil">
+      <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
+      <h2
+        style="
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
+          max-width: 16ch;
+          margin-bottom: 2rem;
+        "
+        data-split
+      >
+        Cada país compete numa frente diferente
+      </h2>
+      <div class="grid g3">
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--muted);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+              "
+              ><i
+                class="fa-solid fa-hand-holding-dollar"
+                style="color: var(--brass)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem"
+              >China e Índia</strong
+            >
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <p style="color: var(--creamS)">
+              Competem por preço: a Índia tem o preço como único grande
+              atrativo. A China soma pontualidade e flexibilidade para grandes
+              pedidos.
+            </p>
+            <p
+              style="
+                margin-top: 0.8rem;
+                font-style: italic;
+                font-weight: 600;
+                color: var(--muted);
+                font-size: 0.85rem;
+              "
+            >
+              Fraquezas: pequenos pedidos e design inovativo
+            </p>
+          </div>
+        </div>
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--leather);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+              "
+              ><i
+                class="fa-solid fa-award"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem">Itália</strong>
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <p style="color: var(--creamS)">
+              Lidera em design (4,8) e qualidade, ditando moda no mercado
+              internacional. Em contrapartida, tem o pior desempenho em preço
+              entre os quatro países.
+            </p>
+            <p
+              style="
+                margin-top: 0.8rem;
+                font-style: italic;
+                font-weight: 600;
+                color: var(--leather);
+                font-size: 0.85rem;
+              "
+            >
+              Aposta: diferenciação, não custo
+            </p>
+          </div>
+        </div>
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--brass);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+              "
+              ><i
+                class="fa-solid fa-balance-scale"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem">Brasil</strong>
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <p style="color: var(--creamS)">
+              Posição intermediária e diferenciada frente aos concorrentes
+              asiáticos: alia qualidade a elevada flexibilidade para pequenas e
+              grandes encomendas, com preço moderado e boa pontualidade.
+            </p>
+            <p
+              style="
+                margin-top: 0.8rem;
+                font-style: italic;
+                font-weight: 600;
+                color: var(--brass);
+                font-size: 0.85rem;
+              "
+            >
+              Limite: design ainda deixa a desejar
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 10 -->
+    <section data-chap="Brasil">
+      <p class="kick" data-anim="fade">2. O Brasil no jogo</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch"
+        data-split
+      >
+        Para onde vai o calçado brasileiro (2010)
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox reveal-up"><canvas id="exportChart"></canvas></div>
+        <div>
+          <h3 style="color: var(--ink)" data-anim="fade">
+            <i
+              class="fa-solid fa-shopping-cart"
+              style="color: var(--leather); margin-right: 0.5rem"
+            ></i
+            >Em pares (quantidade)
+          </h3>
+          <ul class="clean" style="margin-top: 1rem">
+            <li data-anim="fade">
+              EUA: 20,28% dos pares exportados (1º lugar também em volume)
+            </li>
+            <li data-anim="fade">
+              Paraguai: 10,00%. Forte em quantidade, não em valor
+            </li>
+            <li data-anim="fade">Argentina: 9,86%</li>
+            <li data-anim="fade">Espanha: 6,71% · Reino Unido: 5,24%</li>
+            <li data-anim="fade">
+              <strong
+                >Total exportado em 2010: US$ 1,49 bilhão / 143 milhões de
+                pares</strong
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11 -->
+    <section data-chap="Migração">
+      <p class="kick" data-anim="fade">3. A grande migração</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 14ch"
+        data-split
+      >
+        Quem produz calçado no Brasil (2010)
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox reveal-up">
+          <canvas id="estadosChart"></canvas>
+        </div>
+        <div
+          class="card reveal-up"
+          style="background: var(--leather); border-color: transparent"
+        >
+          <span class="chip" style="background: var(--leatherD)"
+            ><i class="fa-solid fa-industry" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="color: var(--cream); margin-top: 0.8rem">
+            O destaque cearense
+          </h3>
+          <div class="num" data-count="181" style="margin-top: 0.6rem">0</div>
+          <p style="color: var(--creamS); margin-top: 0.4rem">
+            empregados por empresa em média no Ceará, a maior do país
+          </p>
+          <hr
+            style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0"
+          />
+          <p style="color: var(--creamS)">
+            Apenas 3,39% das empresas do país concentram 18,23% dos empregos:
+            poucas empresas, mas grandes e verticalizadas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12 -->
+    <section data-chap="Migração">
+      <p class="kick" data-anim="fade">3. A grande migração</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch"
+        data-split
+      >
+        Nem todo estado tem a cadeia completa
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox reveal-up"><canvas id="cadeiaChart"></canvas></div>
+        <div>
+          <h3 data-anim="fade" style="color: var(--leather)">
+            Curtume + Artefatos + Fabricação de calçados
+          </h3>
+          <div style="margin-top: 1.2rem">
+            <p data-anim="fade" style="font-size: 0.9rem; margin: 0.6rem 0">
+              <span
+                style="
+                  display: inline-block;
+                  width: 10px;
+                  height: 10px;
+                  background: var(--good);
+                  border-radius: 50%;
+                  margin-right: 0.6rem;
+                "
+              ></span
+              ><strong>Rio Grande do Sul:</strong> Cadeia completa: curtumes,
+              artefatos de couro e fabricação de calçados próximos
+            </p>
+            <p data-anim="fade" style="font-size: 0.9rem; margin: 0.6rem 0">
+              <span
+                style="
+                  display: inline-block;
+                  width: 10px;
+                  height: 10px;
+                  background: var(--good);
+                  border-radius: 50%;
+                  margin-right: 0.6rem;
+                "
+              ></span
+              ><strong>São Paulo:</strong> Também concentra fornecedores de
+              couro e artefatos perto das fábricas
+            </p>
+            <p data-anim="fade" style="font-size: 0.9rem; margin: 0.6rem 0">
+              <span
+                style="
+                  display: inline-block;
+                  width: 10px;
+                  height: 10px;
+                  background: var(--warn);
+                  border-radius: 50%;
+                  margin-right: 0.6rem;
+                "
+              ></span
+              ><strong>Ceará e Bahia:</strong> Emprego decorre quase só da
+              fabricação de calçados: pouca presença de curtume ou artefatos de
+              couro local
+            </p>
+          </div>
+          <div class="note" style="margin-top: 1.2rem">
+            <span class="mark"
+              ><i class="fa-solid fa-exclamation" style="font-size: 0.7rem"></i
+            ></span>
+            <p style="font-style: italic">
+              <strong>Conclusão:</strong> a indústria cearense é "montadora":
+              depende de insumos (couro, solados, componentes) trazidos de
+              outras regiões ou da indústria química.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 13 -->
+    <section data-chap="Migração">
+      <p class="kick" data-anim="fade">3. A grande migração</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch"
+        data-split
+      >
+        A vocação cearense: plástico, não couro
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox reveal-up">
+          <canvas id="doughnutChart"></canvas>
+        </div>
+        <div
+          class="card reveal-up"
+          style="background: var(--leather); border-color: transparent"
+        >
+          <div
+            class="num"
+            data-count="47.91"
+            data-suffix="%"
+            style="margin-top: 0.2rem"
+          >
+            0
+          </div>
+          <p style="color: var(--cream); font-weight: 600; margin-top: 0.4rem">
+            de todo o emprego brasileiro em calçados de plástico está no Ceará
+          </p>
+          <hr
+            style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0"
+          />
+          <ul class="clean">
+            <li style="color: var(--creamS)">
+              Compare: Bahia tem 97,40% do emprego em calçados de couro; Rio
+              Grande do Sul, 78,83%
+            </li>
+            <li style="color: var(--creamS)">
+              O Ceará segue caminho próprio: injetados de PVC, EVA, PU e TR
+            </li>
+            <li style="color: var(--creamS)">
+              Modelo mais automatizado, ligado à indústria química, e menos
+              dependente de curtume local
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 14 -->
+    <section data-chap="Migração">
+      <p class="kick" data-anim="fade">3. A grande migração</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 16ch"
+        data-split
+      >
+        As maiores aglomerações calçadistas do Brasil
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox reveal-up">
+          <canvas id="clustersChart"></canvas>
+        </div>
+        <div>
+          <p
+            data-anim="fade"
+            style="font-size: 0.95rem; font-weight: 600; color: var(--cream)"
+          >
+            <i
+              class="fa-solid fa-shoe-prints"
+              style="color: var(--brass); margin-right: 0.5rem"
+            ></i
+            >Franca, Jaú, Divinópolis e Birigui concentram 72,5% da mão de obra
+            do setor no país.
+          </p>
+          <ul class="clean" style="margin-top: 1.2rem">
+            <li data-anim="fade">
+              Cariri (CE) já figura entre as maiores aglomerações do país em
+              número de estabelecimentos
+            </li>
+            <li data-anim="fade">
+              Fortaleza (CE) também aparece entre os principais polos nacionais
+            </li>
+            <li data-anim="fade">
+              Vale dos Sinos perde participação relativa, mas mantém a cadeia
+              mais completa e integrada: por isso é chamado de "supercluster"
+              (Schmitz, 1995)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 15 -->
+    <section
+      data-chap="Migração"
+      style="text-align: center; align-items: center"
+    >
+      <div
+        class="glow"
+        style="
+          width: 500px;
+          height: 500px;
+          background: var(--leather);
+          top: 20%;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0.35;
+        "
+      ></div>
+      <p class="kick" data-anim="fade">3. A grande migração</p>
+      <h2
+        style="
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
+          max-width: 18ch;
+          margin: 0 auto 1.5rem;
+        "
+        data-split
+      >
+        O Nordeste vira o novo polo do calçado brasileiro
+      </h2>
+      <div class="split" style="margin-top: 1.5rem">
+        <div class="chartbox dark reveal-up">
+          <canvas id="migracaoChart"></canvas>
+        </div>
+        <div class="card reveal-up">
+          <div
+            class="num"
+            style="font-size: clamp(2.5rem, 5vw, 3.5rem)"
+            data-count="29.4"
+            data-suffix=" pp"
+            data-prefix="+"
+          >
+            +0 pp
+          </div>
+          <p style="margin-top: 0.6rem">
+            é o ganho de participação do Nordeste no emprego do setor entre 2000
+            e 2010
+          </p>
+          <hr style="border-color: rgba(201, 145, 47, 0.3); margin: 1rem 0" />
+          <p>
+            O Sudeste teve a maior perda relativa. São Paulo foi o principal
+            indutor desse movimento (Garcia, 2001).
+          </p>
+          <p style="margin-top: 0.6rem">
+            O mesmo fenômeno parece começar a ocorrer também na região Sul, cujo
+            crescimento se inverte após 2005.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 16 -->
+    <section data-chap="Migração">
+      <p class="kick" data-anim="fade">3. A grande migração</p>
+      <h2
+        style="
+          font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+          max-width: 18ch;
+          margin-bottom: 2rem;
+        "
+        data-split
+      >
+        Por que migrar? Três blocos de fatores (Lages, 2003)
+      </h2>
+      <div class="grid g3">
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--muted);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+              "
+              ><i
+                class="fa-solid fa-globe"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem"
+              >Macroeconômico</strong
+            >
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <ul class="clean">
+              <li>Globalização e abertura comercial brasileira</li>
+              <li>
+                Crise do Mercosul: currency board argentino e perda de
+                competitividade
+              </li>
+              <li>
+                Avanço da concorrência chinesa e asiática no mercado interno e
+                externo
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--leather);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+              "
+              ><i
+                class="fa-solid fa-balance-scale"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem">Fiscal</strong>
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <ul class="clean">
+              <li>
+                Lei Kandir (LC 87/96) desarticulou a cadeia couro-calçado nas
+                regiões tradicionais
+              </li>
+              <li>
+                Incentivos fiscais agressivos do CE e BA, via SUDENE e renúncia
+                fiscal
+              </li>
+              <li>
+                Obras de infraestrutura para atrair novas plantas industriais
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--brass);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+              "
+              ><i
+                class="fa-solid fa-users"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem"
+              >Regional / estrutural</strong
+            >
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <ul class="clean">
+              <li>
+                Mão de obra abundante, barata e pouco qualificada para o setor
+              </li>
+              <li>Sindicatos inexistentes ou fracos nas novas localidades</li>
+              <li>
+                Proximidade geográfica com os mercados do Nafta e da União
+                Europeia
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 17 -->
+    <section data-chap="Ceará">
+      <p class="kick" data-anim="fade">4. O caso Ceará</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch"
+        data-split
+      >
+        Ceará: pioneirismo e a política do FDI
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div
+          class="card reveal-up"
+          style="background: var(--leather); border-color: transparent"
+        >
+          <span class="chip" style="background: var(--leatherD)"
+            ><i class="fa-solid fa-university" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="color: var(--cream); margin-top: 0.8rem">
+            Fundo de Desenvolvimento Industrial (FDI), desde 1979
+          </h3>
+          <ul class="clean" style="margin-top: 1rem">
+            <li style="color: var(--creamS)">
+              Sistema de pontuação definia o percentual de benefícios e o prazo
+              de vigência, conforme a relação custo-benefício para o Estado
+            </li>
+            <li style="color: var(--creamS)">
+              Calçados foi o 6º setor em investimento atraído (8,15%,
+              2001-2006), mas o 1º em geração de empregos (26,19%)
+            </li>
+            <li style="color: var(--creamS)">
+              Atraiu também empresas de médio/grande porte de fora do CE,
+              trazendo novas tecnologias de processo
+            </li>
+          </ul>
+        </div>
+        <div class="card reveal-up">
+          <span class="chip" style="background: var(--brass)"
+            ><i class="fa-solid fa-quote-right" style="color: var(--cream)"></i
+          ></span>
+          <h3 style="margin-top: 0.8rem">"Confiabilidade" acima do subsídio</h3>
+          <p style="margin-top: 0.6rem; font-size: 0.9rem">
+            Tendler (2000) entrevistou executivos sobre suas decisões de
+            relocalização:
+          </p>
+          <div
+            style="
+              background: var(--creamS);
+              border-radius: 8px;
+              padding: 1rem;
+              margin-top: 0.8rem;
+            "
+          >
+            <p
+              style="
+                font-style: italic;
+                font-size: 0.85rem;
+                color: var(--inkS);
+                line-height: 1.5;
+              "
+            >
+              "...ils faisaient souvent allusion au degré de 'confiabilidade' du
+              gouvernement de l'État [...] tous les États offraient à peu près
+              les mêmes subventions de toute façon. [...] ils parlaient de la
+              confiance qu'ils avaient que le gouvernement de l'État tiendrait
+              ses engagements."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 18 -->
+    <section data-chap="Ceará">
+      <p class="kick" data-anim="fade">4. O caso Ceará</p>
+      <h2
+        style="font-size: clamp(1.6rem, 3.5vw, 2.8rem); max-width: 18ch"
+        data-split
+      >
+        O custo do trabalho: salários da indústria calçadista (2010)
+      </h2>
+      <div class="chartbox reveal-up" style="margin-top: 2rem">
+        <canvas id="salariosChart"></canvas>
+      </div>
+      <div class="note" data-anim="fade">
+        <span class="mark"
+          ><i class="fa-solid fa-money-bill-wave" style="font-size: 0.7rem"></i
+        ></span>
+        <p>
+          <strong
+            >O Ceará paga o menor salário relativo entre os grandes
+            produtores</strong
+          >: cerca de 1,5 vez menor do que o salário médio do Rio Grande do Sul,
+          o maior produtor nacional.
+        </p>
+      </div>
+    </section>
+
+    <!-- SLIDE 19 -->
+    <section data-chap="Ceará">
+      <p class="kick" data-anim="fade">4. O caso Ceará</p>
+      <h2
+        style="
+          font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+          max-width: 18ch;
+          margin-bottom: 1.5rem;
+        "
+        data-split
+      >
+        A voz de quem migrou: pesquisa com empresas do Vale dos Sinos
+      </h2>
+      <p
+        class="lead"
+        data-anim="fade"
+        style="font-style: italic; margin-bottom: 2rem"
+      >
+        42 médias e grandes empresas calçadistas gaúchas: motivos "muito
+        importante + importante" somados (Costa e Fligenspan, 1997)
       </p>
-      <p style="margin-top: 0.6rem">
-        O mesmo fenômeno parece começar a ocorrer também na região Sul, cujo
-        crescimento se inverte após 2005.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 16 -->
-<section data-chap="Migração">
-  <p class="kick" data-anim="fade">3. A grande migração</p>
-  <h2
-    style="
-      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-      max-width: 18ch;
-      margin-bottom: 2rem;
-    "
-    data-split
-  >
-    Por que migrar? Três blocos de fatores (Lages, 2003)
-  </h2>
-  <div class="grid g3">
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
+      <div class="chartbox reveal-up"><canvas id="motivosChart"></canvas></div>
+    </section>
+
+    <!-- SLIDE 20 -->
+    <section data-chap="Resultados">
+      <p class="kick" data-anim="fade">5. Resultados no território</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 16ch"
+        data-split
+      >
+        Ceará assume a liderança calçadista do Nordeste
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox dark reveal-up">
+          <canvas id="ceVsPeChart"></canvas>
+        </div>
+        <div class="card reveal-up">
+          <div class="num" data-count="50.61" data-suffix="%">0</div>
+          <p style="margin-top: 0.4rem; font-weight: 600">
+            do emprego calçadista nordestino estava no Ceará em 2010 (era 22,07%
+            em 1985)
+          </p>
+          <hr style="border-color: rgba(201, 145, 47, 0.3); margin: 1rem 0" />
+          <p>
+            Pernambuco era o líder regional em 1985 (52,18%) e despenca para
+            1,59% em 2010: uma verdadeira "guerra fiscal" dentro do próprio
+            Nordeste, vencida pelo Ceará.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 21 -->
+    <section data-chap="Resultados">
+      <p class="kick" data-anim="fade">5. Resultados no território</p>
+      <h2
+        style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 16ch"
+        data-split
+      >
+        A explosão do emprego calçadista no Ceará
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox reveal-up">
+          <canvas id="empregosCEChart"></canvas>
+        </div>
+        <div
+          class="card reveal-up"
+          style="background: var(--leather); border-color: transparent"
+        >
+          <div class="num" data-count="4068" data-prefix="+" data-suffix="%">
+            0
+          </div>
+          <p style="color: var(--creamS); margin-top: 0.4rem">
+            de crescimento no emprego entre 1990 (1.525) e 2010 (63.562)
+          </p>
+          <hr
+            style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0"
+          />
+          <p style="color: var(--creamS)">
+            Mas o salário relativo caiu: de 2,00 salários mínimos (1995) para
+            1,27 (2010). Mesmo o setor crescendo, sinal de que a estratégia
+            competitiva continua baseada em baixo custo.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 22 -->
+    <section data-chap="Resultados">
+      <p class="kick" data-anim="fade">5. Resultados no território</p>
+      <h2
+        style="
+          font-size: clamp(1.8rem, 4vw, 3.2rem);
+          max-width: 14ch;
+          margin-bottom: 2rem;
+        "
+        data-split
+      >
+        Três modelos dentro do próprio Ceará
+      </h2>
+      <div class="grid g3">
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--leather);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+              "
+              ><i
+                class="fa-solid fa-industry"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem">Sobral</strong>
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <div class="num" style="font-size: 1.8rem">30,3%</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                color: var(--muted);
+                margin-top: 0.2rem;
+              "
+            >
+              do emprego estadual
+            </p>
+            <hr
+              style="border-color: rgba(201, 145, 47, 0.2); margin: 0.8rem 0"
+            />
+            <p>
+              Apenas 2 empresas (a Grendene) concentram quase um terço do
+              emprego calçadista do Estado: modelo de planta única, voltada a
+              calçados de plástico (74,5% local).
+            </p>
+          </div>
+        </div>
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--brass);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+              "
+              ><i
+                class="fa-solid fa-building"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem">Fortaleza</strong>
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <div class="num" style="font-size: 1.8rem">32,4%</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                color: var(--muted);
+                margin-top: 0.2rem;
+              "
+            >
+              do emprego estadual
+            </p>
+            <hr
+              style="border-color: rgba(201, 145, 47, 0.2); margin: 0.8rem 0"
+            />
+            <p>
+              Microrregião metropolitana: maior empregadora do Estado (20.599
+              empregos), com 105 empresas (29,9% do total). Inclui Horizonte,
+              forte em calçados de couro.
+            </p>
+          </div>
+        </div>
+        <div class="card reveal-up" style="padding: 0; overflow: hidden">
+          <div
+            style="
+              background: var(--muted);
+              padding: 0.8rem 1.2rem;
+              border-radius: 16px 16px 0 0;
+            "
+          >
+            <span
+              class="chip"
+              style="
+                background: var(--bg2);
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+              "
+              ><i
+                class="fa-solid fa-users"
+                style="color: var(--cream)"
+              ></i></span
+            ><strong style="color: #fff; margin-left: 0.6rem"
+              >Cariri / Juazeiro do Norte</strong
+            >
+          </div>
+          <div style="padding: 1.2rem 1.4rem">
+            <div class="num" style="font-size: 1.8rem">50,7%</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                color: var(--muted);
+                margin-top: 0.2rem;
+              "
+            >
+              das empresas do Estado
+            </p>
+            <hr
+              style="border-color: rgba(201, 145, 47, 0.2); margin: 0.8rem 0"
+            />
+            <p>
+              178 empresas no Cariri, com Juazeiro do Norte concentrando 156. O
+              único arranjo produtivo calçadista do Ceará, pulverizado e
+              especializado em materiais sintéticos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 23 -->
+    <section data-chap="Resultados">
+      <p class="kick" data-anim="fade">5. Resultados no território</p>
+      <h2
+        style="font-size: clamp(1.6rem, 3.5vw, 2.8rem); max-width: 16ch"
+        data-split
+      >
+        De coadjuvante a protagonista da pauta exportadora
+      </h2>
+      <div class="split" style="margin-top: 2rem">
+        <div class="chartbox reveal-up">
+          <canvas id="exportCEChart"></canvas>
+        </div>
+        <div
+          class="card reveal-up"
+          style="background: var(--leather); border-color: transparent"
+        >
+          <div class="num" style="font-size: clamp(2.5rem, 4vw, 3.5rem)">
+            1º
+          </div>
+          <p style="color: var(--cream); font-weight: 600; margin-top: 0.4rem">
+            lugar na pauta de exportações do Ceará em 2010: 31,78% do valor
+            total
+          </p>
+          <hr
+            style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0"
+          />
+          <p style="color: var(--creamS)">
+            Em 1990, o calçado representava apenas 0,52% das exportações
+            cearenses, atrás da castanha de caju, da lagosta e do couro.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 24 CONCLUSÕES -->
+    <section data-chap="Conclusões">
+      <p class="kick" data-anim="fade">6. Conclusões</p>
+      <h2
+        style="
+          font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+          max-width: 18ch;
+          margin-bottom: 2.5rem;
+        "
+        data-split
+      >
+        O que esse caso ensina sobre política industrial regional
+      </h2>
       <div
         style="
-          background: var(--muted);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          max-width: 72ch;
         "
       >
-        <span
-          class="chip"
+        <div
+          class="card reveal-up"
           style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.85rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            align-items: start;
           "
-          ><i class="fa-solid fa-globe" style="color: var(--cream)"></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem"
-          >Macroeconômico</strong
         >
+          <span
+            class="chip"
+            style="
+              background: var(--brass);
+              color: var(--bg);
+              font-weight: 700;
+              font-size: 0.9rem;
+              width: 36px;
+              height: 36px;
+            "
+            >1</span
+          >
+          <div>
+            <h3 style="font-size: 0.95rem">Cadeia comandada pelo comprador</h3>
+            <p>
+              O valor concentra-se em design, marca e marketing: etapas que
+              permaneceram nas regiões tradicionais (Sul/Sudeste).
+            </p>
+          </div>
+        </div>
+        <div
+          class="card reveal-up"
+          style="
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            align-items: start;
+          "
+        >
+          <span
+            class="chip"
+            style="
+              background: var(--brass);
+              color: var(--bg);
+              font-weight: 700;
+              font-size: 0.9rem;
+              width: 36px;
+              height: 36px;
+            "
+            >2</span
+          >
+          <div>
+            <h3 style="font-size: 0.95rem">
+              Relocalização parcial, não substituição
+            </h3>
+            <p>
+              O Nordeste herdou a manufatura mais simples; gerenciamento, design
+              e marketing continuam nas filiais de origem (Garcia, 2001).
+            </p>
+          </div>
+        </div>
+        <div
+          class="card reveal-up"
+          style="
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            align-items: start;
+          "
+        >
+          <span
+            class="chip"
+            style="
+              background: var(--brass);
+              color: var(--bg);
+              font-weight: 700;
+              font-size: 0.9rem;
+              width: 36px;
+              height: 36px;
+            "
+            >3</span
+          >
+          <div>
+            <h3 style="font-size: 0.95rem">
+              Ceará: incentivo fiscal + confiabilidade + mão de obra barata
+            </h3>
+            <p>
+              Combinação que atraiu grandes empresas e fez do Estado o líder
+              calçadista do Nordeste, superando até Pernambuco.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card reveal-up"
+          style="
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            align-items: start;
+          "
+        >
+          <span
+            class="chip"
+            style="
+              background: var(--brass);
+              color: var(--bg);
+              font-weight: 700;
+              font-size: 0.9rem;
+              width: 36px;
+              height: 36px;
+            "
+            >4</span
+          >
+          <div>
+            <h3 style="font-size: 0.95rem">
+              Um modelo próprio: o calçado de plástico
+            </h3>
+            <p>
+              Em vez de copiar o couro do Vale dos Sinos, o Ceará se
+              especializou em injetados: caminho mais automatizado e menos
+              dependente de cadeia local.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card reveal-up"
+          style="
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            align-items: start;
+          "
+        >
+          <span
+            class="chip"
+            style="
+              background: var(--brass);
+              color: var(--bg);
+              font-weight: 700;
+              font-size: 0.9rem;
+              width: 36px;
+              height: 36px;
+            "
+            >5</span
+          >
+          <div>
+            <h3 style="font-size: 0.95rem">
+              Transformação real da economia cearense
+            </h3>
+            <p>
+              O calçado passou de 0,52% (1990) a 1º lugar nas exportações do
+              Estado (2010), com Cariri/Juazeiro do Norte revelando um arranjo
+              produtivo local genuíno.
+            </p>
+          </div>
+        </div>
       </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <ul class="clean">
-          <li>Globalização e abertura comercial brasileira</li>
-          <li>
-            Crise do Mercosul: currency board argentino e perda de
-            competitividade
-          </li>
-          <li>
-            Avanço da concorrência chinesa e asiática no mercado interno e
-            externo
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
+    </section>
+
+    <!-- SLIDE 25 OBRIGADO -->
+    <section
+      data-chap="Fim"
+      style="text-align: center; align-items: center; min-height: 100vh"
+    >
       <div
+        class="glow"
+        style="
+          width: 600px;
+          height: 600px;
+          background: var(--leather);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0.4;
+        "
+      ></div>
+      <span
+        class="chip"
         style="
           background: var(--leather);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
+          width: 64px;
+          height: 64px;
+          font-size: 1.6rem;
+          margin-bottom: 1.5rem;
+        "
+        ><i class="fa-solid fa-shoe-prints" style="color: var(--cream)"></i
+      ></span>
+      <h2
+        style="
+          font-size: clamp(2.5rem, 7vw, 5rem);
+          color: var(--cream);
+          text-align: center;
         "
       >
-        <span
-          class="chip"
-          style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.85rem;
-          "
-          ><i
-            class="fa-solid fa-balance-scale"
-            style="color: var(--cream)"
-          ></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem">Fiscal</strong>
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <ul class="clean">
-          <li>
-            Lei Kandir (LC 87/96) desarticulou a cadeia couro-calçado nas
-            regiões tradicionais
+        Obrigado!
+      </h2>
+      <p
+        style="
+          font-size: 1.1rem;
+          font-style: italic;
+          color: var(--creamS);
+          margin-top: 1rem;
+        "
+      >
+        Perguntas e comentários são bem-vindos
+      </p>
+      <div
+        style="
+          margin-top: 2.5rem;
+          max-width: 44rem;
+          text-align: left;
+          background: var(--bg2);
+          border-radius: 16px;
+          padding: 1.6rem 2rem;
+        "
+      >
+        <h3
+          style="color: var(--brassL); font-size: 0.9rem; margin-bottom: 0.8rem"
+        >
+          Principais referências citadas
+        </h3>
+        <ul class="clean" style="font-size: 0.8rem; line-height: 1.6">
+          <li style="color: var(--creamS)">
+            GARCIA, R. (2001). Vantagens Competitivas de Empresas em
+            Aglomerações Industriais. Tese, IE/UNICAMP.
           </li>
-          <li>
-            Incentivos fiscais agressivos do CE e BA, via SUDENE e renúncia
-            fiscal
+          <li style="color: var(--creamS)">
+            SCHMITZ, H.; KNORRINGA, P. (2000). Learning from Global Buyers.
+            Journal of Development Studies, v.37, n.2.
           </li>
-          <li>Obras de infraestrutura para atrair novas plantas industriais</li>
+          <li style="color: var(--creamS)">
+            TENDLER, J. (2000). The Economic Wars Between the States. MIT/Bank
+            of the Northeast.
+          </li>
+          <li style="color: var(--creamS)">
+            LAGES, A. M. G. (2003). A Relocalização Espacial da Indústria de
+            Calçados de Couro Brasileira. Tese, UFRJ.
+          </li>
+          <li style="color: var(--creamS)">
+            COSTA, A. B.; FLIGENSPAN, F. B. (1997). Avaliação do movimento de
+            relocalização industrial. SEBRAE-RS/NETIT-UFRGS.
+          </li>
         </ul>
       </div>
-    </div>
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
-      <div
-        style="
-          background: var(--brass);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
-        "
-      >
-        <span
-          class="chip"
-          style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.85rem;
-          "
-          ><i class="fa-solid fa-users" style="color: var(--cream)"></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem"
-          >Regional / estrutural</strong
-        >
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <ul class="clean">
-          <li>
-            Mão de obra abundante, barata e pouco qualificada para o setor
-          </li>
-          <li>Sindicatos inexistentes ou fracos nas novas localidades</li>
-          <li>
-            Proximidade geográfica com os mercados do Nafta e da União Europeia
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SLIDE 17 -->
-<section data-chap="Ceará">
-  <p class="kick" data-anim="fade">4. O caso Ceará</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 15ch" data-split>
-    Ceará: pioneirismo e a política do FDI
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div
-      class="card reveal-up"
-      style="background: var(--leather); border-color: transparent"
-    >
-      <span class="chip" style="background: var(--leatherD)"
-        ><i class="fa-solid fa-university" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="color: var(--cream); margin-top: 0.8rem">
-        Fundo de Desenvolvimento Industrial (FDI), desde 1979
-      </h3>
-      <ul class="clean" style="margin-top: 1rem">
-        <li style="color: var(--creamS)">
-          Sistema de pontuação definia o percentual de benefícios e o prazo de
-          vigência, conforme a relação custo-benefício para o Estado
-        </li>
-        <li style="color: var(--creamS)">
-          Calçados foi o 6º setor em investimento atraído (8,15%, 2001-2006),
-          mas o 1º em geração de empregos (26,19%)
-        </li>
-        <li style="color: var(--creamS)">
-          Atraiu também empresas de médio/grande porte de fora do CE, trazendo
-          novas tecnologias de processo
-        </li>
-      </ul>
-    </div>
-    <div class="card reveal-up">
-      <span class="chip" style="background: var(--brass)"
-        ><i class="fa-solid fa-quote-right" style="color: var(--cream)"></i
-      ></span>
-      <h3 style="margin-top: 0.8rem">"Confiabilidade" acima do subsídio</h3>
-      <p style="margin-top: 0.6rem; font-size: 0.9rem">
-        Tendler (2000) entrevistou executivos sobre suas decisões de
-        relocalização:
+      <p style="color: var(--muted); font-size: 0.8rem; margin-top: 2rem">
+        IPECE Textos para Discussão nº 101 · agosto de 2012 · Odorico de Moraes
+        Eloy da Costa
       </p>
-      <div
-        style="
-          background: var(--creamS);
-          border-radius: 8px;
-          padding: 1rem;
-          margin-top: 0.8rem;
-        "
-      >
-        <p
-          style="
-            font-style: italic;
-            font-size: 0.85rem;
-            color: var(--inkS);
-            line-height: 1.5;
-          "
-        >
-          "...ils faisaient souvent allusion au degré de 'confiabilidade' du
-          gouvernement de l'État [...] tous les États offraient à peu près les
-          mêmes subventions de toute façon. [...] ils parlaient de la confiance
-          qu'ils avaient que le gouvernement de l'État tiendrait ses engagements."
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 18 -->
-<section data-chap="Ceará">
-  <p class="kick" data-anim="fade">4. O caso Ceará</p>
-  <h2
-    style="font-size: clamp(1.6rem, 3.5vw, 2.8rem); max-width: 18ch"
-    data-split
-  >
-    O custo do trabalho: salários da indústria calçadista (2010)
-  </h2>
-  <div class="chartbox reveal-up" style="margin-top: 2rem">
-    <canvas id="salariosChart"></canvas>
-  </div>
-  <div class="note" data-anim="fade">
-    <span class="mark"
-      ><i class="fa-solid fa-money-bill-wave" style="font-size: 0.7rem"></i
-    ></span>
-    <p>
-      <strong
-        >O Ceará paga o menor salário relativo entre os grandes
-        produtores</strong
-      >: cerca de 1,5 vez menor do que o salário médio do Rio Grande do Sul, o
-      maior produtor nacional.
-    </p>
-  </div>
-</section>
+    </section>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      var lenis;
+      if (window.Lenis) {
+        lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1 });
+        lenis.on("scroll", ScrollTrigger.update);
+        gsap.ticker.add(function (t) {
+          lenis.raf(t * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+      }
+      gsap.to("#prog", {
+        width: "100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      });
 
-<!-- SLIDE 19 -->
-<section data-chap="Ceará">
-  <p class="kick" data-anim="fade">4. O caso Ceará</p>
-  <h2
-    style="
-      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-      max-width: 18ch;
-      margin-bottom: 1.5rem;
-    "
-    data-split
-  >
-    A voz de quem migrou: pesquisa com empresas do Vale dos Sinos
-  </h2>
-  <p
-    class="lead"
-    data-anim="fade"
-    style="font-style: italic; margin-bottom: 2rem"
-  >
-    42 médias e grandes empresas calçadistas gaúchas: motivos "muito importante
-    + importante" somados (Costa e Fligenspan, 1997)
-  </p>
-  <div class="chartbox reveal-up"><canvas id="motivosChart"></canvas></div>
-</section>
+      var secs = document.querySelectorAll("section[data-chap]"),
+        nav = document.getElementById("chapnav"),
+        activeIdx = 0;
+      secs.forEach(function (s, i) {
+        var a = document.createElement("a");
+        a.title = s.dataset.chap;
+        nav.appendChild(a);
+        a.addEventListener("click", function () {
+          goToSection(i);
+        });
+        ScrollTrigger.create({
+          trigger: s,
+          start: "top 55%",
+          end: "bottom 55%",
+          onToggle: function (self) {
+            if (self.isActive) {
+              activeIdx = i;
+              updateBtns();
+              document.querySelectorAll("#chapnav a").forEach(function (d) {
+                d.classList.remove("on");
+              });
+              a.classList.add("on");
+            }
+          },
+        });
+      });
+      function goToSection(i) {
+        i = Math.max(0, Math.min(secs.length - 1, i));
+        if (lenis) lenis.scrollTo(secs[i], { offset: 0, duration: 1.2 });
+        else secs[i].scrollIntoView({ behavior: "smooth" });
+      }
+      function nearestIndex() {
+        var sc = window.scrollY || document.documentElement.scrollTop,
+          best = 0,
+          bd = Infinity;
+        secs.forEach(function (s, i) {
+          var d = Math.abs(s.offsetTop - sc);
+          if (d < bd) {
+            bd = d;
+            best = i;
+          }
+        });
+        return best;
+      }
+      function updateBtns() {
+        document.getElementById("btnUp").disabled = activeIdx <= 0;
+        document.getElementById("btnDown").disabled =
+          activeIdx >= secs.length - 1;
+      }
+      document.getElementById("btnUp").addEventListener("click", function () {
+        goToSection(nearestIndex() - 1);
+      });
+      document.getElementById("btnDown").addEventListener("click", function () {
+        goToSection(nearestIndex() + 1);
+      });
+      updateBtns();
 
-<!-- SLIDE 20 -->
-<section data-chap="Resultados">
-  <p class="kick" data-anim="fade">5. Resultados no território</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 16ch" data-split>
-    Ceará assume a liderança calçadista do Nordeste
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox dark reveal-up">
-      <canvas id="ceVsPeChart"></canvas>
-    </div>
-    <div class="card reveal-up">
-      <div class="num" data-count="50.61" data-suffix="%">0</div>
-      <p style="margin-top: 0.4rem; font-weight: 600">
-        do emprego calçadista nordestino estava no Ceará em 2010 (era 22,07% em
-        1985)
-      </p>
-      <hr style="border-color: rgba(201, 145, 47, 0.3); margin: 1rem 0" />
-      <p>
-        Pernambuco era o líder regional em 1985 (52,18%) e despenca para 1,59%
-        em 2010: uma verdadeira "guerra fiscal" dentro do próprio Nordeste,
-        vencida pelo Ceará.
-      </p>
-    </div>
-  </div>
-</section>
+      /* Hero pinned phases */
+      gsap.set(".hero-big .hl", { yPercent: 120 });
+      var htl = gsap.timeline({ delay: 0.3 });
+      htl
+        .to(".hero-big .hl", {
+          yPercent: 0,
+          duration: 1.1,
+          stagger: 0.12,
+          ease: "power4.out",
+        })
+        .from("#hp1 .kick", { opacity: 0, y: 20, duration: 0.7 }, "-=.9")
+        .from("#hp1 .hero-sub", { opacity: 0, y: 24, duration: 0.8 }, "-=.6");
 
-<!-- SLIDE 21 -->
-<section data-chap="Resultados">
-  <p class="kick" data-anim="fade">5. Resultados no território</p>
-  <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); max-width: 16ch" data-split>
-    A explosão do emprego calçadista no Ceará
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox reveal-up"><canvas id="empregosCEChart"></canvas></div>
-    <div
-      class="card reveal-up"
-      style="background: var(--leather); border-color: transparent"
-    >
-      <div class="num" data-count="4068" data-prefix="+" data-suffix="%">0</div>
-      <p style="color: var(--creamS); margin-top: 0.4rem">
-        de crescimento no emprego entre 1990 (1.525) e 2010 (63.562)
-      </p>
-      <hr style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0" />
-      <p style="color: var(--creamS)">
-        Mas o salário relativo caiu: de 2,00 salários mínimos (1995) para 1,27
-        (2010). Mesmo o setor crescendo, sinal de que a estratégia competitiva
-        continua baseada em baixo custo.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 22 -->
-<section data-chap="Resultados">
-  <p class="kick" data-anim="fade">5. Resultados no território</p>
-  <h2
-    style="
-      font-size: clamp(1.8rem, 4vw, 3.2rem);
-      max-width: 14ch;
-      margin-bottom: 2rem;
-    "
-    data-split
-  >
-    Três modelos dentro do próprio Ceará
-  </h2>
-  <div class="grid g3">
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
-      <div
-        style="
-          background: var(--leather);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
-        "
-      >
-        <span
-          class="chip"
-          style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.85rem;
-          "
-          ><i
-            class="fa-solid fa-industry"
-            style="color: var(--cream)"
-          ></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem">Sobral</strong>
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <div class="num" style="font-size: 1.8rem">30,3%</div>
-        <p style="font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem">
-          do emprego estadual
-        </p>
-        <hr style="border-color: rgba(201, 145, 47, 0.2); margin: 0.8rem 0" />
-        <p>
-          Apenas 2 empresas (a Grendene) concentram quase um terço do emprego
-          calçadista do Estado: modelo de planta única, voltada a calçados de
-          plástico (74,5% local).
-        </p>
-      </div>
-    </div>
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
-      <div
-        style="
-          background: var(--brass);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
-        "
-      >
-        <span
-          class="chip"
-          style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.85rem;
-          "
-          ><i
-            class="fa-solid fa-building"
-            style="color: var(--cream)"
-          ></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem">Fortaleza</strong>
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <div class="num" style="font-size: 1.8rem">32,4%</div>
-        <p style="font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem">
-          do emprego estadual
-        </p>
-        <hr style="border-color: rgba(201, 145, 47, 0.2); margin: 0.8rem 0" />
-        <p>
-          Microrregião metropolitana: maior empregadora do Estado (20.599
-          empregos), com 105 empresas (29,9% do total). Inclui Horizonte, forte
-          em calçados de couro.
-        </p>
-      </div>
-    </div>
-    <div class="card reveal-up" style="padding: 0; overflow: hidden">
-      <div
-        style="
-          background: var(--muted);
-          padding: 0.8rem 1.2rem;
-          border-radius: 16px 16px 0 0;
-        "
-      >
-        <span
-          class="chip"
-          style="
-            background: var(--bg2);
-            width: 36px;
-            height: 36px;
-            font-size: 0.85rem;
-          "
-          ><i class="fa-solid fa-users" style="color: var(--cream)"></i></span
-        ><strong style="color: #fff; margin-left: 0.6rem"
-          >Cariri / Juazeiro do Norte</strong
-        >
-      </div>
-      <div style="padding: 1.2rem 1.4rem">
-        <div class="num" style="font-size: 1.8rem">50,7%</div>
-        <p style="font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem">
-          das empresas do Estado
-        </p>
-        <hr style="border-color: rgba(201, 145, 47, 0.2); margin: 0.8rem 0" />
-        <p>
-          178 empresas no Cariri, com Juazeiro do Norte concentrando 156. O
-          único arranjo produtivo calçadista do Ceará, pulverizado e
-          especializado em materiais sintéticos.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      /* Pin the hero and cycle through 3 phases on scroll */
+      var heroTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "+=200%",
+          scrub: 1,
+          pin: "#hero-pin",
+          pinSpacing: false,
+        },
+      });
+      heroTl
+        .to("#hp1", { opacity: 0, y: -40, duration: 1, ease: "power2.in" })
+        .fromTo(
+          "#hp2",
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+        )
+        .to(
+          "#hp2",
+          { opacity: 0, y: -40, duration: 1, ease: "power2.in" },
+          "+=0.3",
+        )
+        .fromTo(
+          "#hp3",
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+        )
+        .to(
+          "#hp3",
+          { opacity: 0, y: -40, duration: 1, ease: "power2.in" },
+          "+=0.3",
+        );
 
-<!-- SLIDE 23 -->
-<section data-chap="Resultados">
-  <p class="kick" data-anim="fade">5. Resultados no território</p>
-  <h2
-    style="font-size: clamp(1.6rem, 3.5vw, 2.8rem); max-width: 16ch"
-    data-split
-  >
-    De coadjuvante a protagonista da pauta exportadora
-  </h2>
-  <div class="split" style="margin-top: 2rem">
-    <div class="chartbox reveal-up"><canvas id="exportCEChart"></canvas></div>
-    <div
-      class="card reveal-up"
-      style="background: var(--leather); border-color: transparent"
-    >
-      <div class="num" style="font-size: clamp(2.5rem, 4vw, 3.5rem)">1º</div>
-      <p style="color: var(--cream); font-weight: 600; margin-top: 0.4rem">
-        lugar na pauta de exportações do Ceará em 2010: 31,78% do valor total
-      </p>
-      <hr style="border-color: var(--leatherL); opacity: 0.4; margin: 1rem 0" />
-      <p style="color: var(--creamS)">
-        Em 1990, o calçado representava apenas 0,52% das exportações cearenses,
-        atrás da castanha de caju, da lagosta e do couro.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- SLIDE 24 CONCLUSÕES -->
-<section data-chap="Conclusões">
-  <p class="kick" data-anim="fade">6. Conclusões</p>
-  <h2
-    style="
-      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-      max-width: 18ch;
-      margin-bottom: 2.5rem;
-    "
-    data-split
-  >
-    O que esse caso ensina sobre política industrial regional
-  </h2>
-  <div
-    style="display: flex; flex-direction: column; gap: 1rem; max-width: 72ch"
-  >
-    <div
-      class="card reveal-up"
-      style="
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 1rem;
-        align-items: start;
-      "
-    >
-      <span
-        class="chip"
-        style="
-          background: var(--brass);
-          color: var(--bg);
-          font-weight: 700;
-          font-size: 0.9rem;
-          width: 36px;
-          height: 36px;
-        "
-        >1</span
-      >
-      <div>
-        <h3 style="font-size: 0.95rem">Cadeia comandada pelo comprador</h3>
-        <p>
-          O valor concentra-se em design, marca e marketing: etapas que
-          permaneceram nas regiões tradicionais (Sul/Sudeste).
-        </p>
-      </div>
-    </div>
-    <div
-      class="card reveal-up"
-      style="
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 1rem;
-        align-items: start;
-      "
-    >
-      <span
-        class="chip"
-        style="
-          background: var(--brass);
-          color: var(--bg);
-          font-weight: 700;
-          font-size: 0.9rem;
-          width: 36px;
-          height: 36px;
-        "
-        >2</span
-      >
-      <div>
-        <h3 style="font-size: 0.95rem">
-          Relocalização parcial, não substituição
-        </h3>
-        <p>
-          O Nordeste herdou a manufatura mais simples; gerenciamento, design e
-          marketing continuam nas filiais de origem (Garcia, 2001).
-        </p>
-      </div>
-    </div>
-    <div
-      class="card reveal-up"
-      style="
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 1rem;
-        align-items: start;
-      "
-    >
-      <span
-        class="chip"
-        style="
-          background: var(--brass);
-          color: var(--bg);
-          font-weight: 700;
-          font-size: 0.9rem;
-          width: 36px;
-          height: 36px;
-        "
-        >3</span
-      >
-      <div>
-        <h3 style="font-size: 0.95rem">
-          Ceará: incentivo fiscal + confiabilidade + mão de obra barata
-        </h3>
-        <p>
-          Combinação que atraiu grandes empresas e fez do Estado o líder
-          calçadista do Nordeste, superando até Pernambuco.
-        </p>
-      </div>
-    </div>
-    <div
-      class="card reveal-up"
-      style="
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 1rem;
-        align-items: start;
-      "
-    >
-      <span
-        class="chip"
-        style="
-          background: var(--brass);
-          color: var(--bg);
-          font-weight: 700;
-          font-size: 0.9rem;
-          width: 36px;
-          height: 36px;
-        "
-        >4</span
-      >
-      <div>
-        <h3 style="font-size: 0.95rem">
-          Um modelo próprio: o calçado de plástico
-        </h3>
-        <p>
-          Em vez de copiar o couro do Vale dos Sinos, o Ceará se especializou em
-          injetados: caminho mais automatizado e menos dependente de cadeia
-          local.
-        </p>
-      </div>
-    </div>
-    <div
-      class="card reveal-up"
-      style="
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 1rem;
-        align-items: start;
-      "
-    >
-      <span
-        class="chip"
-        style="
-          background: var(--brass);
-          color: var(--bg);
-          font-weight: 700;
-          font-size: 0.9rem;
-          width: 36px;
-          height: 36px;
-        "
-        >5</span
-      >
-      <div>
-        <h3 style="font-size: 0.95rem">
-          Transformação real da economia cearense
-        </h3>
-        <p>
-          O calçado passou de 0,52% (1990) a 1º lugar nas exportações do Estado
-          (2010), com Cariri/Juazeiro do Norte revelando um arranjo produtivo
-          local genuíno.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      document.querySelectorAll("[data-split]").forEach(function (el) {
+        var w = el.textContent.trim().split(/\s+/);
+        el.innerHTML = w
+          .map(function (x) {
+            return '<span class="word">' + x + "</span>";
+          })
+          .join(" ");
+        gsap.from(el.querySelectorAll(".word"), {
+          yPercent: 110,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.04,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 82%",
+            end: "top -20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+      document.querySelectorAll('[data-anim="fade"]').forEach(function (el) {
+        gsap.from(el, {
+          opacity: 0,
+          y: 28,
+          duration: 0.85,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 88%",
+            end: "top -20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+      document.querySelectorAll("section").forEach(function (s) {
+        var c = s.querySelectorAll(".reveal-up");
+        if (!c.length) return;
+        gsap.to(c, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: s,
+            start: "top 70%",
+            end: "top -30%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
 
-<!-- SLIDE 25 OBRIGADO -->
-<section
-  data-chap="Fim"
-  style="text-align: center; align-items: center; min-height: 100vh"
->
-  <div
-    class="glow"
-    style="
-      width: 600px;
-      height: 600px;
-      background: var(--leather);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.4;
-    "
-  ></div>
-  <span
-    class="chip"
-    style="
-      background: var(--leather);
-      width: 64px;
-      height: 64px;
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
-    "
-    ><i class="fa-solid fa-shoe-prints" style="color: var(--cream)"></i
-  ></span>
-  <h2
-    style="
-      font-size: clamp(2.5rem, 7vw, 5rem);
-      color: var(--cream);
-      text-align: center;
-    "
-  >
-    Obrigado!
-  </h2>
-  <p
-    style="
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--creamS);
-      margin-top: 1rem;
-    "
-  >
-    Perguntas e comentários são bem-vindos
-  </p>
-  <div
-    style="
-      margin-top: 2.5rem;
-      max-width: 44rem;
-      text-align: left;
-      background: var(--bg2);
-      border-radius: 16px;
-      padding: 1.6rem 2rem;
-    "
-  >
-    <h3 style="color: var(--brassL); font-size: 0.9rem; margin-bottom: 0.8rem">
-      Principais referências citadas
-    </h3>
-    <ul class="clean" style="font-size: 0.8rem; line-height: 1.6">
-      <li style="color: var(--creamS)">
-        GARCIA, R. (2001). Vantagens Competitivas de Empresas em Aglomerações
-        Industriais. Tese, IE/UNICAMP.
-      </li>
-      <li style="color: var(--creamS)">
-        SCHMITZ, H.; KNORRINGA, P. (2000). Learning from Global Buyers. Journal
-        of Development Studies, v.37, n.2.
-      </li>
-      <li style="color: var(--creamS)">
-        TENDLER, J. (2000). The Economic Wars Between the States. MIT/Bank of
-        the Northeast.
-      </li>
-      <li style="color: var(--creamS)">
-        LAGES, A. M. G. (2003). A Relocalização Espacial da Indústria de
-        Calçados de Couro Brasileira. Tese, UFRJ.
-      </li>
-      <li style="color: var(--creamS)">
-        COSTA, A. B.; FLIGENSPAN, F. B. (1997). Avaliação do movimento de
-        relocalização industrial. SEBRAE-RS/NETIT-UFRGS.
-      </li>
-    </ul>
-  </div>
-  <p style="color: var(--muted); font-size: 0.8rem; margin-top: 2rem">
-    IPECE Textos para Discussão nº 101 · agosto de 2012 · Odorico de Moraes Eloy
-    da Costa
-  </p>
-</section>
-<script>
-gsap.registerPlugin(ScrollTrigger);
-var lenis;if(window.Lenis){lenis=new Lenis({lerp:.09,wheelMultiplier:1});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}
-gsap.to('#prog',{width:'100%',ease:'none',scrollTrigger:{trigger:'body',start:'top top',end:'bottom bottom',scrub:true}});
+      document.querySelectorAll("[data-count]").forEach(function (el) {
+        var end = parseFloat(el.dataset.count),
+          pre = el.dataset.prefix || "",
+          suf = el.dataset.suffix || "",
+          dec =
+            end % 1 !== 0 ? (el.dataset.count.split(".")[1] || "").length : 0,
+          o = { v: 0 };
+        function render() {
+          var n;
+          if (end >= 1000) n = Math.round(o.v).toLocaleString("pt-BR");
+          else n = o.v.toFixed(dec).replace(".", ",");
+          el.textContent = pre + n + suf;
+        }
+        function run() {
+          o.v = 0;
+          render();
+          gsap.to(o, {
+            v: end,
+            duration: 1.8,
+            ease: "power2.out",
+            onUpdate: render,
+          });
+        }
+        ScrollTrigger.create({
+          trigger: el,
+          start: "top 85%",
+          onEnter: run,
+          onEnterBack: run,
+          onLeave: function () {
+            o.v = 0;
+            render();
+          },
+          onLeaveBack: function () {
+            o.v = 0;
+            render();
+          },
+        });
+      });
+      var shoe = document.getElementById("shoe");
+      gsap.set(shoe, {
+        x: innerWidth * 0.1,
+        y: innerHeight * 0.7,
+        rotation: -10,
+      });
+      var stl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1.2,
+        },
+      });
+      stl
+        .to(shoe, { x: innerWidth * 0.78, rotation: 8, ease: "none" })
+        .to(shoe, { x: innerWidth * 0.15, rotation: -8, ease: "none" })
+        .to(shoe, { x: innerWidth * 0.82, rotation: 10, ease: "none" })
+        .to(shoe, { x: innerWidth * 0.4, rotation: 0, ease: "none" });
+      gsap.to(shoe, {
+        y: "-=16",
+        rotation: "+=3",
+        duration: 0.6,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
 
-var secs=document.querySelectorAll('section[data-chap]'),nav=document.getElementById('chapnav'),activeIdx=0;
-secs.forEach(function(s,i){var a=document.createElement('a');a.title=s.dataset.chap;nav.appendChild(a);a.addEventListener('click',function(){goToSection(i)});ScrollTrigger.create({trigger:s,start:'top 55%',end:'bottom 55%',onToggle:function(self){if(self.isActive){activeIdx=i;updateBtns();document.querySelectorAll('#chapnav a').forEach(function(d){d.classList.remove('on')});a.classList.add('on')}}})});
-function goToSection(i){i=Math.max(0,Math.min(secs.length-1,i));if(lenis)lenis.scrollTo(secs[i],{offset:0,duration:1.2});else secs[i].scrollIntoView({behavior:'smooth'})}
-function nearestIndex(){var sc=window.scrollY||document.documentElement.scrollTop,best=0,bd=Infinity;secs.forEach(function(s,i){var d=Math.abs(s.offsetTop-sc);if(d<bd){bd=d;best=i}});return best}
-function updateBtns(){document.getElementById('btnUp').disabled=(activeIdx<=0);document.getElementById('btnDown').disabled=(activeIdx>=secs.length-1)}
-document.getElementById('btnUp').addEventListener('click',function(){goToSection(nearestIndex()-1)});
-document.getElementById('btnDown').addEventListener('click',function(){goToSection(nearestIndex()+1)});
-updateBtns();
+      (function () {
+        var marks = ["fa-shoe-prints", "fa-shoe-prints", "fa-shoe-prints"],
+          count = 0;
+        if (lenis)
+          lenis.on("scroll", function () {
+            count++;
+            if (count % 16 === 0) {
+              var p = document.createElement("i");
+              p.className =
+                "fa-solid fa-" +
+                marks[Math.floor(Math.random() * marks.length)] +
+                " print";
+              p.style.left = 10 + Math.random() * 80 + "vw";
+              p.style.top = 15 + Math.random() * 70 + "vh";
+              document.body.appendChild(p);
+              gsap.fromTo(
+                p,
+                { opacity: 0, scale: 0.4, rotation: Math.random() * 40 - 20 },
+                { opacity: 0.4, scale: 1, duration: 0.5 },
+              );
+              gsap.to(p, {
+                opacity: 0,
+                duration: 1.2,
+                delay: 0.7,
+                onComplete: function () {
+                  p.remove();
+                },
+              });
+            }
+          });
+      })();
 
-/* Hero pinned phases */
-gsap.set('.hero-big .hl',{yPercent:120});
-var htl=gsap.timeline({delay:.3});
-htl.to('.hero-big .hl',{yPercent:0,duration:1.1,stagger:.12,ease:'power4.out'})
-   .from('#hp1 .kick',{opacity:0,y:20,duration:.7},'-=.9')
-   .from('#hp1 .hero-sub',{opacity:0,y:24,duration:.8},'-=.6');
+      Chart.defaults.font.family = "'Inter',sans-serif";
+      var built = {};
+      function bld(id, fn) {
+        if (built[id]) return;
+        built[id] = true;
+        fn();
+      }
+      function onV(id, fn) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        ScrollTrigger.create({
+          trigger: el,
+          start: "top 80%",
+          once: true,
+          onEnter: function () {
+            bld(id, fn);
+          },
+        });
+      }
 
-/* Pin the hero and cycle through 3 phases on scroll */
-var heroTl=gsap.timeline({scrollTrigger:{trigger:'#hero',start:'top top',end:'+=200%',scrub:1,pin:'#hero-pin',pinSpacing:false}});
-heroTl.to('#hp1',{opacity:0,y:-40,duration:1,ease:'power2.in'})
-  .fromTo('#hp2',{opacity:0,y:40},{opacity:1,y:0,duration:1,ease:'power2.out'})
-  .to('#hp2',{opacity:0,y:-40,duration:1,ease:'power2.in'},'+=0.3')
-  .fromTo('#hp3',{opacity:0,y:40},{opacity:1,y:0,duration:1,ease:'power2.out'})
-  .to('#hp3',{opacity:0,y:-40,duration:1,ease:'power2.in'},'+=0.3');
+      onV("radarChart", function () {
+        new Chart(document.getElementById("radarChart"), {
+          type: "radar",
+          data: {
+            labels: [
+              "Qualidade",
+              "Preço",
+              "Tempo de resposta",
+              "Pontualidade",
+              "Flex. peq. encomendas",
+              "Flex. grandes encomendas",
+              "Design inovativo",
+            ],
+            datasets: [
+              {
+                label: "China",
+                data: [3.8, 4.7, 2.8, 4.1, 1.8, 3.6, 1.7],
+                borderColor: "#8A7A68",
+                backgroundColor: "rgba(138,122,104,.08)",
+                borderWidth: 2,
+              },
+              {
+                label: "Índia",
+                data: [2, 4.1, 2.1, 2.4, 2.9, 2.8, 1.4],
+                borderColor: "#B3A48F",
+                backgroundColor: "rgba(179,164,143,.08)",
+                borderWidth: 2,
+              },
+              {
+                label: "Brasil",
+                data: [3.9, 2.8, 3.5, 3.6, 3.5, 3.7, 2.5],
+                borderColor: "#C9912F",
+                backgroundColor: "rgba(201,145,47,.15)",
+                borderWidth: 2.5,
+              },
+              {
+                label: "Itália",
+                data: [3.7, 1.9, 3.4, 3.1, 4.1, 3, 4.8],
+                borderColor: "#7A4326",
+                backgroundColor: "rgba(122,67,38,.08)",
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1400 },
+            scales: {
+              r: {
+                min: 0,
+                max: 5,
+                ticks: { stepSize: 1, font: { size: 9 } },
+                pointLabels: { font: { size: 9 } },
+              },
+            },
+            plugins: {
+              legend: { position: "bottom", labels: { font: { size: 10 } } },
+            },
+          },
+        });
+      });
 
-document.querySelectorAll('[data-split]').forEach(function(el){var w=el.textContent.trim().split(/\s+/);el.innerHTML=w.map(function(x){return'<span class="word">'+x+'</span>'}).join(' ');gsap.from(el.querySelectorAll('.word'),{yPercent:110,opacity:0,duration:.8,stagger:.04,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 82%',end:'top -20%',toggleActions:'play none none reverse'}})});
-document.querySelectorAll('[data-anim="fade"]').forEach(function(el){gsap.from(el,{opacity:0,y:28,duration:.85,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',end:'top -20%',toggleActions:'play none none reverse'}})});
-document.querySelectorAll('section').forEach(function(s){var c=s.querySelectorAll('.reveal-up');if(!c.length)return;gsap.to(c,{opacity:1,y:0,duration:.8,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 70%',end:'top -30%',toggleActions:'play none none reverse'}})});
+      onV("exportChart", function () {
+        new Chart(document.getElementById("exportChart"), {
+          type: "bar",
+          data: {
+            labels: [
+              "EUA",
+              "Reino Unido",
+              "Argentina",
+              "Itália",
+              "França",
+              "Paraguai",
+            ],
+            datasets: [
+              {
+                data: [22.93, 12.04, 11.25, 6.89, 3.97, 3.1],
+                backgroundColor: "#C9912F",
+                borderRadius: 5,
+              },
+            ],
+          },
+          options: {
+            indexAxis: "y",
+            responsive: true,
+            animation: { duration: 1200 },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "Participação no valor exportado (%)",
+                color: "#2B2018",
+                font: { size: 12 },
+              },
+            },
+            scales: {
+              x: { display: false },
+              y: { ticks: { color: "#2B2018", font: { size: 11 } } },
+            },
+          },
+        });
+      });
 
-document.querySelectorAll('[data-count]').forEach(function(el){var end=parseFloat(el.dataset.count),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',dec=(end%1!==0)?(el.dataset.count.split('.')[1]||'').length:0,o={v:0};function render(){var n;if(end>=1000)n=Math.round(o.v).toLocaleString('pt-BR');else n=o.v.toFixed(dec).replace('.',',');el.textContent=pre+n+suf}function run(){o.v=0;render();gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:render})}ScrollTrigger.create({trigger:el,start:'top 85%',onEnter:run,onEnterBack:run,onLeave:function(){o.v=0;render()},onLeaveBack:function(){o.v=0;render()}})});
-var shoe=document.getElementById('shoe');gsap.set(shoe,{x:innerWidth*.1,y:innerHeight*.7,rotation:-10});
-var stl=gsap.timeline({scrollTrigger:{trigger:'body',start:'top top',end:'bottom bottom',scrub:1.2}});stl.to(shoe,{x:innerWidth*.78,rotation:8,ease:'none'}).to(shoe,{x:innerWidth*.15,rotation:-8,ease:'none'}).to(shoe,{x:innerWidth*.82,rotation:10,ease:'none'}).to(shoe,{x:innerWidth*.4,rotation:0,ease:'none'});
-gsap.to(shoe,{y:'-=16',rotation:'+=3',duration:.6,repeat:-1,yoyo:true,ease:'sine.inOut'});
+      onV("estadosChart", function () {
+        new Chart(document.getElementById("estadosChart"), {
+          type: "bar",
+          data: {
+            labels: ["RS", "SP", "MG", "CE", "BA", "PB"],
+            datasets: [
+              {
+                label: "% das empresas",
+                data: [36.97, 29.82, 16.97, 3.39, 1.28, 1.28],
+                backgroundColor: "#8A7A68",
+                borderRadius: 4,
+              },
+              {
+                label: "% dos empregos",
+                data: [33.95, 16.15, 8.88, 18.23, 11.28, 3.94],
+                backgroundColor: "#C9912F",
+                borderRadius: 4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1200 },
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { color: "#2B2018", font: { size: 10 } },
+              },
+            },
+            scales: {
+              y: { ticks: { color: "#2B2018" } },
+              x: { ticks: { color: "#2B2018" } },
+            },
+          },
+        });
+      });
 
-(function(){var marks=['fa-shoe-prints','fa-shoe-prints','fa-shoe-prints'],count=0;if(lenis)lenis.on('scroll',function(){count++;if(count%16===0){var p=document.createElement('i');p.className='fa-solid fa-'+marks[Math.floor(Math.random()*marks.length)]+' print';p.style.left=(10+Math.random()*80)+'vw';p.style.top=(15+Math.random()*70)+'vh';document.body.appendChild(p);gsap.fromTo(p,{opacity:0,scale:.4,rotation:Math.random()*40-20},{opacity:.4,scale:1,duration:.5});gsap.to(p,{opacity:0,duration:1.2,delay:.7,onComplete:function(){p.remove()}})}})})();
+      onV("cadeiaChart", function () {
+        new Chart(document.getElementById("cadeiaChart"), {
+          type: "bar",
+          data: {
+            labels: ["RS", "SP", "CE", "BA"],
+            datasets: [
+              {
+                data: [32.01, 17.3, 16.69, 10.11],
+                backgroundColor: "#C9912F",
+                borderRadius: 5,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1200 },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "Participação no emprego total da cadeia (%)",
+                color: "#2B2018",
+                font: { size: 12 },
+              },
+            },
+            scales: {
+              y: { ticks: { color: "#2B2018" } },
+              x: { ticks: { color: "#2B2018" } },
+            },
+          },
+        });
+      });
 
-Chart.defaults.font.family="'Inter',sans-serif";var built={};
-function bld(id,fn){if(built[id])return;built[id]=true;fn()}
-function onV(id,fn){var el=document.getElementById(id);if(!el)return;ScrollTrigger.create({trigger:el,start:'top 80%',once:true,onEnter:function(){bld(id,fn)}})}
+      onV("doughnutChart", function () {
+        new Chart(document.getElementById("doughnutChart"), {
+          type: "doughnut",
+          data: {
+            labels: [
+              "Calçados de couro",
+              "Calçados de plástico",
+              "Outros materiais",
+            ],
+            datasets: [
+              {
+                data: [52.9, 41.02, 6.05],
+                backgroundColor: ["#7A4326", "#C9912F", "#8A7A68"],
+                borderWidth: 3,
+                borderColor: "#F1E7D5",
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            cutout: "55%",
+            animation: { duration: 1400, animateRotate: true },
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { color: "#2B2018", font: { size: 10 } },
+              },
+              title: {
+                display: true,
+                text: "Composição do emprego calçadista no Ceará (%)",
+                color: "#2B2018",
+                font: { size: 12 },
+              },
+            },
+          },
+        });
+      });
 
-onV('radarChart',function(){new Chart(document.getElementById('radarChart'),{type:'radar',data:{labels:['Qualidade','Preço','Tempo de resposta','Pontualidade','Flex. peq. encomendas','Flex. grandes encomendas','Design inovativo'],datasets:[{label:'China',data:[3.8,4.7,2.8,4.1,1.8,3.6,1.7],borderColor:'#8A7A68',backgroundColor:'rgba(138,122,104,.08)',borderWidth:2},{label:'Índia',data:[2,4.1,2.1,2.4,2.9,2.8,1.4],borderColor:'#B3A48F',backgroundColor:'rgba(179,164,143,.08)',borderWidth:2},{label:'Brasil',data:[3.9,2.8,3.5,3.6,3.5,3.7,2.5],borderColor:'#C9912F',backgroundColor:'rgba(201,145,47,.15)',borderWidth:2.5},{label:'Itália',data:[3.7,1.9,3.4,3.1,4.1,3,4.8],borderColor:'#7A4326',backgroundColor:'rgba(122,67,38,.08)',borderWidth:2}]},options:{responsive:true,animation:{duration:1400},scales:{r:{min:0,max:5,ticks:{stepSize:1,font:{size:9}},pointLabels:{font:{size:9}}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}}})}); 
+      onV("clustersChart", function () {
+        new Chart(document.getElementById("clustersChart"), {
+          type: "bar",
+          data: {
+            labels: [
+              "Franca-SP",
+              "Divinópolis-MG",
+              "Jaú-SP",
+              "Birigui-SP",
+              "Cariri-CE",
+              "Fortaleza-CE",
+              "Vale dos Sinos-RS",
+            ],
+            datasets: [
+              {
+                data: [1800, 1053, 510, 400, 178, 103, 94],
+                backgroundColor: "#C9912F",
+                borderRadius: 5,
+              },
+            ],
+          },
+          options: {
+            indexAxis: "y",
+            responsive: true,
+            animation: { duration: 1200 },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "Número de estabelecimentos por microrregião (2010)",
+                color: "#2B2018",
+                font: { size: 11 },
+              },
+            },
+            scales: {
+              x: { display: false },
+              y: { ticks: { color: "#2B2018", font: { size: 10 } } },
+            },
+          },
+        });
+      });
+      onV("migracaoChart", function () {
+        new Chart(document.getElementById("migracaoChart"), {
+          type: "line",
+          data: {
+            labels: ["2000", "2005", "2010"],
+            datasets: [
+              {
+                label: "Sudeste",
+                data: [46.69, 26.86, 25.71],
+                borderColor: "#8A7A68",
+                backgroundColor: "rgba(138,122,104,.08)",
+                fill: true,
+                tension: 0.25,
+              },
+              {
+                label: "Sul",
+                data: [43.58, 44.9, 37.21],
+                borderColor: "#9C5E37",
+                backgroundColor: "rgba(156,94,55,.08)",
+                fill: true,
+                tension: 0.25,
+              },
+              {
+                label: "Nordeste",
+                data: [6.59, 27.32, 36.02],
+                borderColor: "#C9912F",
+                backgroundColor: "rgba(201,145,47,.12)",
+                fill: true,
+                borderWidth: 3,
+                tension: 0.25,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1400 },
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { color: "#EAE0CC", font: { size: 10 } },
+              },
+              title: {
+                display: true,
+                text: "Participação regional no emprego do setor calçadista (%)",
+                color: "#EAE0CC",
+                font: { size: 11 },
+              },
+            },
+            scales: {
+              y: {
+                ticks: { color: "#8A7A68" },
+                grid: { color: "rgba(255,255,255,.08)" },
+              },
+              x: { ticks: { color: "#EAE0CC" }, grid: { display: false } },
+            },
+          },
+        });
+      });
 
-onV('exportChart',function(){new Chart(document.getElementById('exportChart'),{type:'bar',data:{labels:['EUA','Reino Unido','Argentina','Itália','França','Paraguai'],datasets:[{data:[22.93,12.04,11.25,6.89,3.97,3.10],backgroundColor:'#C9912F',borderRadius:5}]},options:{indexAxis:'y',responsive:true,animation:{duration:1200},plugins:{legend:{display:false},title:{display:true,text:'Participação no valor exportado (%)',color:'#2B2018',font:{size:12}}},scales:{x:{display:false},y:{ticks:{color:'#2B2018',font:{size:11}}}}}})});
+      onV("salariosChart", function () {
+        new Chart(document.getElementById("salariosChart"), {
+          type: "bar",
+          data: {
+            labels: [
+              "RJ",
+              "SC",
+              "RS",
+              "SP",
+              "PB",
+              "PE",
+              "RN",
+              "BA",
+              "MG",
+              "CE",
+            ],
+            datasets: [
+              {
+                data: [
+                  1.91, 1.82, 1.71, 1.7, 1.5, 1.49, 1.35, 1.31, 1.27, 1.27,
+                ],
+                backgroundColor: "#C9912F",
+                borderRadius: 5,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1200 },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "Salários mínimos pagos em média (2010)",
+                color: "#2B2018",
+                font: { size: 12 },
+              },
+            },
+            scales: {
+              y: { display: false },
+              x: { ticks: { color: "#2B2018", font: { size: 11 } } },
+            },
+          },
+        });
+      });
 
-onV('estadosChart',function(){new Chart(document.getElementById('estadosChart'),{type:'bar',data:{labels:['RS','SP','MG','CE','BA','PB'],datasets:[{label:'% das empresas',data:[36.97,29.82,16.97,3.39,1.28,1.28],backgroundColor:'#8A7A68',borderRadius:4},{label:'% dos empregos',data:[33.95,16.15,8.88,18.23,11.28,3.94],backgroundColor:'#C9912F',borderRadius:4}]},options:{responsive:true,animation:{duration:1200},plugins:{legend:{position:'bottom',labels:{color:'#2B2018',font:{size:10}}}},scales:{y:{ticks:{color:'#2B2018'}},x:{ticks:{color:'#2B2018'}}}}})});
+      onV("motivosChart", function () {
+        new Chart(document.getElementById("motivosChart"), {
+          type: "bar",
+          data: {
+            labels: [
+              "Incentivos fiscais",
+              "Salários menores na região",
+              "Impostos menores",
+              "Melhorar a rentabilidade",
+              "Concorrência com asiáticos",
+              "Terreno mais barato",
+              "Crédito mais fácil",
+            ],
+            datasets: [
+              {
+                data: [41, 39, 38, 32, 31, 30, 29],
+                backgroundColor: function (ctx) {
+                  return ctx.dataIndex < 2 ? "#7A4326" : "#C9912F";
+                },
+                borderRadius: 5,
+              },
+            ],
+          },
+          options: {
+            indexAxis: "y",
+            responsive: true,
+            animation: { duration: 1200 },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "Motivos para migração (nº de empresas que responderam)",
+                color: "#2B2018",
+                font: { size: 11 },
+              },
+            },
+            scales: {
+              x: { display: false },
+              y: { ticks: { color: "#2B2018", font: { size: 10 } } },
+            },
+          },
+        });
+      });
 
-onV('cadeiaChart',function(){new Chart(document.getElementById('cadeiaChart'),{type:'bar',data:{labels:['RS','SP','CE','BA'],datasets:[{data:[32.01,17.30,16.69,10.11],backgroundColor:'#C9912F',borderRadius:5}]},options:{responsive:true,animation:{duration:1200},plugins:{legend:{display:false},title:{display:true,text:'Participação no emprego total da cadeia (%)',color:'#2B2018',font:{size:12}}},scales:{y:{ticks:{color:'#2B2018'}},x:{ticks:{color:'#2B2018'}}}}})});
+      onV("ceVsPeChart", function () {
+        new Chart(document.getElementById("ceVsPeChart"), {
+          type: "line",
+          data: {
+            labels: ["1985", "1990", "1995", "2000", "2005", "2010"],
+            datasets: [
+              {
+                label: "Ceará",
+                data: [22.07, 20.91, 43.8, 56.5, 54.26, 50.61],
+                borderColor: "#C9912F",
+                backgroundColor: "rgba(201,145,47,.12)",
+                fill: true,
+                borderWidth: 3,
+                tension: 0.25,
+              },
+              {
+                label: "Pernambuco",
+                data: [52.18, 41.84, 8.44, 4.16, 2.18, 1.59],
+                borderColor: "#8A7A68",
+                backgroundColor: "rgba(138,122,104,.08)",
+                fill: true,
+                tension: 0.25,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1400 },
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { color: "#EAE0CC", font: { size: 10 } },
+              },
+              title: {
+                display: true,
+                text: "% do emprego calçadista do Nordeste, por estado",
+                color: "#EAE0CC",
+                font: { size: 11 },
+              },
+            },
+            scales: {
+              y: {
+                ticks: { color: "#8A7A68" },
+                grid: { color: "rgba(255,255,255,.08)" },
+              },
+              x: { ticks: { color: "#EAE0CC" }, grid: { display: false } },
+            },
+          },
+        });
+      });
 
-onV('doughnutChart',function(){new Chart(document.getElementById('doughnutChart'),{type:'doughnut',data:{labels:['Calçados de couro','Calçados de plástico','Outros materiais'],datasets:[{data:[52.90,41.02,6.05],backgroundColor:['#7A4326','#C9912F','#8A7A68'],borderWidth:3,borderColor:'#F1E7D5'}]},options:{responsive:true,cutout:'55%',animation:{duration:1400,animateRotate:true},plugins:{legend:{position:'bottom',labels:{color:'#2B2018',font:{size:10}}},title:{display:true,text:'Composição do emprego calçadista no Ceará (%)',color:'#2B2018',font:{size:12}}}}})});
+      onV("empregosCEChart", function () {
+        new Chart(document.getElementById("empregosCEChart"), {
+          type: "line",
+          data: {
+            labels: ["1990", "1995", "2000", "2005", "2010"],
+            datasets: [
+              {
+                label: "Empregos gerados",
+                data: [1525, 6339, 27287, 44268, 63562],
+                borderColor: "#7A4326",
+                backgroundColor: "rgba(122,67,38,.1)",
+                fill: true,
+                borderWidth: 3,
+                tension: 0.3,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1400 },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "Empregos na indústria calçadista cearense",
+                color: "#2B2018",
+                font: { size: 12 },
+              },
+            },
+            scales: {
+              y: { ticks: { color: "#8A7A68" } },
+              x: { ticks: { color: "#2B2018" } },
+            },
+          },
+        });
+      });
 
-onV('clustersChart',function(){new Chart(document.getElementById('clustersChart'),{type:'bar',data:{labels:['Franca-SP','Divinópolis-MG','Jaú-SP','Birigui-SP','Cariri-CE','Fortaleza-CE','Vale dos Sinos-RS'],datasets:[{data:[1800,1053,510,400,178,103,94],backgroundColor:'#C9912F',borderRadius:5}]},options:{indexAxis:'y',responsive:true,animation:{duration:1200},plugins:{legend:{display:false},title:{display:true,text:'Número de estabelecimentos por microrregião (2010)',color:'#2B2018',font:{size:11}}},scales:{x:{display:false},y:{ticks:{color:'#2B2018',font:{size:10}}}}}})});
-onV('migracaoChart',function(){new Chart(document.getElementById('migracaoChart'),{type:'line',data:{labels:['2000','2005','2010'],datasets:[{label:'Sudeste',data:[46.69,26.86,25.71],borderColor:'#8A7A68',backgroundColor:'rgba(138,122,104,.08)',fill:true,tension:.25},{label:'Sul',data:[43.58,44.90,37.21],borderColor:'#9C5E37',backgroundColor:'rgba(156,94,55,.08)',fill:true,tension:.25},{label:'Nordeste',data:[6.59,27.32,36.02],borderColor:'#C9912F',backgroundColor:'rgba(201,145,47,.12)',fill:true,borderWidth:3,tension:.25}]},options:{responsive:true,animation:{duration:1400},plugins:{legend:{position:'bottom',labels:{color:'#EAE0CC',font:{size:10}}},title:{display:true,text:'Participação regional no emprego do setor calçadista (%)',color:'#EAE0CC',font:{size:11}}},scales:{y:{ticks:{color:'#8A7A68'},grid:{color:'rgba(255,255,255,.08)'}},x:{ticks:{color:'#EAE0CC'},grid:{display:false}}}}})});
+      onV("exportCEChart", function () {
+        new Chart(document.getElementById("exportCEChart"), {
+          type: "line",
+          data: {
+            labels: ["1990", "2000", "2005", "2010"],
+            datasets: [
+              {
+                label: "Calçados e partes",
+                data: [0.52, 14.37, 21.82, 31.78],
+                borderColor: "#7A4326",
+                backgroundColor: "rgba(122,67,38,.1)",
+                fill: true,
+                borderWidth: 3,
+                tension: 0.25,
+              },
+              {
+                label: "Castanha de caju",
+                data: [35.94, 27.77, 14.52, 14.34],
+                borderColor: "#8A7A68",
+                backgroundColor: "rgba(138,122,104,.08)",
+                fill: true,
+                tension: 0.25,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            animation: { duration: 1400 },
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { color: "#2B2018", font: { size: 10 } },
+              },
+              title: {
+                display: true,
+                text: "Participação no valor das exportações cearenses (%)",
+                color: "#2B2018",
+                font: { size: 12 },
+              },
+            },
+            scales: {
+              y: { ticks: { color: "#8A7A68" } },
+              x: { ticks: { color: "#2B2018" } },
+            },
+          },
+        });
+      });
 
-onV('salariosChart',function(){new Chart(document.getElementById('salariosChart'),{type:'bar',data:{labels:['RJ','SC','RS','SP','PB','PE','RN','BA','MG','CE'],datasets:[{data:[1.91,1.82,1.71,1.70,1.50,1.49,1.35,1.31,1.27,1.27],backgroundColor:'#C9912F',borderRadius:5}]},options:{responsive:true,animation:{duration:1200},plugins:{legend:{display:false},title:{display:true,text:'Salários mínimos pagos em média (2010)',color:'#2B2018',font:{size:12}}},scales:{y:{display:false},x:{ticks:{color:'#2B2018',font:{size:11}}}}}})});
-
-onV('motivosChart',function(){new Chart(document.getElementById('motivosChart'),{type:'bar',data:{labels:['Incentivos fiscais','Salários menores na região','Impostos menores','Melhorar a rentabilidade','Concorrência com asiáticos','Terreno mais barato','Crédito mais fácil'],datasets:[{data:[41,39,38,32,31,30,29],backgroundColor:function(ctx){return ctx.dataIndex<2?'#7A4326':'#C9912F'},borderRadius:5}]},options:{indexAxis:'y',responsive:true,animation:{duration:1200},plugins:{legend:{display:false},title:{display:true,text:'Motivos para migração (nº de empresas que responderam)',color:'#2B2018',font:{size:11}}},scales:{x:{display:false},y:{ticks:{color:'#2B2018',font:{size:10}}}}}})});
-
-onV('ceVsPeChart',function(){new Chart(document.getElementById('ceVsPeChart'),{type:'line',data:{labels:['1985','1990','1995','2000','2005','2010'],datasets:[{label:'Ceará',data:[22.07,20.91,43.80,56.50,54.26,50.61],borderColor:'#C9912F',backgroundColor:'rgba(201,145,47,.12)',fill:true,borderWidth:3,tension:.25},{label:'Pernambuco',data:[52.18,41.84,8.44,4.16,2.18,1.59],borderColor:'#8A7A68',backgroundColor:'rgba(138,122,104,.08)',fill:true,tension:.25}]},options:{responsive:true,animation:{duration:1400},plugins:{legend:{position:'bottom',labels:{color:'#EAE0CC',font:{size:10}}},title:{display:true,text:'% do emprego calçadista do Nordeste, por estado',color:'#EAE0CC',font:{size:11}}},scales:{y:{ticks:{color:'#8A7A68'},grid:{color:'rgba(255,255,255,.08)'}},x:{ticks:{color:'#EAE0CC'},grid:{display:false}}}}})});
-
-onV('empregosCEChart',function(){new Chart(document.getElementById('empregosCEChart'),{type:'line',data:{labels:['1990','1995','2000','2005','2010'],datasets:[{label:'Empregos gerados',data:[1525,6339,27287,44268,63562],borderColor:'#7A4326',backgroundColor:'rgba(122,67,38,.1)',fill:true,borderWidth:3,tension:.3}]},options:{responsive:true,animation:{duration:1400},plugins:{legend:{display:false},title:{display:true,text:'Empregos na indústria calçadista cearense',color:'#2B2018',font:{size:12}}},scales:{y:{ticks:{color:'#8A7A68'}},x:{ticks:{color:'#2B2018'}}}}})});
-
-onV('exportCEChart',function(){new Chart(document.getElementById('exportCEChart'),{type:'line',data:{labels:['1990','2000','2005','2010'],datasets:[{label:'Calçados e partes',data:[0.52,14.37,21.82,31.78],borderColor:'#7A4326',backgroundColor:'rgba(122,67,38,.1)',fill:true,borderWidth:3,tension:.25},{label:'Castanha de caju',data:[35.94,27.77,14.52,14.34],borderColor:'#8A7A68',backgroundColor:'rgba(138,122,104,.08)',fill:true,tension:.25}]},options:{responsive:true,animation:{duration:1400},plugins:{legend:{position:'bottom',labels:{color:'#2B2018',font:{size:10}}},title:{display:true,text:'Participação no valor das exportações cearenses (%)',color:'#2B2018',font:{size:12}}},scales:{y:{ticks:{color:'#8A7A68'}},x:{ticks:{color:'#2B2018'}}}}})});
-
-window.addEventListener('scroll',function(){gsap.to('.scrollhint',{opacity:0,duration:.4})},{once:true});
-if(lenis)lenis.on('scroll',function(){gsap.to('.scrollhint',{opacity:0,duration:.4})});
-</script>
-</body>
+      window.addEventListener(
+        "scroll",
+        function () {
+          gsap.to(".scrollhint", { opacity: 0, duration: 0.4 });
+        },
+        { once: true },
+      );
+      if (lenis)
+        lenis.on("scroll", function () {
+          gsap.to(".scrollhint", { opacity: 0, duration: 0.4 });
+        });
+    </script>
+  </body>
 </html>
