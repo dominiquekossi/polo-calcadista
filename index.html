@@ -441,156 +441,101 @@
     </div>
     <div class="scrollhint"><span>scroll</span><span class="bar"></span></div>
 
-    <!-- SLIDE 1 CAPA (pinned, 3 phases) -->
-    <section id="hero" data-chap="Início" style="min-height: 300vh; padding: 0">
+    <!-- SLIDE 1 CAPA -->
+    <section id="hero" data-chap="Início">
       <div
-        id="hero-pin"
+        class="glow"
         style="
-          height: 100vh;
-          width: 100%;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding: 14vh 8vw;
-          overflow: hidden;
+          width: 600px;
+          height: 600px;
+          background: var(--leather);
+          top: -10%;
+          right: -5%;
         "
+      ></div>
+      <div
+        class="glow"
+        style="
+          width: 400px;
+          height: 400px;
+          background: var(--brass);
+          bottom: 5%;
+          left: -8%;
+          opacity: 0.3;
+        "
+      ></div>
+      <p class="kick" data-anim="fade">Seminário · Economia do Nordeste</p>
+      <h1 class="hero-big">
+        <span class="ln"><span class="hl">Panorama da</span></span>
+        <span class="ln"><span class="hl">Indústria Cearense</span></span>
+        <span class="ln"
+          ><span class="hl" style="color: var(--brass)">de Calçados</span></span
+        >
+      </h1>
+      <p class="hero-sub" data-anim="fade">
+        Da relocalização da cadeia produtiva nacional à consolidação do Ceará
+        como o principal polo calçadista do Nordeste
+      </p>
+    </section>
+
+    <!-- SLIDE 1b - APRESENTAÇÃO -->
+    <section data-chap="Início" style="text-align: center; align-items: center">
+      <p class="kick" data-anim="fade">Apresentado por</p>
+      <h2
+        style="
+          font-size: clamp(2.2rem, 5.5vw, 5rem);
+          color: var(--cream);
+          text-align: center;
+          max-width: 16ch;
+          margin-bottom: 1.2rem;
+        "
+        data-split
       >
-        <div
-          class="glow"
-          style="
-            width: 600px;
-            height: 600px;
-            background: var(--leather);
-            top: -10%;
-            right: -5%;
-          "
-        ></div>
-        <div
-          class="glow"
-          style="
-            width: 400px;
-            height: 400px;
-            background: var(--brass);
-            bottom: 5%;
-            left: -8%;
-            opacity: 0.3;
-          "
-        ></div>
-
-        <!-- Phase 1: título -->
-        <div
-          id="hp1"
-          style="
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-          "
-        >
-          <p class="kick">Seminário · Economia do Nordeste</p>
-          <h1 class="hero-big">
-            <span class="ln"><span class="hl">Panorama da</span></span>
-            <span class="ln"><span class="hl">Indústria Cearense</span></span>
-            <span class="ln"
-              ><span class="hl" style="color: var(--brass)"
-                >de Calçados</span
-              ></span
-            >
-          </h1>
-          <p class="hero-sub" style="margin-top: 2rem">
-            Da relocalização da cadeia produtiva nacional à consolidação do
-            Ceará como o principal polo calçadista do Nordeste
-          </p>
-        </div>
-
-        <!-- Phase 2: nome + curso -->
-        <div
-          id="hp2"
-          style="
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 14vh 8vw;
-            opacity: 0;
-          "
-        >
-          <p class="kick" style="text-align: center">Apresentado por</p>
-          <h2
-            style="
-              font-size: clamp(2rem, 5vw, 4.5rem);
-              color: var(--cream);
-              text-align: center;
-              max-width: 18ch;
-              margin-bottom: 1rem;
-            "
-          >
-            Kossi Sedjro Mawuli Dominique Houessou
-          </h2>
-          <p
-            style="
-              font-size: clamp(1rem, 1.5vw, 1.3rem);
-              color: var(--brassL);
-              font-style: italic;
-              text-align: center;
-            "
-          >
-            Engenharia de Computação
-          </p>
-        </div>
-
-        <!-- Phase 3: referência -->
-        <div
-          id="hp3"
-          style="
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 14vh 8vw;
-            opacity: 0;
-          "
-        >
-          <p class="kick" style="text-align: center">Baseado em</p>
-          <h2
-            style="
-              font-size: clamp(1.5rem, 3.5vw, 2.8rem);
-              color: var(--cream);
-              text-align: center;
-              max-width: 22ch;
-              margin-bottom: 1rem;
-            "
-          >
-            Odorico de Moraes Eloy da Costa
-          </h2>
-          <p
-            style="
-              font-size: clamp(0.95rem, 1.3vw, 1.15rem);
-              color: var(--creamS);
-              text-align: center;
-              max-width: 36ch;
-            "
-          >
-            "Panorama da Indústria Cearense de Calçados"
-          </p>
-          <p
-            style="
-              font-size: 0.85rem;
-              color: var(--muted);
-              margin-top: 0.8rem;
-              text-align: center;
-            "
-          >
-            IPECE Textos para Discussão nº 101 · agosto de 2012
-          </p>
-        </div>
-      </div>
+        Kossi Sedjro Mawuli Dominique Houessou
+      </h2>
+      <p
+        style="
+          font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+          color: var(--brassL);
+          font-style: italic;
+          text-align: center;
+        "
+        data-anim="fade"
+      >
+        Engenharia de Computação
+      </p>
+      <div
+        style="
+          width: 120px;
+          height: 2px;
+          background: var(--brass);
+          margin: 3rem auto;
+        "
+      ></div>
+      <p
+        style="
+          font-size: 1rem;
+          color: var(--muted);
+          text-align: center;
+          margin-top: 1rem;
+        "
+        data-anim="fade"
+      >
+        <strong style="color: var(--brassL)">Baseado em:</strong> Odorico de
+        Moraes Eloy da Costa
+      </p>
+      <p
+        style="
+          font-size: 0.9rem;
+          color: var(--muted);
+          text-align: center;
+          margin-top: 0.4rem;
+        "
+        data-anim="fade"
+      >
+        "Panorama da Indústria Cearense de Calçados"<br />IPECE Textos para
+        Discussão nº 101 · agosto de 2012
+      </p>
     </section>
 
     <!-- SLIDE 2 ROTEIRO -->
@@ -2314,7 +2259,7 @@
       });
       updateBtns();
 
-      /* Hero pinned phases */
+      /* Hero intro animation */
       gsap.set(".hero-big .hl", { yPercent: 120 });
       var htl = gsap.timeline({ delay: 0.3 });
       htl
@@ -2324,42 +2269,8 @@
           stagger: 0.12,
           ease: "power4.out",
         })
-        .from("#hp1 .kick", { opacity: 0, y: 20, duration: 0.7 }, "-=.9")
-        .from("#hp1 .hero-sub", { opacity: 0, y: 24, duration: 0.8 }, "-=.6");
-
-      /* Pin the hero and cycle through 3 phases on scroll */
-      var heroTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top top",
-          end: "+=200%",
-          scrub: 1,
-          pin: "#hero-pin",
-          pinSpacing: false,
-        },
-      });
-      heroTl
-        .to("#hp1", { opacity: 0, y: -40, duration: 1, ease: "power2.in" })
-        .fromTo(
-          "#hp2",
-          { opacity: 0, y: 40 },
-          { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
-        )
-        .to(
-          "#hp2",
-          { opacity: 0, y: -40, duration: 1, ease: "power2.in" },
-          "+=0.3",
-        )
-        .fromTo(
-          "#hp3",
-          { opacity: 0, y: 40 },
-          { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
-        )
-        .to(
-          "#hp3",
-          { opacity: 0, y: -40, duration: 1, ease: "power2.in" },
-          "+=0.3",
-        );
+        .from("#hero .kick", { opacity: 0, y: 20, duration: 0.7 }, "-=.9")
+        .from(".hero-sub", { opacity: 0, y: 24, duration: 0.8 }, "-=.6");
 
       document.querySelectorAll("[data-split]").forEach(function (el) {
         var w = el.textContent.trim().split(/\s+/);
