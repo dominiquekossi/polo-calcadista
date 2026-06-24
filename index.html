@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polo Calçadista do Ceará — Uma jornada</title>
+    <title>Polo Calçadista do Ceará · Uma jornada</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -70,11 +70,59 @@
         margin-bottom: 1.4rem;
       }
       .lead {
-        font-size: clamp(1rem, 1.5vw, 1.35rem);
+        font-size: clamp(1.02rem, 1.3vw, 1.28rem);
         color: var(--creamS);
-        max-width: 46ch;
-        line-height: 1.6;
+        max-width: 60ch;
+        line-height: 1.72;
         font-weight: 300;
+      }
+      .lead strong {
+        font-weight: 600;
+        color: var(--cream);
+      }
+      /* intro two-column layout for chapter openers */
+      .intro {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: clamp(2rem, 5vw, 5.5rem);
+        align-items: center;
+        width: 100%;
+      }
+      .intro .col-text .lead {
+        max-width: 42ch;
+      }
+      /* note block: an explanatory paragraph that sits below a grid */
+      .note {
+        margin-top: 2.6rem;
+        max-width: 78ch;
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      .note .mark {
+        flex: none;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid var(--brass);
+        color: var(--brass);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.05rem;
+        margin-top: 0.15rem;
+      }
+      .note p {
+        font-size: clamp(1rem, 1.2vw, 1.18rem);
+        line-height: 1.68;
+        color: var(--creamS);
+        font-weight: 300;
+        margin: 0;
+        max-width: 64ch;
+      }
+      .note p strong {
+        font-weight: 600;
+        color: var(--cream);
       }
       .word {
         display: inline-block;
@@ -362,8 +410,12 @@
         .g2,
         .g3,
         .g4,
-        .split {
+        .split,
+        .intro {
           grid-template-columns: 1fr;
+        }
+        .intro {
+          gap: 1.8rem;
         }
         section {
           padding: 12vh 7vw;
@@ -426,18 +478,30 @@
 
 <!-- CHAPTER 1 INTRO -->
 <section data-chap="Mundo">
-  <p class="kick" data-anim="fade">Capítulo 01 — Contexto mundial</p>
-  <h2 style="font-size: clamp(2rem, 5.5vw, 5rem); max-width: 16ch" data-split>
-    Uma indústria tradicional em plena reestruturação.
-  </h2>
-  <p class="lead" style="margin-top: 2rem" data-anim="fade">
-    Desde os anos 1980, novas máquinas, a microeletrônica e o desenho por
-    computador (CAD/CAM) modernizaram a fabricação de calçados. Mesmo assim,
-    costurar e montar a parte de cima do sapato — o cabedal — ainda exige muita
-    mão de obra. Como esse trabalho manual é caro, as fábricas passaram a
-    procurar países onde a mão de obra custa menos: foi assim que a produção
-    começou a migrar pelo mundo.
-  </p>
+  <p class="kick" data-anim="fade">Capítulo 01 · Contexto mundial</p>
+  <div class="intro">
+    <div class="col-text">
+      <h2
+        style="font-size: clamp(2rem, 5vw, 4.4rem); max-width: 14ch"
+        data-split
+      >
+        Uma indústria tradicional em plena reestruturação.
+      </h2>
+    </div>
+    <div class="col-text">
+      <p class="lead" data-anim="fade">
+        Desde os anos 1980, novas máquinas, a microeletrônica e o desenho por
+        computador (CAD/CAM) modernizaram a fabricação de calçados. Mesmo assim,
+        costurar e montar a parte de cima do sapato (o cabedal) ainda exige
+        muita mão de obra.
+      </p>
+      <p class="lead" style="margin-top: 1.2rem" data-anim="fade">
+        Como esse trabalho manual é caro, as fábricas passaram a procurar países
+        onde a mão de obra custa menos. Foi assim que a produção começou a migrar
+        pelo mundo.
+      </p>
+    </div>
+  </div>
 </section>
 <!-- aglomerados -->
 <section data-chap="Mundo">
@@ -461,36 +525,39 @@
     <div class="card reveal-up">
       🇰🇷
       <h3>Coreia do Sul</h3>
-      <p>Pusan — grandes empresas</p>
+      <p>Pusan · grandes empresas</p>
     </div>
     <div class="card reveal-up">
       🇮🇹
       <h3>Itália</h3>
-      <p>Brenta e Marche — pequenas empresas</p>
+      <p>Brenta e Marche · pequenas empresas</p>
     </div>
     <div class="card reveal-up" style="border-color: var(--brass)">
       🇧🇷
-      <h3>Brasil — RS</h3>
+      <h3>Brasil · RS</h3>
       <p>Vale dos Sinos, o "supercluster"</p>
     </div>
     <div class="card reveal-up" style="border-color: var(--brass)">
       🇧🇷
-      <h3>Brasil — SP / MG</h3>
+      <h3>Brasil · SP / MG</h3>
       <p>Franca, Jaú, Birigui, Divinópolis</p>
     </div>
     <div class="card reveal-up" style="border-color: var(--brass)">
       🇧🇷
-      <h3>Brasil — CE</h3>
+      <h3>Brasil · CE</h3>
       <p>Fortaleza e Cariri</p>
     </div>
   </div>
-  <p class="lead" style="margin-top: 2rem" data-anim="fade">
-    A indústria de calçados costuma se concentrar em regiões específicas, os
-    chamados "clusters": ali, fábricas, fornecedores e instituições ficam perto
-    umas das outras e compartilham conhecimento. Mas o formato varia — alguns
-    polos reúnem muitas empresas pequenas (Itália, Taiwan), enquanto outros são
-    dominados por poucas empresas grandes (Coreia, China e Brasil).
-  </p>
+  <div class="note" data-anim="fade">
+    <span class="mark">i</span>
+    <p>
+      A indústria de calçados costuma se concentrar em regiões específicas, os
+      chamados "clusters": ali, fábricas, fornecedores e instituições ficam perto
+      umas das outras e compartilham conhecimento. Mas o formato varia: alguns
+      polos reúnem muitas empresas pequenas (Itália, Taiwan), enquanto outros são
+      dominados por poucas empresas grandes (Coreia, China e Brasil).
+    </p>
+  </div>
 </section>
 
 <!-- cadeia de valor -->
@@ -510,12 +577,14 @@
     <div class="card reveal-up" style="text-align: center">
       <div style="font-size: 2.2rem">🎨</div>
       <h3 style="font-size: 1rem; margin-top: 0.6rem">Design & P&D</h3>
-      <p style="font-size: 0.8rem">Concepção e tendências</p>
+      <p style="font-size: 0.8rem">Concepção do produto e tendências de
+moda</p>
     </div>
     <div class="card reveal-up" style="text-align: center">
       <div style="font-size: 2.2rem">🏆</div>
       <h3 style="font-size: 1rem; margin-top: 0.6rem">Marca & Marketing</h3>
-      <p style="font-size: 0.8rem">Comunicação e varejo</p>
+      <p style="font-size: 0.8rem">Construção de marca, comunicação e
+varejo</p>
     </div>
     <div
       class="card reveal-up"
@@ -529,25 +598,30 @@
       <h3 style="font-size: 1rem; margin-top: 0.6rem; color: var(--brassL)">
         Manufatura
       </h3>
-      <p style="font-size: 0.8rem">A etapa que migra</p>
+      <p style="font-size: 0.8rem">Corte, costura e montagem: a etapa que
+migra</p>
     </div>
     <div class="card reveal-up" style="text-align: center">
       <div style="font-size: 2.2rem">🛒</div>
       <h3 style="font-size: 1rem; margin-top: 0.6rem">Logística & Venda</h3>
-      <p style="font-size: 0.8rem">Distribuição final</p>
+      <p style="font-size: 0.8rem">Distribuição até o consumidor</p>
     </div>
   </div>
-  <p class="lead" style="margin-top: 2.2rem" data-anim="fade">
-    Nessa indústria, quem manda são os compradores — as grandes marcas e redes
-    de varejo (o modelo "buyer-driven", ou guiado pelo comprador). Elas controlam
-    o design, a marca e a venda, que são as etapas mais lucrativas, e ficam com a
-    maior fatia do lucro. Para quem só fabrica o calçado sob encomenda, sobra a
-    parte que rende menos: a manufatura.
+  <div class="note" data-anim="fade">
+    <span class="mark">$</span>
+    <p>
+      Nessa indústria, quem manda são os compradores: as grandes marcas e redes
+      de varejo (o modelo "buyer-driven", ou guiado pelo comprador). Elas
+      controlam o design, a marca e a venda, que são as etapas mais lucrativas, e
+      ficam com a maior fatia do lucro. Para quem só fabrica o calçado sob
+      encomenda, sobra a parte que rende menos: a manufatura.
+    </p>
+  </div>
   </p>
 </section>
-<!-- CHAPTER 2 — BRASIL -->
+<!-- CHAPTER 2 - BRASIL -->
 <section data-chap="Brasil">
-  <p class="kick" data-anim="fade">Capítulo 02 — O Brasil no jogo</p>
+  <p class="kick" data-anim="fade">Capítulo 02 · O Brasil no jogo</p>
   <h2 style="font-size: clamp(2rem, 5.5vw, 5rem); max-width: 14ch" data-split>
     As raízes do calçado no Brasil.
   </h2>
@@ -616,13 +690,16 @@
       <div class="nlabel">empregos gerados</div>
     </div>
   </div>
-  <p class="lead" style="margin-top: 2.2rem" data-anim="fade">
-    <strong style="color: var(--brass)">84%</strong> de tudo o que o Brasil
-    produz é vendido aqui dentro, no próprio mercado nacional; só
-    <strong style="color: var(--brass)">16%</strong> vai para fora. É o oposto
-    do modelo asiático — China e países vizinhos fabricam pensando, acima de
-    tudo, em exportar.
-  </p>
+  <div class="note" data-anim="fade">
+    <span class="mark">%</span>
+    <p>
+      <strong style="color: var(--brass)">84%</strong> de tudo o que o Brasil
+      produz é vendido aqui dentro, no próprio mercado nacional; só
+      <strong style="color: var(--brass)">16%</strong> vai para fora. É o oposto
+      do modelo asiático: China e países vizinhos fabricam pensando, acima de
+      tudo, em exportar.
+    </p>
+  </div>
 </section>
 
 <!-- radar -->
@@ -645,7 +722,7 @@
         <li data-anim="fade">China e Índia: ganham no preço baixo</li>
         <li data-anim="fade">Itália: imbatível em design (nota 4,8)</li>
         <li data-anim="fade">
-          Brasil: fica no meio-termo — boa qualidade e flexibilidade para
+          Brasil: fica no meio-termo, com boa qualidade e flexibilidade para
           pedidos de qualquer tamanho
         </li>
         <li data-anim="fade">
@@ -673,7 +750,7 @@
           EUA: maior comprador, com 20,28% dos pares vendidos lá fora
         </li>
         <li data-anim="fade">
-          Paraguai: 10% dos pares — compra muito em quantidade, mas calçado
+          Paraguai: 10% dos pares. Compra muito em quantidade, mas calçado
           barato (pouco valor)
         </li>
         <li data-anim="fade">Argentina: 9,86% · Espanha: 6,71%</li>
@@ -688,7 +765,7 @@
   </div>
 </section>
 
-<!-- CHAPTER 3 — MIGRAÇÃO (big statement) -->
+<!-- CHAPTER 3 - MIGRAÇÃO (big statement) -->
 <section data-chap="Migração" style="text-align: center; align-items: center">
   <div
     class="glow"
@@ -702,7 +779,7 @@
       opacity: 0.35;
     "
   ></div>
-  <p class="kick" data-anim="fade">Capítulo 03 — A grande migração</p>
+  <p class="kick" data-anim="fade">Capítulo 03 · A grande migração</p>
   <div
     class="big-stat serif"
     data-count="29.4"
@@ -713,15 +790,15 @@
   </div>
   <p
     class="lead"
-    style="margin: 1.5rem auto 0; text-align: center"
+    style="margin: 1.5rem auto 0; text-align: center; max-width: 56ch"
     data-anim="fade"
   >
     foi o ganho de participação do
     <strong style="color: var(--brassL)">Nordeste</strong> no total de empregos
     do setor entre 2000 e 2010. Os "pp" são
     <strong style="color: var(--brassL)">pontos percentuais</strong>: a
-    participação saltou de 6,6% para 36% dos empregos do país — ou seja, subiu
-    29,4 pontos e quase quintuplicou. Enquanto isso, o Sudeste despencou — e São
+    participação saltou de 6,6% para 36% dos empregos do país, ou seja, subiu
+    29,4 pontos e quase quintuplicou. Enquanto isso, o Sudeste despencou. São
     Paulo, antes líder, foi justamente quem mais transferiu fábricas para outras
     regiões.
   </p>
@@ -774,7 +851,7 @@
         style="font-size: 1rem; margin-top: 0.4rem"
         data-anim="fade"
       >
-        é a média de empregados por empresa no Ceará — a maior do Brasil. Isso
+        é a média de empregados por empresa no Ceará, a maior do Brasil. Isso
         revela um perfil único: o estado tem poucas fábricas (apenas 3,39% do
         total nacional), mas elas são enormes e respondem por 18,23% de todos os
         empregos do setor no país. São empresas grandes e "verticalizadas", que
@@ -811,7 +888,7 @@
         de todo o emprego brasileiro em calçados de plástico está concentrado no
         Ceará. Aqui está a grande diferença do estado: enquanto a Bahia faz 97%
         de calçados de couro, o Ceará apostou nos sapatos injetados de plástico
-        (PVC, EVA, PU e TR) — como sandálias e chinelos. É um modelo de produção
+        (PVC, EVA, PU e TR), como sandálias e chinelos. É um modelo de produção
         mais automatizado, ligado à indústria química, e que quase não depende de
         curtumes por perto.
       </p>
@@ -848,9 +925,9 @@
     </div>
   </div>
 </section>
-<!-- CHAPTER 4 — CEARÁ -->
+<!-- CHAPTER 4 - CEARÁ -->
 <section data-chap="Ceará">
-  <p class="kick" data-anim="fade">Capítulo 04 — O caso Ceará</p>
+  <p class="kick" data-anim="fade">Capítulo 04 · O caso Ceará</p>
   <h2
     style="
       font-size: clamp(2rem, 5vw, 4.5rem);
@@ -881,16 +958,19 @@
       </ul>
     </div>
   </div>
-  <p class="lead" style="margin-top: 2rem" data-anim="fade">
-    <strong style="color: var(--brass)">O resultado:</strong> grandes fabricantes
-    do Sul e Sudeste — como Grendene, Vulcabrás, Dakota e Paquetá — abriram
-    fábricas no Ceará para aproveitar esses benefícios.
-  </p>
+  <div class="note" data-anim="fade">
+    <span class="mark">★</span>
+    <p>
+      <strong style="color: var(--brass)">O resultado:</strong> grandes
+      fabricantes do Sul e Sudeste, como Grendene, Vulcabrás, Dakota e Paquetá,
+      abriram fábricas no Ceará para aproveitar esses benefícios.
+    </p>
+  </div>
 </section>
 
-<!-- CHAPTER 5 — RESULTADOS -->
+<!-- CHAPTER 5 - RESULTADOS -->
 <section data-chap="Resultados">
-  <p class="kick" data-anim="fade">Capítulo 05 — Resultados no território</p>
+  <p class="kick" data-anim="fade">Capítulo 05 · Resultados no território</p>
   <h2
     style="
       font-size: clamp(1.8rem, 4.5vw, 3.6rem);
@@ -914,16 +994,19 @@
       <div class="num" data-count="299" data-prefix="US$ " data-suffix=" mi">
         0
       </div>
-      <div class="nlabel">exportados — 20% do Brasil</div>
+      <div class="nlabel">exportados · 20% do Brasil</div>
     </div>
   </div>
-  <p class="lead" style="margin-top: 2.2rem" data-anim="fade">
-    Em dez anos, o Ceará mais que dobrou seu peso: foi de
-    <strong style="color: var(--brass)">6,59%</strong> para
-    <strong style="color: var(--brass)">18,23%</strong> de todos os empregos do
-    setor no Brasil. As fábricas se espalharam por três grandes polos:
-    Fortaleza e região, Sobral e o Cariri (Crato/Juazeiro do Norte).
-  </p>
+  <div class="note" data-anim="fade">
+    <span class="mark">↑</span>
+    <p>
+      Em dez anos, o Ceará mais que dobrou seu peso: foi de
+      <strong style="color: var(--brass)">6,59%</strong> para
+      <strong style="color: var(--brass)">18,23%</strong> de todos os empregos
+      do setor no Brasil. As fábricas se espalharam por três grandes polos:
+      Fortaleza e região, Sobral e o Cariri (Crato e Juazeiro do Norte).
+    </p>
+  </div>
 </section>
 
 <!-- export CE -->
@@ -946,16 +1029,16 @@
           Principais destinos: Estados Unidos, Argentina e Europa
         </li>
         <li data-anim="fade">
-          O preço médio é de US$ 7,50 por par — mais baixo porque é calçado
+          O preço médio é de US$ 7,50 por par. É mais baixo porque é calçado
           popular e produzido em larga escala, e não por ser de pior qualidade
         </li>
       </ul>
     </div>
   </div>
 </section>
-<!-- CHAPTER 6 — CONCLUSÕES -->
+<!-- CHAPTER 6 - CONCLUSÕES -->
 <section data-chap="Conclusões">
-  <p class="kick" data-anim="fade">Capítulo 06 — Conclusões</p>
+  <p class="kick" data-anim="fade">Capítulo 06 · Conclusões</p>
   <h2
     style="
       font-size: clamp(2rem, 5vw, 4.2rem);
@@ -984,20 +1067,23 @@
         </li>
         <li>Pouca inovação e design feitos no próprio estado</li>
         <li>
-          Incentivos têm prazo de validade — e podem virar "guerra fiscal" entre
+          Incentivos têm prazo de validade e podem virar "guerra fiscal" entre
           estados
         </li>
         <li>Salários baixos seguram o consumo da própria população</li>
       </ul>
     </div>
   </div>
-  <p class="lead" style="margin-top: 2.2rem; max-width: 60ch" data-anim="fade">
-    <strong style="color: var(--brass)">A grande lição:</strong> trazer fábricas
-    com incentivos é só o começo. O desafio de verdade — e que dura anos — é
-    construir um ecossistema completo em volta delas, com fornecedores locais,
-    design próprio e capacidade de inovar. Sem isso, o polo continua dependente e
-    vulnerável.
-  </p>
+  <div class="note" data-anim="fade">
+    <span class="mark">✦</span>
+    <p>
+      <strong style="color: var(--brass)">A grande lição:</strong> trazer
+      fábricas com incentivos é só o começo. O desafio de verdade, e que dura
+      anos, é construir um ecossistema completo em volta delas, com fornecedores
+      locais, design próprio e capacidade de inovar. Sem isso, o polo continua
+      dependente e vulnerável.
+    </p>
+  </div>
 </section>
 
 <!-- OUTRO -->
