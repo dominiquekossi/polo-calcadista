@@ -221,14 +221,6 @@
         font-weight: 400;
         max-width: 42ch;
       }
-      .hero-meta {
-        margin-top: auto;
-        padding-top: 3rem;
-        padding-bottom: 2vh;
-        font-size: 0.8rem;
-        color: var(--muted);
-        line-height: 1.7;
-      }
       .glow {
         position: absolute;
         border-radius: 50%;
@@ -450,49 +442,39 @@
     <div class="scrollhint"><span>scroll</span><span class="bar"></span></div>
   </body>
 </html>
-<!-- SLIDE 1 CAPA -->
-<section id="hero" data-chap="Início">
-  <div
-    class="glow"
-    style="
-      width: 600px;
-      height: 600px;
-      background: var(--leather);
-      top: -10%;
-      right: -5%;
-    "
-  ></div>
-  <div
-    class="glow"
-    style="
-      width: 400px;
-      height: 400px;
-      background: var(--brass);
-      bottom: 5%;
-      left: -8%;
-      opacity: 0.3;
-    "
-  ></div>
-  <p class="kick" data-anim="fade">Seminário · Economia do Nordeste</p>
-  <h1 class="hero-big">
-    <span class="ln"><span class="hl">Panorama da</span></span>
-    <span class="ln"><span class="hl">Indústria Cearense</span></span>
-    <span class="ln"
-      ><span class="hl" style="color: var(--brass)">de Calçados</span></span
-    >
-  </h1>
-  <p class="hero-sub" data-anim="fade">
-    Da relocalização da cadeia produtiva nacional à consolidação do Ceará como o
-    principal polo calçadista do Nordeste
-  </p>
-  <div class="hero-meta">
-    <strong style="color: var(--brassL)">Apresentado por:</strong>
-    Kossi Sedjro Mawuli Dominique Houessou<br /><br />
-    <strong style="color: var(--brassL)">Baseado em:</strong>
-    Odorico de Moraes Eloy da Costa<br />
-    "Panorama da Indústria Cearense de Calçados"<br />
-    IPECE Textos para Discussão nº 101 · agosto de 2012
-  </div>
+<!-- SLIDE 1 CAPA (pinned, 3 phases) -->
+<section id="hero" data-chap="Início" style="min-height:300vh;padding:0">
+<div id="hero-pin" style="height:100vh;width:100%;position:relative;display:flex;flex-direction:column;justify-content:center;padding:14vh 8vw;overflow:hidden">
+<div class="glow" style="width:600px;height:600px;background:var(--leather);top:-10%;right:-5%"></div>
+<div class="glow" style="width:400px;height:400px;background:var(--brass);bottom:5%;left:-8%;opacity:.3"></div>
+
+<!-- Phase 1: título -->
+<div id="hp1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:14vh 8vw">
+<p class="kick">Seminário · Economia do Nordeste</p>
+<h1 class="hero-big">
+<span class="ln"><span class="hl">Panorama da</span></span>
+<span class="ln"><span class="hl">Indústria Cearense</span></span>
+<span class="ln"><span class="hl" style="color:var(--brass)">de Calçados</span></span>
+</h1>
+<p class="hero-sub" style="margin-top:2rem">Da relocalização da cadeia produtiva nacional à consolidação do Ceará como o principal polo calçadista do Nordeste</p>
+</div>
+
+<!-- Phase 2: nome + curso -->
+<div id="hp2" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14vh 8vw;opacity:0">
+<p class="kick" style="text-align:center">Apresentado por</p>
+<h2 style="font-size:clamp(2rem,5vw,4.5rem);color:var(--cream);text-align:center;max-width:18ch;margin-bottom:1rem">Kossi Sedjro Mawuli Dominique Houessou</h2>
+<p style="font-size:clamp(1rem,1.5vw,1.3rem);color:var(--brassL);font-style:italic;text-align:center">Engenharia de Computação</p>
+</div>
+
+<!-- Phase 3: referência -->
+<div id="hp3" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14vh 8vw;opacity:0">
+<p class="kick" style="text-align:center">Baseado em</p>
+<h2 style="font-size:clamp(1.5rem,3.5vw,2.8rem);color:var(--cream);text-align:center;max-width:22ch;margin-bottom:1rem">Odorico de Moraes Eloy da Costa</h2>
+<p style="font-size:clamp(.95rem,1.3vw,1.15rem);color:var(--creamS);text-align:center;max-width:36ch">"Panorama da Indústria Cearense de Calçados"</p>
+<p style="font-size:.85rem;color:var(--muted);margin-top:.8rem;text-align:center">IPECE Textos para Discussão nº 101 · agosto de 2012</p>
+</div>
+
+</div>
 </section>
 
 <!-- SLIDE 2 ROTEIRO -->
@@ -2014,8 +1996,20 @@ document.getElementById('btnUp').addEventListener('click',function(){goToSection
 document.getElementById('btnDown').addEventListener('click',function(){goToSection(nearestIndex()+1)});
 updateBtns();
 
+/* Hero pinned phases */
 gsap.set('.hero-big .hl',{yPercent:120});
-var htl=gsap.timeline({delay:.3});htl.to('.hero-big .hl',{yPercent:0,duration:1.1,stagger:.12,ease:'power4.out'}).from('#hero .kick',{opacity:0,y:20,duration:.7},'-=.9').from('.hero-sub',{opacity:0,y:24,duration:.8},'-=.6').from('.hero-meta',{opacity:0,duration:.8},'-=.5');
+var htl=gsap.timeline({delay:.3});
+htl.to('.hero-big .hl',{yPercent:0,duration:1.1,stagger:.12,ease:'power4.out'})
+   .from('#hp1 .kick',{opacity:0,y:20,duration:.7},'-=.9')
+   .from('#hp1 .hero-sub',{opacity:0,y:24,duration:.8},'-=.6');
+
+/* Pin the hero and cycle through 3 phases on scroll */
+var heroTl=gsap.timeline({scrollTrigger:{trigger:'#hero',start:'top top',end:'+=200%',scrub:1,pin:'#hero-pin',pinSpacing:false}});
+heroTl.to('#hp1',{opacity:0,y:-40,duration:1,ease:'power2.in'})
+  .fromTo('#hp2',{opacity:0,y:40},{opacity:1,y:0,duration:1,ease:'power2.out'})
+  .to('#hp2',{opacity:0,y:-40,duration:1,ease:'power2.in'},'+=0.3')
+  .fromTo('#hp3',{opacity:0,y:40},{opacity:1,y:0,duration:1,ease:'power2.out'})
+  .to('#hp3',{opacity:0,y:-40,duration:1,ease:'power2.in'},'+=0.3');
 
 document.querySelectorAll('[data-split]').forEach(function(el){var w=el.textContent.trim().split(/\s+/);el.innerHTML=w.map(function(x){return'<span class="word">'+x+'</span>'}).join(' ');gsap.from(el.querySelectorAll('.word'),{yPercent:110,opacity:0,duration:.8,stagger:.04,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 82%',end:'top -20%',toggleActions:'play none none reverse'}})});
 document.querySelectorAll('[data-anim="fade"]').forEach(function(el){gsap.from(el,{opacity:0,y:28,duration:.85,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',end:'top -20%',toggleActions:'play none none reverse'}})});
