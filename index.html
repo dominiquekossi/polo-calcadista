@@ -1100,13 +1100,13 @@ document.querySelectorAll('[data-split]').forEach(function(el){
   el.innerHTML=words.map(function(w){return '<span class="word">'+w+'</span>'}).join(' ');
   gsap.from(el.querySelectorAll('.word'),{
     yPercent:110,opacity:0,duration:.8,stagger:.045,ease:'power3.out',
-    scrollTrigger:{trigger:el,start:'top 82%'}
+    scrollTrigger:{trigger:el,start:'top 82%',toggleActions:'play reverse play reverse'}
   });
 });
 
 /* ---------- generic fade-ins ---------- */
 document.querySelectorAll('[data-anim="fade"]').forEach(function(el){
-  gsap.from(el,{opacity:0,y:30,duration:.9,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  gsap.from(el,{opacity:0,y:30,duration:.9,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play reverse play reverse'}});
 });
 
 /* ---------- reveal-up cards (stagger per section) ---------- */
@@ -1114,22 +1114,31 @@ document.querySelectorAll('section').forEach(function(s){
   var cards=s.querySelectorAll('.reveal-up');
   if(!cards.length)return;
   gsap.to(cards,{opacity:1,y:0,duration:.8,stagger:.1,ease:'power3.out',
-    scrollTrigger:{trigger:s,start:'top 70%'}});
+    scrollTrigger:{trigger:s,start:'top 70%',toggleActions:'play reverse play reverse'}});
 });
 
-/* ---------- animated counters ---------- */
+/* ---------- animated counters (re-run each time it enters view) ---------- */
 document.querySelectorAll('[data-count]').forEach(function(el){
   var end=parseFloat(el.dataset.count),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';
   var dec=(end%1!==0)?(el.dataset.count.split('.')[1]||'').length:0;
   var o={v:0};
-  ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:function(){
-    gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:function(){
-      var n=o.v.toFixed(dec);
-      if(end>=1000)n=Math.round(o.v).toLocaleString('pt-BR');
-      else n=o.v.toFixed(dec).replace('.',',');
-      el.textContent=pre+n+suf;
-    }});
-  }});
+  function render(){
+    var n;
+    if(end>=1000)n=Math.round(o.v).toLocaleString('pt-BR');
+    else n=o.v.toFixed(dec).replace('.',',');
+    el.textContent=pre+n+suf;
+  }
+  function runCount(){
+    o.v=0;render();
+    gsap.to(o,{v:end,duration:1.8,ease:'power2.out',onUpdate:render});
+  }
+  ScrollTrigger.create({
+    trigger:el,start:'top 85%',
+    onEnter:runCount,
+    onEnterBack:runCount,
+    onLeave:function(){o.v=0;render()},
+    onLeaveBack:function(){o.v=0;render()}
+  });
 });
 /* ---------- walking shoe that drifts across as you scroll ---------- */
 var shoe=document.getElementById('shoe');
